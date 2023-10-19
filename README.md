@@ -6,7 +6,6 @@ Installation
 ------------
 Recommened way is to install the library using composer and private Careix composer channel:
 ```bash
-$ composer config repositories.carerix composer https://composer.carerix.com
 $ composer require carerx/cxrest-client  
 ```
 
@@ -49,12 +48,12 @@ $employee->apply($params);
 
 Resources
 ---------
-http://res.carerix.com/manual/english/cxfields.htm Carerix Data Models
-http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest - RESTful API description
-http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest_api_methods - Detailed description of the methods provided by Carerix RESTful API
-http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest_api_client - Detailed description and examples for this Client Library 
-http://development.wiki.carerix.com/cxwiki/doku.php?id=xml - all developers, examples of XML packages that can be used with Carerix RESTful API
-https://groups.google.com/forum/#!forum/carerix-rest-api - Carerix RESTful API Google Group - see if your question had already been answered. If not post your question and get an answer.
+* http://res.carerix.com/manual/english/cxfields.htm Carerix Data Models
+* http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest - RESTful API description
+* http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest_api_methods - Detailed description of the methods provided by Carerix RESTful API
+* http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest_api_client - Detailed description and examples for this Client Library 
+* http://development.wiki.carerix.com/cxwiki/doku.php?id=xml - all developers, examples of XML packages that can be used with Carerix RESTful API
+* https://groups.google.com/forum/#!forum/carerix-rest-api - Carerix RESTful API Google Group - see if your question had already been answered. If not post your question and get an answer.
 
 To access these resources you'll have to apply a partner developer account.  
 
