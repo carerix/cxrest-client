@@ -6,7 +6,7 @@ Installation
 ------------
 Recommened way is to install the library using composer and private Careix composer channel:
 ```bash
-$ composer require carerx/cxrest-client  
+$ composer require carerix/cxrest-client  
 ```
 
 Basic usage

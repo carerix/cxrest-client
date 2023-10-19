@@ -2,7 +2,7 @@
   "name": "carerix/cxrest-client",
   "type": "library",
   "minimum-stability": "stable",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "license": "MIT",
   "require": {
     "ext-curl": "*",
