@@ -10,7 +10,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:31 +0000
+ * @version Wed, 11 Oct 2023 08:58:00 +0000
  * @method AbstractCRToDoUser setProcessDate() setProcessDate(string $value)
  * @method string getProcessDate getProcessDate()
  * @method AbstractCRToDoUser setIsActive() setIsActive(integer $value)
@@ -36,7 +36,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRToDoUser';
+    public const ENTITY = 'CRToDoUser';
 
     /**
      * @cx_field true
@@ -45,7 +45,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $processDate;
+    public $processDate = null;
 
     /**
      * @cx_field true
@@ -56,7 +56,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -65,7 +65,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -76,7 +76,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -85,7 +85,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -96,7 +96,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $emailAddressKey;
+    public $emailAddressKey = null;
 
     /**
      * @cx_field true
@@ -109,7 +109,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @name toUser
      * @inverseName toDoUsers
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -122,7 +122,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @name toToDo
      * @inverseName toDoUsers
      */
-    public $toToDo;
+    public $toToDo = null;
 
     /**
      * @cx_field true
@@ -135,7 +135,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @name toEmployee
      * @inverseName toDoUsers
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -149,7 +149,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Deelnemer-status
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -161,7 +161,7 @@ abstract class AbstractCRToDoUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toRoleNode
      */
-    public $toRoleNode;
+    public $toRoleNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

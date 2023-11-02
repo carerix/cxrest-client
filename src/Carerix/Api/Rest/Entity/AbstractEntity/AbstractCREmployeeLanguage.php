@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:26 +0000
+ * @version Wed, 11 Oct 2023 08:57:54 +0000
  * @method AbstractCREmployeeLanguage setEmployeeLanguageID() setEmployeeLanguageID(integer $value)
  * @method integer getEmployeeLanguageID getEmployeeLanguageID()
  * @method AbstractCREmployeeLanguage setCreationDate() setCreationDate(string $value)
@@ -30,7 +30,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
  */
 abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CREmployeeLanguage';
+    public const ENTITY = 'CREmployeeLanguage';
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $employeeLanguageID;
+    public $employeeLanguageID = null;
 
     /**
      * @cx_field true
@@ -50,7 +50,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -61,7 +61,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -70,7 +70,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -82,7 +82,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmployee
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -96,7 +96,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Taalvaardigheid
      */
-    public $toLanguageSpeakLevel;
+    public $toLanguageSpeakLevel = null;
 
     /**
      * @cx_field true
@@ -110,7 +110,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Taalvaardigheid
      */
-    public $toLanguageReadLevel;
+    public $toLanguageReadLevel = null;
 
     /**
      * @cx_field true
@@ -124,7 +124,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Taalvaardigheid
      */
-    public $toLanguageWriteLevel;
+    public $toLanguageWriteLevel = null;
 
     /**
      * @cx_field true
@@ -138,7 +138,7 @@ abstract class AbstractCREmployeeLanguage extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Taal
      */
-    public $toLanguage;
+    public $toLanguage = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

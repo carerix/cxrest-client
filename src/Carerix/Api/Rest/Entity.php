@@ -150,7 +150,7 @@ abstract class Entity implements Serializable
         $origVars = self::getObjectVars($context->snapshot);
         $userVars = self::getObjectVars($context);
 
-        return array_diff_assoc($userVars, $origVars);
+        return Util::getInstance()->array_diff_assoc_recursive($userVars, $origVars);
     }
 
     /**
@@ -261,41 +261,7 @@ abstract class Entity implements Serializable
         }
 
         foreach ($vars as $k => $v) {
-            // don't include empty vars into XML document
-            if ($v === null) {
-                continue;
-            }
-
-            // The NSArray element will be eliminated completely in a future release
-            if ($v instanceof NSArray) {
-                $v->toSimpleXMLElement($sxe->{$k});
-            } elseif ($v instanceof NSDictionary) {
-                $v->toSimpleXMLElement($sxe->{$k});
-            } elseif ($v instanceof Collection) {
-                foreach ($v as $vv) {
-                    if ($vv instanceof Entity) {
-                        $entityName = self::getEntityFromObject($vv);
-                        $this->toSimpleXMLElement($sxe->{$k}->{$entityName}[], $vv, $dirty);
-                    }
-                }
-            } elseif (is_array($v)) {
-                foreach ($v as $kk => $vv) {
-                    if (is_array($vv)) {
-                        foreach ($vv as $kkk => $vvv) {
-                            $sxe->{$k}->{$kk}->{$kkk} = $vvv;
-                        }
-                    } else {
-                        $sxe->{$k} = $vv;
-                    }
-                }
-            } else {
-                if ($v instanceof Entity) {
-                    $entityName = self::getEntityFromObject($v);
-                    $this->toSimpleXMLElement($sxe->{$k}->{$entityName}, $v, $dirty);
-                } else {
-                    $sxe->{$k} = $v;
-                }
-            }
+            Util::getInstance()->xmlFactory($v, $sxe, $k, $dirty);
         }
 
         // support for transient.* attributes

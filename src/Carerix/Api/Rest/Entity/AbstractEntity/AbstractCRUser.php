@@ -20,6 +20,7 @@ use Carerix\Api\Rest\Entity\CRToDoUser;
 use Carerix\Api\Rest\Entity\CRUrl;
 use Carerix\Api\Rest\Entity\CRUser;
 use Carerix\Api\Rest\Entity\CRUserCompany;
+use Carerix\Api\Rest\Entity\CRUserHash;
 use Carerix\Api\Rest\Entity\CRUserRole;
 use Carerix\Api\Rest\Entity\CRUserStatus;
 use Carerix\Api\Rest\Entity\CRVacancy;
@@ -28,7 +29,7 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:32 +0000
+ * @version Wed, 11 Oct 2023 08:58:01 +0000
  * @method AbstractCRUser setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRUser setCreationDate() setCreationDate(string $value)
@@ -243,6 +244,14 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method string getHashKey getHashKey()
  * @method AbstractCRUser setHashDate() setHashDate(string $value)
  * @method string getHashDate getHashDate()
+ * @method AbstractCRUser setTrackingModificationDate() setTrackingModificationDate(string $value)
+ * @method string getTrackingModificationDate getTrackingModificationDate()
+ * @method AbstractCRUser setIntercomUserHash() setIntercomUserHash(string $value)
+ * @method string getIntercomUserHash getIntercomUserHash()
+ * @method AbstractCRUser setIamUser() setIamUser(string $value)
+ * @method string getIamUser getIamUser()
+ * @method AbstractCRUser setUserRoleType() setUserRoleType(string $value)
+ * @method string getUserRoleType getUserRoleType()
  * @method AbstractCRUser setVacancies() setVacancies(array|Collection $values)
  * @method Collection|CRVacancy getVacancies getVacancies()
  * @method AbstractCRUser setClients() setClients(array|Collection $values)
@@ -329,10 +338,12 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method Collection|CROpportunityUser getUserOpportunities getUserOpportunities()
  * @method AbstractCRUser setTalentPoolUsers() setTalentPoolUsers(array|Collection $values)
  * @method Collection|CRTalentPoolUser getTalentPoolUsers getTalentPoolUsers()
+ * @method AbstractCRUser setUserHashes() setUserHashes(array|Collection $values)
+ * @method Collection|CRUserHash getUserHashes getUserHashes()
  */
 abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRUser';
+    public const ENTITY = 'CRUser';
 
     /**
      * @cx_field true
@@ -341,7 +352,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -350,7 +361,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -360,7 +371,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $firstName;
+    public $firstName = null;
 
     /**
      * @cx_field true
@@ -370,7 +381,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 12
      */
-    public $initials;
+    public $initials = null;
 
     /**
      * @cx_field true
@@ -380,7 +391,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $lastName;
+    public $lastName = null;
 
     /**
      * @cx_field true
@@ -390,7 +401,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 200
      */
-    public $password;
+    public $password = null;
 
     /**
      * @cx_field true
@@ -400,7 +411,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 200
      */
-    public $userName;
+    public $userName = null;
 
     /**
      * @cx_field true
@@ -411,7 +422,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $wantsCookie;
+    public $wantsCookie = null;
 
     /**
      * @cx_field true
@@ -422,7 +433,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $userID;
+    public $userID = null;
 
     /**
      * @cx_field true
@@ -432,7 +443,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $lastNamePrefix;
+    public $lastNamePrefix = null;
 
     /**
      * @cx_field true
@@ -442,7 +453,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $city;
+    public $city = null;
 
     /**
      * @cx_field true
@@ -453,7 +464,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -462,7 +473,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $birthDate;
+    public $birthDate = null;
 
     /**
      * @cx_field true
@@ -472,7 +483,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $houseNumber;
+    public $houseNumber = null;
 
     /**
      * @cx_field true
@@ -482,7 +493,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 200
      */
-    public $jobTitle;
+    public $jobTitle = null;
 
     /**
      * @cx_field true
@@ -492,7 +503,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $postalCode;
+    public $postalCode = null;
 
     /**
      * @cx_field true
@@ -502,7 +513,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $street;
+    public $street = null;
 
     /**
      * @cx_field true
@@ -513,7 +524,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $isNewUser;
+    public $isNewUser = null;
 
     /**
      * @cx_field true
@@ -523,7 +534,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $abbreviation;
+    public $abbreviation = null;
 
     /**
      * @cx_field true
@@ -534,7 +545,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -544,7 +555,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $houseNumberSuffix;
+    public $houseNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -554,7 +565,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 32
      */
-    public $suffix;
+    public $suffix = null;
 
     /**
      * @cx_field true
@@ -564,7 +575,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $fullAddress;
+    public $fullAddress = null;
 
     /**
      * @cx_field true
@@ -575,7 +586,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $exportID;
+    public $exportID = null;
 
     /**
      * @cx_field true
@@ -585,7 +596,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $visitCity;
+    public $visitCity = null;
 
     /**
      * @cx_field true
@@ -595,7 +606,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $visitNumber;
+    public $visitNumber = null;
 
     /**
      * @cx_field true
@@ -605,7 +616,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $visitPostalCode;
+    public $visitPostalCode = null;
 
     /**
      * @cx_field true
@@ -615,7 +626,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $visitStreet;
+    public $visitStreet = null;
 
     /**
      * @cx_field true
@@ -625,7 +636,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $visitFullAddress;
+    public $visitFullAddress = null;
 
     /**
      * @cx_field true
@@ -635,7 +646,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $visitNumberSuffix;
+    public $visitNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -645,7 +656,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $sourceInfo;
+    public $sourceInfo = null;
 
     /**
      * @cx_field true
@@ -656,7 +667,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isLoginBlocked;
+    public $isLoginBlocked = null;
 
     /**
      * @cx_field true
@@ -667,7 +678,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $forwardEmail;
+    public $forwardEmail = null;
 
     /**
      * @cx_field true
@@ -677,7 +688,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $externalIdentifier;
+    public $externalIdentifier = null;
 
     /**
      * @cx_field true
@@ -688,7 +699,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $trialPeriodAmount;
+    public $trialPeriodAmount = null;
 
     /**
      * @cx_field true
@@ -698,7 +709,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $conditionsInformation;
+    public $conditionsInformation = null;
 
     /**
      * @cx_field true
@@ -708,7 +719,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $faxNumber;
+    public $faxNumber = null;
 
     /**
      * @cx_field true
@@ -718,7 +729,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $faxNumberBusiness;
+    public $faxNumberBusiness = null;
 
     /**
      * @cx_field true
@@ -728,7 +739,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $internalAddress;
+    public $internalAddress = null;
 
     /**
      * @cx_field true
@@ -737,7 +748,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $lastContactDate;
+    public $lastContactDate = null;
 
     /**
      * @cx_field true
@@ -747,7 +758,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $mobileNumber;
+    public $mobileNumber = null;
 
     /**
      * @cx_field true
@@ -757,7 +768,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $mobileNumberBusiness;
+    public $mobileNumberBusiness = null;
 
     /**
      * @cx_field true
@@ -767,7 +778,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $organisationInformation;
+    public $organisationInformation = null;
 
     /**
      * @cx_field true
@@ -777,7 +788,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $phoneNumber;
+    public $phoneNumber = null;
 
     /**
      * @cx_field true
@@ -787,7 +798,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $phoneNumberBusiness;
+    public $phoneNumberBusiness = null;
 
     /**
      * @cx_field true
@@ -797,7 +808,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 32
      */
-    public $title;
+    public $title = null;
 
     /**
      * @cx_field true
@@ -807,7 +818,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $userInformation;
+    public $userInformation = null;
 
     /**
      * @cx_field true
@@ -818,7 +829,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isTokenWorkActive;
+    public $isTokenWorkActive = null;
 
     /**
      * @cx_field true
@@ -828,7 +839,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $tokenWork;
+    public $tokenWork = null;
 
     /**
      * @cx_field true
@@ -837,7 +848,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $tokenWorkValidUntilDate;
+    public $tokenWorkValidUntilDate = null;
 
     /**
      * @cx_field true
@@ -847,7 +858,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $tokenHome;
+    public $tokenHome = null;
 
     /**
      * @cx_field true
@@ -858,7 +869,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isTokenHomeActive;
+    public $isTokenHomeActive = null;
 
     /**
      * @cx_field true
@@ -867,7 +878,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $tokenHomeValidUntilDate;
+    public $tokenHomeValidUntilDate = null;
 
     /**
      * @cx_field true
@@ -877,7 +888,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $tokenRoad;
+    public $tokenRoad = null;
 
     /**
      * @cx_field true
@@ -888,7 +899,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isTokenRoadActive;
+    public $isTokenRoadActive = null;
 
     /**
      * @cx_field true
@@ -898,7 +909,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $tokenEmailAddress;
+    public $tokenEmailAddress = null;
 
     /**
      * @cx_field true
@@ -909,7 +920,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isTbaActive;
+    public $isTbaActive = null;
 
     /**
      * @cx_field true
@@ -918,7 +929,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $passwordValidUntilDate;
+    public $passwordValidUntilDate = null;
 
     /**
      * @cx_field true
@@ -927,7 +938,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $outOfOfficeDate;
+    public $outOfOfficeDate = null;
 
     /**
      * @cx_field true
@@ -937,7 +948,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $mailboxURLString;
+    public $mailboxURLString = null;
 
     /**
      * @cx_field true
@@ -946,7 +957,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $mailboxDate;
+    public $mailboxDate = null;
 
     /**
      * @cx_field true
@@ -957,7 +968,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $mailboxFlags;
+    public $mailboxFlags = null;
 
     /**
      * @cx_field true
@@ -967,7 +978,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $outOfOfficeText;
+    public $outOfOfficeText = null;
 
     /**
      * @cx_field true
@@ -977,7 +988,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $timeZoneName;
+    public $timeZoneName = null;
 
     /**
      * @cx_field true
@@ -988,7 +999,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -998,7 +1009,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $homeCity;
+    public $homeCity = null;
 
     /**
      * @cx_field true
@@ -1008,7 +1019,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $homeFullAddress;
+    public $homeFullAddress = null;
 
     /**
      * @cx_field true
@@ -1018,7 +1029,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $homeNumber;
+    public $homeNumber = null;
 
     /**
      * @cx_field true
@@ -1028,7 +1039,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $homeNumberSuffix;
+    public $homeNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -1038,7 +1049,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $homePostalCode;
+    public $homePostalCode = null;
 
     /**
      * @cx_field true
@@ -1048,7 +1059,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $homeStreet;
+    public $homeStreet = null;
 
     /**
      * @cx_field true
@@ -1058,7 +1069,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $alternativeCity;
+    public $alternativeCity = null;
 
     /**
      * @cx_field true
@@ -1068,7 +1079,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $alternativeFullAddress;
+    public $alternativeFullAddress = null;
 
     /**
      * @cx_field true
@@ -1078,7 +1089,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $alternativeNumber;
+    public $alternativeNumber = null;
 
     /**
      * @cx_field true
@@ -1088,7 +1099,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $alternativeNumberSuffix;
+    public $alternativeNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -1098,7 +1109,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $alternativePostalCode;
+    public $alternativePostalCode = null;
 
     /**
      * @cx_field true
@@ -1108,7 +1119,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $alternativeStreet;
+    public $alternativeStreet = null;
 
     /**
      * @cx_field true
@@ -1119,7 +1130,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isEmailInConfidential;
+    public $isEmailInConfidential = null;
 
     /**
      * @cx_field true
@@ -1128,7 +1139,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $mailboxSettings;
+    public $mailboxSettings = null;
 
     /**
      * @cx_field true
@@ -1138,7 +1149,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $url;
+    public $url = null;
 
     /**
      * @cx_field true
@@ -1149,7 +1160,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isEmailOutConfidential;
+    public $isEmailOutConfidential = null;
 
     /**
      * @cx_field true
@@ -1159,7 +1170,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $fullFirstNames;
+    public $fullFirstNames = null;
 
     /**
      * @cx_field true
@@ -1168,7 +1179,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $userBonuses;
+    public $userBonuses = null;
 
     /**
      * @cx_field true
@@ -1178,7 +1189,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $sofiNumber;
+    public $sofiNumber = null;
 
     /**
      * @cx_field true
@@ -1187,7 +1198,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $goals;
+    public $goals = null;
 
     /**
      * @cx_field true
@@ -1197,7 +1208,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $promoText;
+    public $promoText = null;
 
     /**
      * @cx_field true
@@ -1206,7 +1217,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $state;
+    public $state = null;
 
     /**
      * @cx_field true
@@ -1215,7 +1226,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 0
      */
-    public $additionalInfo;
+    public $additionalInfo = null;
 
     /**
      * @cx_field true
@@ -1224,7 +1235,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 0
      */
-    public $additionalInfoPartial;
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true
@@ -1234,7 +1245,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 200
      */
-    public $passwordHash;
+    public $passwordHash = null;
 
     /**
      * @cx_field true
@@ -1245,7 +1256,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $previewDelay;
+    public $previewDelay = null;
 
     /**
      * @cx_field true
@@ -1255,7 +1266,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 32
      */
-    public $encryptedPassword;
+    public $encryptedPassword = null;
 
     /**
      * @cx_field true
@@ -1266,7 +1277,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $emailNotificationPopup;
+    public $emailNotificationPopup = null;
 
     /**
      * @cx_field true
@@ -1277,7 +1288,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $visitAddressUseCompanyVisitAddress;
+    public $visitAddressUseCompanyVisitAddress = null;
 
     /**
      * @cx_field true
@@ -1288,7 +1299,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $addressUseCompanyMailingAddress;
+    public $addressUseCompanyMailingAddress = null;
 
     /**
      * @cx_field true
@@ -1299,7 +1310,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $multiRoleUserID;
+    public $multiRoleUserID = null;
 
     /**
      * @cx_field true
@@ -1309,7 +1320,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $roleName;
+    public $roleName = null;
 
     /**
      * @cx_field true
@@ -1319,7 +1330,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 20
      */
-    public $indicationColor;
+    public $indicationColor = null;
 
     /**
      * @cx_field true
@@ -1330,7 +1341,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isMasterUser;
+    public $isMasterUser = null;
 
     /**
      * @cx_field true
@@ -1341,7 +1352,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isOutOfOfficeForward;
+    public $isOutOfOfficeForward = null;
 
     /**
      * @cx_field true
@@ -1351,7 +1362,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $outOfOfficeForwardAddress;
+    public $outOfOfficeForwardAddress = null;
 
     /**
      * @cx_field true
@@ -1360,7 +1371,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $additionalAgenciesIDs;
+    public $additionalAgenciesIDs = null;
 
     /**
      * @cx_field true
@@ -1371,7 +1382,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $loginAttemptCount;
+    public $loginAttemptCount = null;
 
     /**
      * @cx_field true
@@ -1380,7 +1391,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $lastLoginAttemptDate;
+    public $lastLoginAttemptDate = null;
 
     /**
      * @cx_field true
@@ -1389,7 +1400,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $mailboxOAuth2Settings;
+    public $mailboxOAuth2Settings = null;
 
     /**
      * @cx_field true
@@ -1399,7 +1410,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $hashKey;
+    public $hashKey = null;
 
     /**
      * @cx_field true
@@ -1408,7 +1419,47 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $hashDate;
+    public $hashDate = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSCalendarDate
+     * @allows_null 1
+     */
+    public $trackingModificationDate = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 64
+     */
+    public $intercomUserHash = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     * @isUnique 1
+     */
+    public $iamUser = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 25
+     */
+    public $userRoleType = null;
 
     /**
      * @cx_field true
@@ -1420,7 +1471,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name vacancies
      */
-    public $vacancies;
+    public $vacancies = null;
 
     /**
      * @cx_field true
@@ -1432,7 +1483,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name clients
      */
-    public $clients;
+    public $clients = null;
 
     /**
      * @cx_field true
@@ -1444,7 +1495,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name accounts
      */
-    public $accounts;
+    public $accounts = null;
 
     /**
      * @cx_field true
@@ -1456,7 +1507,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -1468,7 +1519,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -1480,7 +1531,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name singleOwner
      */
-    public $singleOwner;
+    public $singleOwner = null;
 
     /**
      * @cx_field true
@@ -1492,7 +1543,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name agency
      */
-    public $agency;
+    public $agency = null;
 
     /**
      * @cx_field true
@@ -1504,7 +1555,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -1518,7 +1569,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toProvinceNode;
+    public $toProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1532,7 +1583,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType ${label}-status
      */
-    public $toSingleStatusNode;
+    public $toSingleStatusNode = null;
 
     /**
      * @cx_field true
@@ -1546,7 +1597,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Contact-functie
      */
-    public $toFunctionNode;
+    public $toFunctionNode = null;
 
     /**
      * @cx_field true
@@ -1560,7 +1611,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Taal
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     /**
      * @cx_field true
@@ -1574,7 +1625,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Product
      */
-    public $toProductNode;
+    public $toProductNode = null;
 
     /**
      * @cx_field true
@@ -1588,7 +1639,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Geslacht
      */
-    public $toGenderNode;
+    public $toGenderNode = null;
 
     /**
      * @cx_field true
@@ -1602,7 +1653,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toCountryNode;
+    public $toCountryNode = null;
 
     /**
      * @cx_field true
@@ -1616,7 +1667,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toVisitCountryNode;
+    public $toVisitCountryNode = null;
 
     /**
      * @cx_field true
@@ -1630,7 +1681,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toVisitProvinceNode;
+    public $toVisitProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1644,7 +1695,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Bron-Contactpersoon
      */
-    public $toSourceNode;
+    public $toSourceNode = null;
 
     /**
      * @cx_field true
@@ -1656,7 +1707,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name statuses
      */
-    public $statuses;
+    public $statuses = null;
 
     /**
      * @cx_field true
@@ -1670,7 +1721,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Proeftijd-eenheid
      */
-    public $toTrialPeriodUnitNode;
+    public $toTrialPeriodUnitNode = null;
 
     /**
      * @cx_field true
@@ -1684,7 +1735,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Aanspreekvorm
      */
-    public $toSalutationNode;
+    public $toSalutationNode = null;
 
     /**
      * @cx_field true
@@ -1697,7 +1748,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @name toDoUsers
      * @inverseName toUser
      */
-    public $toDoUsers;
+    public $toDoUsers = null;
 
     /**
      * @cx_field true
@@ -1709,7 +1760,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name employees
      */
-    public $employees;
+    public $employees = null;
 
     /**
      * @cx_field true
@@ -1721,7 +1772,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name groupNodes
      */
-    public $groupNodes;
+    public $groupNodes = null;
 
     /**
      * @cx_field true
@@ -1733,7 +1784,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -1745,7 +1796,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name emailAddresses
      */
-    public $emailAddresses;
+    public $emailAddresses = null;
 
     /**
      * @cx_field true
@@ -1757,7 +1808,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUserRole
      */
-    public $toUserRole;
+    public $toUserRole = null;
 
     /**
      * @cx_field true
@@ -1769,7 +1820,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name userCompanies
      */
-    public $userCompanies;
+    public $userCompanies = null;
 
     /**
      * @cx_field true
@@ -1783,7 +1834,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType SMTP-server
      */
-    public $toSmtpServerNode;
+    public $toSmtpServerNode = null;
 
     /**
      * @cx_field true
@@ -1795,7 +1846,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSupplier
      */
-    public $toSupplier;
+    public $toSupplier = null;
 
     /**
      * @cx_field true
@@ -1809,7 +1860,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toHomeCountryNode;
+    public $toHomeCountryNode = null;
 
     /**
      * @cx_field true
@@ -1823,7 +1874,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toHomeProvinceNode;
+    public $toHomeProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1837,7 +1888,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toAlternativeCountryNode;
+    public $toAlternativeCountryNode = null;
 
     /**
      * @cx_field true
@@ -1851,7 +1902,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toAlternativeProvinceNode;
+    public $toAlternativeProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1863,7 +1914,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name urls
      */
-    public $urls;
+    public $urls = null;
 
     /**
      * @cx_field true
@@ -1875,7 +1926,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attributeChanges
      */
-    public $attributeChanges;
+    public $attributeChanges = null;
 
     /**
      * @cx_field true
@@ -1887,7 +1938,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfigProfile
      */
-    public $toConfigProfile;
+    public $toConfigProfile = null;
 
     /**
      * @cx_field true
@@ -1899,7 +1950,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toMultiRoleUser
      */
-    public $toMultiRoleUser;
+    public $toMultiRoleUser = null;
 
     /**
      * @cx_field true
@@ -1911,7 +1962,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name additionalRoles
      */
-    public $additionalRoles;
+    public $additionalRoles = null;
 
     /**
      * @cx_field true
@@ -1923,7 +1974,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name userLeads
      */
-    public $userLeads;
+    public $userLeads = null;
 
     /**
      * @cx_field true
@@ -1935,7 +1986,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name userVacancies
      */
-    public $userVacancies;
+    public $userVacancies = null;
 
     /**
      * @cx_field true
@@ -1947,7 +1998,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name userOpportunities
      */
-    public $userOpportunities;
+    public $userOpportunities = null;
 
     /**
      * @cx_field true
@@ -1959,7 +2010,19 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name talentPoolUsers
      */
-    public $talentPoolUsers;
+    public $talentPoolUsers = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var Collection
+     * @OneToMany (targetEntity="CRUserHash")
+     * @mandatory 0
+     * @destination_entity CRUserHash
+     * @to_many 1
+     * @name userHashes
+     */
+    public $userHashes = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

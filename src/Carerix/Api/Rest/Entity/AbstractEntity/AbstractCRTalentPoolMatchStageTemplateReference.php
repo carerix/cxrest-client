@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:39 +0000
+ * @version Wed, 11 Oct 2023 08:58:06 +0000
  * @method AbstractCRTalentPoolMatchStageTemplateReference setImportID() setImportID(string $value)
  * @method string getImportID getImportID()
  * @method AbstractCRTalentPoolMatchStageTemplateReference setToTalentPoolMatchStage() setToTalentPoolMatchStage(array|CRTalentPoolMatchStage $value)
@@ -18,7 +18,7 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
  */
 abstract class AbstractCRTalentPoolMatchStageTemplateReference extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRTalentPoolMatchStageTemplateReference';
+    public const ENTITY = 'CRTalentPoolMatchStageTemplateReference';
 
     /**
      * @cx_field true
@@ -29,7 +29,7 @@ abstract class AbstractCRTalentPoolMatchStageTemplateReference extends \Carerix\
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCRTalentPoolMatchStageTemplateReference extends \Carerix\
      * @to_many 0
      * @name toTalentPoolMatchStage
      */
-    public $toTalentPoolMatchStage;
+    public $toTalentPoolMatchStage = null;
 
     /**
      * @cx_field true
@@ -53,7 +53,7 @@ abstract class AbstractCRTalentPoolMatchStageTemplateReference extends \Carerix\
      * @to_many 0
      * @name toTemplateReference
      */
-    public $toTemplateReference;
+    public $toTemplateReference = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

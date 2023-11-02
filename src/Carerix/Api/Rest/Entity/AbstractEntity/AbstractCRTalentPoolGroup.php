@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRTalentPool;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:37 +0000
+ * @version Wed, 11 Oct 2023 08:58:04 +0000
  * @method AbstractCRTalentPoolGroup setImportID() setImportID(string $value)
  * @method string getImportID getImportID()
  * @method AbstractCRTalentPoolGroup setToGroupNode() setToGroupNode(array|CRDataNode $value)
@@ -18,7 +18,7 @@ use Carerix\Api\Rest\Entity\CRTalentPool;
  */
 abstract class AbstractCRTalentPoolGroup extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRTalentPoolGroup';
+    public const ENTITY = 'CRTalentPoolGroup';
 
     /**
      * @cx_field true
@@ -29,7 +29,7 @@ abstract class AbstractCRTalentPoolGroup extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCRTalentPoolGroup extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toGroupNode
      */
-    public $toGroupNode;
+    public $toGroupNode = null;
 
     /**
      * @cx_field true
@@ -53,7 +53,7 @@ abstract class AbstractCRTalentPoolGroup extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toTalentPool
      */
-    public $toTalentPool;
+    public $toTalentPool = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

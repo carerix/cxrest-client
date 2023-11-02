@@ -38,7 +38,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:31 +0000
+ * @version Wed, 11 Oct 2023 08:57:59 +0000
  * @method AbstractCRToDo setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRToDo setModificationDate() setModificationDate(string $value)
@@ -119,6 +119,8 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
  * @method string getMonthString getMonthString()
  * @method AbstractCRToDo setIsTemplateVisible() setIsTemplateVisible(integer $value)
  * @method integer getIsTemplateVisible getIsTemplateVisible()
+ * @method AbstractCRToDo setConfidentialIamRole() setConfidentialIamRole(string $value)
+ * @method string getConfidentialIamRole getConfidentialIamRole()
  * @method AbstractCRToDo setCreatedBy() setCreatedBy(array|CRUser $value)
  * @method CRUser getCreatedBy getCreatedBy($index = null)
  * @method AbstractCRToDo setModifiedBy() setModifiedBy(array|CRUser $value)
@@ -206,7 +208,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
  */
 abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRToDo';
+    public const ENTITY = 'CRToDo';
 
     /**
      * @cx_field true
@@ -215,49 +217,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
-
-    /**
-     * @cx_field true
-     * @access private
-     * @var string
-     * @value_class NSCalendarDate
-     * @allows_null 1
-     */
-    public $modificationDate;
-
-    /**
-     * @cx_field true
-     * @access private
-     * @var integer
-     * @value_class NSNumber
-     * @allows_null 0
-     * @value_type s
-     * @value_type_human short integer (16 bits)
-     */
-    public $deleted;
-
-    /**
-     * @cx_field true
-     * @access private
-     * @var integer
-     * @value_class NSNumber
-     * @allows_null 0
-     * @value_type s
-     * @value_type_human short integer (16 bits)
-     */
-    public $status;
-
-    /**
-     * @cx_field true
-     * @access private
-     * @var integer
-     * @value_class NSNumber
-     * @allows_null 0
-     * @value_type s
-     * @value_type_human short integer (16 bits)
-     */
-    public $todoTypeKey;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -266,7 +226,49 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $deadline;
+    public $modificationDate = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $deleted = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $status = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $todoTypeKey = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSCalendarDate
+     * @allows_null 1
+     */
+    public $deadline = null;
 
     /**
      * @cx_field true
@@ -276,7 +278,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $subject;
+    public $subject = null;
 
     /**
      * @cx_field true
@@ -287,7 +289,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $todoID;
+    public $todoID = null;
 
     /**
      * @cx_field true
@@ -298,7 +300,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -307,7 +309,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $endTime;
+    public $endTime = null;
 
     /**
      * @cx_field true
@@ -318,7 +320,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $reminderMinutes;
+    public $reminderMinutes = null;
 
     /**
      * @cx_field true
@@ -329,7 +331,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $repeatRate;
+    public $repeatRate = null;
 
     /**
      * @cx_field true
@@ -339,7 +341,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $fromObjectKeyPath;
+    public $fromObjectKeyPath = null;
 
     /**
      * @cx_field true
@@ -349,7 +351,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $toObjectKeyPath;
+    public $toObjectKeyPath = null;
 
     /**
      * @cx_field true
@@ -359,7 +361,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $uniqueID;
+    public $uniqueID = null;
 
     /**
      * @cx_field true
@@ -369,7 +371,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1024
      */
-    public $location;
+    public $location = null;
 
     /**
      * @cx_field true
@@ -379,7 +381,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10000
      */
-    public $attendees;
+    public $attendees = null;
 
     /**
      * @cx_field true
@@ -389,7 +391,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $toAddress;
+    public $toAddress = null;
 
     /**
      * @cx_field true
@@ -399,7 +401,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $ccAddress;
+    public $ccAddress = null;
 
     /**
      * @cx_field true
@@ -409,7 +411,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $fromAddress;
+    public $fromAddress = null;
 
     /**
      * @cx_field true
@@ -419,7 +421,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $ownerKeyPath;
+    public $ownerKeyPath = null;
 
     /**
      * @cx_field true
@@ -430,7 +432,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isHTML;
+    public $isHTML = null;
 
     /**
      * @cx_field true
@@ -440,7 +442,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $bccAddress;
+    public $bccAddress = null;
 
     /**
      * @cx_field true
@@ -449,7 +451,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $expiryDate;
+    public $expiryDate = null;
 
     /**
      * @cx_field true
@@ -460,7 +462,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $priority;
+    public $priority = null;
 
     /**
      * @cx_field true
@@ -469,7 +471,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $reminderDate;
+    public $reminderDate = null;
 
     /**
      * @cx_field true
@@ -479,7 +481,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $replyToAddress;
+    public $replyToAddress = null;
 
     /**
      * @cx_field true
@@ -490,7 +492,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $recurrence;
+    public $recurrence = null;
 
     /**
      * @cx_field true
@@ -501,7 +503,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $attachmentCount;
+    public $attachmentCount = null;
 
     /**
      * @cx_field true
@@ -512,7 +514,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isConfidential;
+    public $isConfidential = null;
 
     /**
      * @cx_field true
@@ -521,7 +523,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $otherRelationships;
+    public $otherRelationships = null;
 
     /**
      * @cx_field true
@@ -532,7 +534,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $remind;
+    public $remind = null;
 
     /**
      * @cx_field true
@@ -541,7 +543,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $otherInfo;
+    public $otherInfo = null;
 
     /**
      * @cx_field true
@@ -552,7 +554,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $hoursRealized;
+    public $hoursRealized = null;
 
     /**
      * @cx_field true
@@ -562,7 +564,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 8
      */
-    public $dateString;
+    public $dateString = null;
 
     /**
      * @cx_field true
@@ -572,7 +574,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $externalIdentifier;
+    public $externalIdentifier = null;
 
     /**
      * @cx_field true
@@ -581,7 +583,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfo;
+    public $additionalInfo = null;
 
     /**
      * @cx_field true
@@ -590,7 +592,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfoPartial;
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true
@@ -600,7 +602,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 6
      */
-    public $monthString;
+    public $monthString = null;
 
     /**
      * @cx_field true
@@ -611,7 +613,17 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isTemplateVisible;
+    public $isTemplateVisible = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 128
+     */
+    public $confidentialIamRole = null;
 
     /**
      * @cx_field true
@@ -623,7 +635,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -635,7 +647,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -647,7 +659,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -660,7 +672,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toCompany
      * @inverseName _todos
      */
-    public $toCompany;
+    public $toCompany = null;
 
     /**
      * @cx_field true
@@ -673,7 +685,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toVacancy
      * @inverseName _todos
      */
-    public $toVacancy;
+    public $toVacancy = null;
 
     /**
      * @cx_field true
@@ -686,7 +698,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toEmployee
      * @inverseName _todos
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -699,7 +711,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toContact
      * @inverseName _todos
      */
-    public $toContact;
+    public $toContact = null;
 
     /**
      * @cx_field true
@@ -711,7 +723,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toStatusInfo
      */
-    public $toStatusInfo;
+    public $toStatusInfo = null;
 
     /**
      * @cx_field true
@@ -723,7 +735,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmailTemplate
      */
-    public $toEmailTemplate;
+    public $toEmailTemplate = null;
 
     /**
      * @cx_field true
@@ -737,7 +749,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType ${label}-type
      */
-    public $toActivityTypeNode;
+    public $toActivityTypeNode = null;
 
     /**
      * @cx_field true
@@ -749,7 +761,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPreviousToDo
      */
-    public $toPreviousToDo;
+    public $toPreviousToDo = null;
 
     /**
      * @cx_field true
@@ -761,7 +773,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toTemplateReference
      */
-    public $toTemplateReference;
+    public $toTemplateReference = null;
 
     /**
      * @cx_field true
@@ -773,7 +785,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toFetchSpecification
      */
-    public $toFetchSpecification;
+    public $toFetchSpecification = null;
 
     /**
      * @cx_field true
@@ -785,7 +797,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPublication
      */
-    public $toPublication;
+    public $toPublication = null;
 
     /**
      * @cx_field true
@@ -798,7 +810,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toJob
      * @inverseName _todos
      */
-    public $toJob;
+    public $toJob = null;
 
     /**
      * @cx_field true
@@ -810,7 +822,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toWeekHourView
      */
-    public $toWeekHourView;
+    public $toWeekHourView = null;
 
     /**
      * @cx_field true
@@ -822,7 +834,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toRecruiter
      */
-    public $toRecruiter;
+    public $toRecruiter = null;
 
     /**
      * @cx_field true
@@ -836,7 +848,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType ${label}-resultaat
      */
-    public $toResultNode;
+    public $toResultNode = null;
 
     /**
      * @cx_field true
@@ -850,7 +862,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType ${label}-status
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -862,7 +874,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toFolderNode
      */
-    public $toFolderNode;
+    public $toFolderNode = null;
 
     /**
      * @cx_field true
@@ -876,7 +888,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Herhalings-eenheid
      */
-    public $toRepeatUnitNode;
+    public $toRepeatUnitNode = null;
 
     /**
      * @cx_field true
@@ -888,7 +900,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toWeekHourJobView
      */
-    public $toWeekHourJobView;
+    public $toWeekHourJobView = null;
 
     /**
      * @cx_field true
@@ -901,7 +913,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toDoUsers
      * @inverseName toToDo
      */
-    public $toDoUsers;
+    public $toDoUsers = null;
 
     /**
      * @cx_field true
@@ -913,7 +925,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name nextToDos
      */
-    public $nextToDos;
+    public $nextToDos = null;
 
     /**
      * @cx_field true
@@ -925,7 +937,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attributeChanges
      */
-    public $attributeChanges;
+    public $attributeChanges = null;
 
     /**
      * @cx_field true
@@ -937,7 +949,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toNotes
      */
-    public $toNotes;
+    public $toNotes = null;
 
     /**
      * @cx_field true
@@ -951,7 +963,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Systeemtaal
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     /**
      * @cx_field true
@@ -963,7 +975,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toInvoice
      */
-    public $toInvoice;
+    public $toInvoice = null;
 
     /**
      * @cx_field true
@@ -975,7 +987,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toInvoiceLine
      */
-    public $toInvoiceLine;
+    public $toInvoiceLine = null;
 
     /**
      * @cx_field true
@@ -987,7 +999,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name editionArticles
      */
-    public $editionArticles;
+    public $editionArticles = null;
 
     /**
      * @cx_field true
@@ -1001,7 +1013,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Product
      */
-    public $toProductNode;
+    public $toProductNode = null;
 
     /**
      * @cx_field true
@@ -1013,7 +1025,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name invoiceLines
      */
-    public $invoiceLines;
+    public $invoiceLines = null;
 
     /**
      * @cx_field true
@@ -1025,7 +1037,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name resources
      */
-    public $resources;
+    public $resources = null;
 
     /**
      * @cx_field true
@@ -1037,7 +1049,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfidentialUserRole
      */
-    public $toConfidentialUserRole;
+    public $toConfidentialUserRole = null;
 
     /**
      * @cx_field true
@@ -1049,7 +1061,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toTransferData
      */
-    public $toTransferData;
+    public $toTransferData = null;
 
     /**
      * @cx_field true
@@ -1061,7 +1073,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -1073,7 +1085,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toObjectImport
      */
-    public $toObjectImport;
+    public $toObjectImport = null;
 
     /**
      * @cx_field true
@@ -1086,7 +1098,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toLead
      * @inverseName _todos
      */
-    public $toLead;
+    public $toLead = null;
 
     /**
      * @cx_field true
@@ -1099,7 +1111,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toOpportunity
      * @inverseName _todos
      */
-    public $toOpportunity;
+    public $toOpportunity = null;
 
     /**
      * @cx_field true
@@ -1111,7 +1123,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toMonthHourView
      */
-    public $toMonthHourView;
+    public $toMonthHourView = null;
 
     /**
      * @cx_field true
@@ -1123,7 +1135,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toMonthHourJobView
      */
-    public $toMonthHourJobView;
+    public $toMonthHourJobView = null;
 
     /**
      * @cx_field true
@@ -1136,7 +1148,7 @@ abstract class AbstractCRToDo extends \Carerix\Api\Rest\Entity
      * @name toTalentPool
      * @inverseName _todos
      */
-    public $toTalentPool;
+    public $toTalentPool = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

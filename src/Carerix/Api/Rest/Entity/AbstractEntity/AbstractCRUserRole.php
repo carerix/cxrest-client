@@ -10,7 +10,7 @@ use Carerix\Api\Rest\Entity\CRUserRoleKey;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:33 +0000
+ * @version Wed, 11 Oct 2023 08:58:01 +0000
  * @method AbstractCRUserRole setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRUserRole setDeleted() setDeleted(integer $value)
@@ -29,6 +29,8 @@ use Carerix\Api\Rest\Entity\CRUserRoleKey;
  * @method integer getIsEditable getIsEditable()
  * @method AbstractCRUserRole setIsMultiRole() setIsMultiRole(integer $value)
  * @method integer getIsMultiRole getIsMultiRole()
+ * @method AbstractCRUserRole setIamRole() setIamRole(string $value)
+ * @method string getIamRole getIamRole()
  * @method AbstractCRUserRole setUserRoleKeys() setUserRoleKeys(array|Collection $values)
  * @method Collection|CRUserRoleKey getUserRoleKeys getUserRoleKeys()
  * @method AbstractCRUserRole setCreatedBy() setCreatedBy(array|CRUser $value)
@@ -42,7 +44,7 @@ use Carerix\Api\Rest\Entity\CRUserRoleKey;
  */
 abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRUserRole';
+    public const ENTITY = 'CRUserRole';
 
     /**
      * @cx_field true
@@ -51,7 +53,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -62,7 +64,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -73,7 +75,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -82,7 +84,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -92,7 +94,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -102,7 +104,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -113,7 +115,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $userRoleID;
+    public $userRoleID = null;
 
     /**
      * @cx_field true
@@ -124,7 +126,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isEditable;
+    public $isEditable = null;
 
     /**
      * @cx_field true
@@ -135,7 +137,18 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isMultiRole;
+    public $isMultiRole = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 128
+     * @isUnique 1
+     */
+    public $iamRole = null;
 
     /**
      * @cx_field true
@@ -147,7 +160,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name userRoleKeys
      */
-    public $userRoleKeys;
+    public $userRoleKeys = null;
 
     /**
      * @cx_field true
@@ -159,7 +172,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -171,7 +184,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -183,7 +196,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -195,7 +208,7 @@ abstract class AbstractCRUserRole extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfigProfile
      */
-    public $toConfigProfile;
+    public $toConfigProfile = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

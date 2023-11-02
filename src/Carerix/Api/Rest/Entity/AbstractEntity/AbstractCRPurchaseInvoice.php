@@ -12,7 +12,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:30 +0000
+ * @version Wed, 11 Oct 2023 08:57:59 +0000
  * @method AbstractCRPurchaseInvoice setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRPurchaseInvoice setDeleted() setDeleted(integer $value)
@@ -58,7 +58,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRPurchaseInvoice';
+    public const ENTITY = 'CRPurchaseInvoice';
 
     /**
      * @cx_field true
@@ -67,7 +67,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -78,7 +78,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -87,7 +87,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -98,7 +98,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $purchaseInvoiceID;
+    public $purchaseInvoiceID = null;
 
     /**
      * @cx_field true
@@ -108,7 +108,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $number;
+    public $number = null;
 
     /**
      * @cx_field true
@@ -117,7 +117,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $date;
+    public $date = null;
 
     /**
      * @cx_field true
@@ -127,7 +127,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $subject;
+    public $subject = null;
 
     /**
      * @cx_field true
@@ -136,7 +136,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $totalInclTax;
+    public $totalInclTax = null;
 
     /**
      * @cx_field true
@@ -146,7 +146,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $customerReference;
+    public $customerReference = null;
 
     /**
      * @cx_field true
@@ -157,7 +157,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -166,7 +166,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $totalExclTax;
+    public $totalExclTax = null;
 
     /**
      * @cx_field true
@@ -176,7 +176,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -190,7 +190,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Inkoopfactuur-status
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -202,7 +202,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -214,7 +214,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -226,7 +226,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -238,7 +238,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -250,7 +250,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name invoiceLines
      */
-    public $invoiceLines;
+    public $invoiceLines = null;
 
     /**
      * @cx_field true
@@ -264,7 +264,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toCurrencyNode;
+    public $toCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -276,7 +276,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSupplier
      */
-    public $toSupplier;
+    public $toSupplier = null;
 
     /**
      * @cx_field true
@@ -288,7 +288,7 @@ abstract class AbstractCRPurchaseInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSupplierContact
      */
-    public $toSupplierContact;
+    public $toSupplierContact = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

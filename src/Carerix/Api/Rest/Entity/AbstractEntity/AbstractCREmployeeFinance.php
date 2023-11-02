@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRFinance;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:26 +0000
+ * @version Wed, 11 Oct 2023 08:57:54 +0000
  * @method AbstractCREmployeeFinance setImportID() setImportID(string $value)
  * @method string getImportID getImportID()
  * @method AbstractCREmployeeFinance setToFinance() setToFinance(array|CRFinance $value)
@@ -18,7 +18,7 @@ use Carerix\Api\Rest\Entity\CRFinance;
  */
 abstract class AbstractCREmployeeFinance extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CREmployeeFinance';
+    public const ENTITY = 'CREmployeeFinance';
 
     /**
      * @cx_field true
@@ -29,7 +29,7 @@ abstract class AbstractCREmployeeFinance extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCREmployeeFinance extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toFinance
      */
-    public $toFinance;
+    public $toFinance = null;
 
     /**
      * @cx_field true
@@ -53,7 +53,7 @@ abstract class AbstractCREmployeeFinance extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmployee
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

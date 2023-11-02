@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:50 +0000
+ * @version Wed, 11 Oct 2023 08:58:13 +0000
  * @method AbstractCRNewsletterSubscriber setIsActive() setIsActive(integer $value)
  * @method integer getIsActive getIsActive()
  * @method AbstractCRNewsletterSubscriber setCreationDate() setCreationDate(string $value)
@@ -27,7 +27,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRNewsletterSubscriber';
+    public const ENTITY = 'CRNewsletterSubscriber';
 
     /**
      * @cx_field true
@@ -38,7 +38,7 @@ abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -47,7 +47,7 @@ abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -56,7 +56,7 @@ abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -66,7 +66,7 @@ abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 16
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -78,7 +78,7 @@ abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmployee
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -90,7 +90,7 @@ abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -102,7 +102,7 @@ abstract class AbstractCRNewsletterSubscriber extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toToDo
      */
-    public $toToDo;
+    public $toToDo = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

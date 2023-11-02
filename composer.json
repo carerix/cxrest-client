@@ -2,14 +2,15 @@
   "name": "carerix/cxrest-client",
   "type": "library",
   "minimum-stability": "stable",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "license": "MIT",
   "require": {
     "ext-curl": "*",
     "ext-json": "*",
     "ext-libxml": "*",
     "ext-simplexml": "*",
-    "guzzlehttp/guzzle": "^7.0"
+    "guzzlehttp/guzzle": "^7.0",
+    "adbario/php-dot-notation": "^3.3"
   },
   "require-dev": {
     "ext-dom": "*",
@@ -20,7 +21,7 @@
     "phpunit/phpunit": "^8.5",
     "nette/php-generator": "^3.4",
     "zf1/zend-console-getopt": "~1.12",
-    "symfony/var-dumper": "^5.2"
+    "symfony/var-dumper": "^6.3"
   },
   "autoload": {
     "psr-4": {

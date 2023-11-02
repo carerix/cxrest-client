@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRTalentPoolMatchStage;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:38 +0000
+ * @version Wed, 11 Oct 2023 08:58:06 +0000
  * @method AbstractCRTalentPoolMatchStageName setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRTalentPoolMatchStageName setName() setName(string $value)
@@ -22,7 +22,7 @@ use Carerix\Api\Rest\Entity\CRTalentPoolMatchStage;
  */
 abstract class AbstractCRTalentPoolMatchStageName extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRTalentPoolMatchStageName';
+    public const ENTITY = 'CRTalentPoolMatchStageName';
 
     /**
      * @cx_field true
@@ -31,7 +31,7 @@ abstract class AbstractCRTalentPoolMatchStageName extends \Carerix\Api\Rest\Enti
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCRTalentPoolMatchStageName extends \Carerix\Api\Rest\Enti
      * @allows_null 1
      * @width 255
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -50,7 +50,7 @@ abstract class AbstractCRTalentPoolMatchStageName extends \Carerix\Api\Rest\Enti
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRTalentPoolMatchStageName extends \Carerix\Api\Rest\Enti
      * @to_many 0
      * @name toLanguageNode
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     /**
      * @cx_field true
@@ -74,7 +74,7 @@ abstract class AbstractCRTalentPoolMatchStageName extends \Carerix\Api\Rest\Enti
      * @to_many 0
      * @name toTalentPoolMatchStage
      */
-    public $toTalentPoolMatchStage;
+    public $toTalentPoolMatchStage = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

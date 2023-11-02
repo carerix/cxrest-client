@@ -11,7 +11,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:21 +0000
+ * @version Wed, 11 Oct 2023 08:57:51 +0000
  * @method AbstractCRArticle setArticleID() setArticleID(integer $value)
  * @method integer getArticleID getArticleID()
  * @method AbstractCRArticle setCreationDate() setCreationDate(string $value)
@@ -45,7 +45,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRArticle';
+    public const ENTITY = 'CRArticle';
 
     /**
      * @cx_field true
@@ -56,7 +56,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $articleID;
+    public $articleID = null;
 
     /**
      * @cx_field true
@@ -65,7 +65,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -76,7 +76,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -87,7 +87,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -96,7 +96,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -106,7 +106,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $content;
+    public $content = null;
 
     /**
      * @cx_field true
@@ -116,7 +116,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $title;
+    public $title = null;
 
     /**
      * @cx_field true
@@ -126,7 +126,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $subTitle;
+    public $subTitle = null;
 
     /**
      * @cx_field true
@@ -137,7 +137,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isVisible;
+    public $isVisible = null;
 
     /**
      * @cx_field true
@@ -149,7 +149,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -161,7 +161,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -173,7 +173,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -185,7 +185,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -197,7 +197,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name editionArticles
      */
-    public $editionArticles;
+    public $editionArticles = null;
 
     /**
      * @cx_field true
@@ -211,7 +211,7 @@ abstract class AbstractCRArticle extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Taal
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

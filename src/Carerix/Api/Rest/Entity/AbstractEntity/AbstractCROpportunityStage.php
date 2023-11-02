@@ -13,7 +13,7 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:40 +0000
+ * @version Wed, 11 Oct 2023 08:58:08 +0000
  * @method AbstractCROpportunityStage setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCROpportunityStage setIsFinal() setIsFinal(integer $value)
@@ -57,7 +57,7 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
  */
 abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CROpportunityStage';
+    public const ENTITY = 'CROpportunityStage';
 
     /**
      * @cx_field true
@@ -66,7 +66,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -77,7 +77,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isFinal;
+    public $isFinal = null;
 
     /**
      * @cx_field true
@@ -87,7 +87,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $code;
+    public $code = null;
 
     /**
      * @cx_field true
@@ -98,7 +98,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $opportunityStageID;
+    public $opportunityStageID = null;
 
     /**
      * @cx_field true
@@ -108,7 +108,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 20
      */
-    public $indicationColor;
+    public $indicationColor = null;
 
     /**
      * @cx_field true
@@ -119,7 +119,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -130,7 +130,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -141,7 +141,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -152,7 +152,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isDefault;
+    public $isDefault = null;
 
     /**
      * @cx_field true
@@ -162,7 +162,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -171,7 +171,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -181,7 +181,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $packageID;
+    public $packageID = null;
 
     /**
      * @cx_field true
@@ -190,7 +190,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $packageConfig;
+    public $packageConfig = null;
 
     /**
      * @cx_field true
@@ -202,7 +202,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name templateReferences
      */
-    public $templateReferences;
+    public $templateReferences = null;
 
     /**
      * @cx_field true
@@ -214,7 +214,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name emailTemplates
      */
-    public $emailTemplates;
+    public $emailTemplates = null;
 
     /**
      * @cx_field true
@@ -226,7 +226,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProcedureNode
      */
-    public $toProcedureNode;
+    public $toProcedureNode = null;
 
     /**
      * @cx_field true
@@ -238,7 +238,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name names
      */
-    public $names;
+    public $names = null;
 
     /**
      * @cx_field true
@@ -250,7 +250,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toOpportunityStageGroupNode
      */
-    public $toOpportunityStageGroupNode;
+    public $toOpportunityStageGroupNode = null;
 
     /**
      * @cx_field true
@@ -262,7 +262,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name children
      */
-    public $children;
+    public $children = null;
 
     /**
      * @cx_field true
@@ -274,7 +274,7 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name parents
      */
-    public $parents;
+    public $parents = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

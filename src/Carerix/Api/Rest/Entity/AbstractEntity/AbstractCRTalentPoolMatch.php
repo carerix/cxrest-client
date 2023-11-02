@@ -14,7 +14,7 @@ use Carerix\Api\Rest\Entity\CRUserRole;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:37 +0000
+ * @version Wed, 11 Oct 2023 08:58:05 +0000
  * @method AbstractCRTalentPoolMatch setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRTalentPoolMatch setModificationDate() setModificationDate(string $value)
@@ -27,6 +27,8 @@ use Carerix\Api\Rest\Entity\CRUserRole;
  * @method string getMotivation getMotivation()
  * @method AbstractCRTalentPoolMatch setIsConfidential() setIsConfidential(integer $value)
  * @method integer getIsConfidential getIsConfidential()
+ * @method AbstractCRTalentPoolMatch setConfidentialIamRole() setConfidentialIamRole(string $value)
+ * @method string getConfidentialIamRole getConfidentialIamRole()
  * @method AbstractCRTalentPoolMatch setToEmployee() setToEmployee(array|CREmployee $value)
  * @method CREmployee getToEmployee getToEmployee($index = null)
  * @method AbstractCRTalentPoolMatch setModifiedBy() setModifiedBy(array|CRUser $value)
@@ -48,7 +50,7 @@ use Carerix\Api\Rest\Entity\CRUserRole;
  */
 abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRTalentPoolMatch';
+    public const ENTITY = 'CRTalentPoolMatch';
 
     /**
      * @cx_field true
@@ -57,7 +59,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -66,7 +68,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -77,7 +79,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -87,7 +89,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -97,7 +99,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $motivation;
+    public $motivation = null;
 
     /**
      * @cx_field true
@@ -108,7 +110,17 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isConfidential;
+    public $isConfidential = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 128
+     */
+    public $confidentialIamRole = null;
 
     /**
      * @cx_field true
@@ -120,7 +132,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmployee
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -132,7 +144,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -144,7 +156,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -156,7 +168,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -168,7 +180,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toTalentPoolMatchStage
      */
-    public $toTalentPoolMatchStage;
+    public $toTalentPoolMatchStage = null;
 
     /**
      * @cx_field true
@@ -180,7 +192,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attributeChanges
      */
-    public $attributeChanges;
+    public $attributeChanges = null;
 
     /**
      * @cx_field true
@@ -192,7 +204,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfidentialUserRole
      */
-    public $toConfidentialUserRole;
+    public $toConfidentialUserRole = null;
 
     /**
      * @cx_field true
@@ -204,7 +216,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toTalentPool
      */
-    public $toTalentPool;
+    public $toTalentPool = null;
 
     /**
      * @cx_field true
@@ -216,7 +228,7 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name groupNodes
      */
-    public $groupNodes;
+    public $groupNodes = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

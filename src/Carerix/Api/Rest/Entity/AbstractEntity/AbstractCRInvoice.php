@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:28 +0000
+ * @version Wed, 11 Oct 2023 08:57:57 +0000
  * @method AbstractCRInvoice setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRInvoice setDeleted() setDeleted(integer $value)
@@ -117,7 +117,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  */
 abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRInvoice';
+    public const ENTITY = 'CRInvoice';
 
     /**
      * @cx_field true
@@ -126,7 +126,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -137,7 +137,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -146,7 +146,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -157,7 +157,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $invoiceID;
+    public $invoiceID = null;
 
     /**
      * @cx_field true
@@ -168,7 +168,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $number;
+    public $number = null;
 
     /**
      * @cx_field true
@@ -177,7 +177,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $date;
+    public $date = null;
 
     /**
      * @cx_field true
@@ -187,7 +187,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $companyName;
+    public $companyName = null;
 
     /**
      * @cx_field true
@@ -197,7 +197,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $attention;
+    public $attention = null;
 
     /**
      * @cx_field true
@@ -207,7 +207,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $address;
+    public $address = null;
 
     /**
      * @cx_field true
@@ -216,7 +216,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $total;
+    public $total = null;
 
     /**
      * @cx_field true
@@ -226,7 +226,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $senderBankAccountName;
+    public $senderBankAccountName = null;
 
     /**
      * @cx_field true
@@ -236,7 +236,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $senderBankAccountNumberOld;
+    public $senderBankAccountNumberOld = null;
 
     /**
      * @cx_field true
@@ -246,7 +246,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $senderBankBicCode;
+    public $senderBankBicCode = null;
 
     /**
      * @cx_field true
@@ -256,7 +256,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $senderBankIbanCode;
+    public $senderBankIbanCode = null;
 
     /**
      * @cx_field true
@@ -266,7 +266,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $senderBankName;
+    public $senderBankName = null;
 
     /**
      * @cx_field true
@@ -276,7 +276,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $senderName;
+    public $senderName = null;
 
     /**
      * @cx_field true
@@ -286,7 +286,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $senderKvkNumber;
+    public $senderKvkNumber = null;
 
     /**
      * @cx_field true
@@ -296,7 +296,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $senderTaxNumber;
+    public $senderTaxNumber = null;
 
     /**
      * @cx_field true
@@ -306,7 +306,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $senderAddress;
+    public $senderAddress = null;
 
     /**
      * @cx_field true
@@ -316,7 +316,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $subject;
+    public $subject = null;
 
     /**
      * @cx_field true
@@ -325,7 +325,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $taxPercentage;
+    public $taxPercentage = null;
 
     /**
      * @cx_field true
@@ -335,7 +335,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $paymentPeriod;
+    public $paymentPeriod = null;
 
     /**
      * @cx_field true
@@ -345,7 +345,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $currency;
+    public $currency = null;
 
     /**
      * @cx_field true
@@ -355,7 +355,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $customerReference;
+    public $customerReference = null;
 
     /**
      * @cx_field true
@@ -366,7 +366,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -377,7 +377,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $credited;
+    public $credited = null;
 
     /**
      * @cx_field true
@@ -386,7 +386,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $purchaseTotal;
+    public $purchaseTotal = null;
 
     /**
      * @cx_field true
@@ -396,7 +396,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $header;
+    public $header = null;
 
     /**
      * @cx_field true
@@ -406,7 +406,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $footer;
+    public $footer = null;
 
     /**
      * @cx_field true
@@ -415,7 +415,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $valueDate;
+    public $valueDate = null;
 
     /**
      * @cx_field true
@@ -425,7 +425,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $senderBankAccountNumber;
+    public $senderBankAccountNumber = null;
 
     /**
      * @cx_field true
@@ -435,7 +435,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $senderKvkCity;
+    public $senderKvkCity = null;
 
     /**
      * @cx_field true
@@ -449,7 +449,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Factuur-status
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -461,7 +461,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -473,7 +473,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -485,7 +485,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name invoiceLines
      */
-    public $invoiceLines;
+    public $invoiceLines = null;
 
     /**
      * @cx_field true
@@ -497,7 +497,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -509,7 +509,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toContact
      */
-    public $toContact;
+    public $toContact = null;
 
     /**
      * @cx_field true
@@ -521,7 +521,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -533,7 +533,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toVacancy
      */
-    public $toVacancy;
+    public $toVacancy = null;
 
     /**
      * @cx_field true
@@ -545,7 +545,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toJob
      */
-    public $toJob;
+    public $toJob = null;
 
     /**
      * @cx_field true
@@ -557,7 +557,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPublication
      */
-    public $toPublication;
+    public $toPublication = null;
 
     /**
      * @cx_field true
@@ -569,7 +569,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name agency
      */
-    public $agency;
+    public $agency = null;
 
     /**
      * @cx_field true
@@ -581,7 +581,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name todos
      */
-    public $todos;
+    public $todos = null;
 
     /**
      * @cx_field true
@@ -593,7 +593,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompany
      */
-    public $toCompany;
+    public $toCompany = null;
 
     /**
      * @cx_field true
@@ -605,7 +605,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attributeChanges
      */
-    public $attributeChanges;
+    public $attributeChanges = null;
 
     /**
      * @cx_field true
@@ -617,7 +617,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCreditInvoice
      */
-    public $toCreditInvoice;
+    public $toCreditInvoice = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

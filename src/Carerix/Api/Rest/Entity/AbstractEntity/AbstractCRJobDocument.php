@@ -10,7 +10,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:28 +0000
+ * @version Wed, 11 Oct 2023 08:57:57 +0000
  * @method AbstractCRJobDocument setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRJobDocument setJobDocumentID() setJobDocumentID(integer $value)
@@ -36,7 +36,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRJobDocument';
+    public const ENTITY = 'CRJobDocument';
 
     /**
      * @cx_field true
@@ -45,7 +45,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -56,7 +56,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $jobDocumentID;
+    public $jobDocumentID = null;
 
     /**
      * @cx_field true
@@ -67,7 +67,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -76,7 +76,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -85,7 +85,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $validUntilDate;
+    public $validUntilDate = null;
 
     /**
      * @cx_field true
@@ -97,7 +97,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -109,7 +109,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -121,7 +121,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -133,7 +133,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toJob
      */
-    public $toJob;
+    public $toJob = null;
 
     /**
      * @cx_field true
@@ -145,7 +145,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toDocumentNode
      */
-    public $toDocumentNode;
+    public $toDocumentNode = null;
 
     /**
      * @cx_field true
@@ -157,7 +157,7 @@ abstract class AbstractCRJobDocument extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toAttachment
      */
-    public $toAttachment;
+    public $toAttachment = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

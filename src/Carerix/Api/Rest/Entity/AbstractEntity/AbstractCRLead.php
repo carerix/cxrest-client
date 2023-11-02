@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:39 +0000
+ * @version Wed, 11 Oct 2023 08:58:06 +0000
  * @method AbstractCRLead setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRLead setCreationDate() setCreationDate(string $value)
@@ -64,6 +64,8 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method NSDictionary|array getAdditionalInfo getAdditionalInfo()
  * @method AbstractCRLead setAdditionalInfoPartial() setAdditionalInfoPartial(NSDictionary|array $value)
  * @method NSDictionary|array getAdditionalInfoPartial getAdditionalInfoPartial()
+ * @method AbstractCRLead setConfidentialIamRole() setConfidentialIamRole(string $value)
+ * @method string getConfidentialIamRole getConfidentialIamRole()
  * @method AbstractCRLead setToUser() setToUser(array|CRUser $value)
  * @method CRUser getToUser getToUser($index = null)
  * @method AbstractCRLead setCreatedBy() setCreatedBy(array|CRUser $value)
@@ -125,7 +127,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  */
 abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRLead';
+    public const ENTITY = 'CRLead';
 
     /**
      * @cx_field true
@@ -134,7 +136,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -143,7 +145,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -154,7 +156,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $leadID;
+    public $leadID = null;
 
     /**
      * @cx_field true
@@ -164,7 +166,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $workPostalCode;
+    public $workPostalCode = null;
 
     /**
      * @cx_field true
@@ -175,7 +177,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -185,7 +187,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 200
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -194,7 +196,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $startDate;
+    public $startDate = null;
 
     /**
      * @cx_field true
@@ -203,7 +205,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $endDate;
+    public $endDate = null;
 
     /**
      * @cx_field true
@@ -213,7 +215,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 45
      */
-    public $leadNo;
+    public $leadNo = null;
 
     /**
      * @cx_field true
@@ -224,7 +226,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -233,7 +235,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $successRatePercentage;
+    public $successRatePercentage = null;
 
     /**
      * @cx_field true
@@ -242,7 +244,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $estimatedAmount;
+    public $estimatedAmount = null;
 
     /**
      * @cx_field true
@@ -252,7 +254,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $workCity;
+    public $workCity = null;
 
     /**
      * @cx_field true
@@ -262,7 +264,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -272,7 +274,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $sourceInfo;
+    public $sourceInfo = null;
 
     /**
      * @cx_field true
@@ -283,7 +285,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $coordX;
+    public $coordX = null;
 
     /**
      * @cx_field true
@@ -294,7 +296,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $coordY;
+    public $coordY = null;
 
     /**
      * @cx_field true
@@ -303,7 +305,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $feePercentage;
+    public $feePercentage = null;
 
     /**
      * @cx_field true
@@ -313,7 +315,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $workLocation;
+    public $workLocation = null;
 
     /**
      * @cx_field true
@@ -324,7 +326,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isConfidential;
+    public $isConfidential = null;
 
     /**
      * @cx_field true
@@ -333,7 +335,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfo;
+    public $additionalInfo = null;
 
     /**
      * @cx_field true
@@ -342,7 +344,17 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfoPartial;
+    public $additionalInfoPartial = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 128
+     */
+    public $confidentialIamRole = null;
 
     /**
      * @cx_field true
@@ -354,7 +366,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -366,7 +378,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -378,7 +390,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -390,7 +402,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -402,7 +414,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -414,7 +426,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProvince1Node
      */
-    public $toProvince1Node;
+    public $toProvince1Node = null;
 
     /**
      * @cx_field true
@@ -426,7 +438,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSignAuthority
      */
-    public $toSignAuthority;
+    public $toSignAuthority = null;
 
     /**
      * @cx_field true
@@ -438,7 +450,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCountry1Node
      */
-    public $toCountry1Node;
+    public $toCountry1Node = null;
 
     /**
      * @cx_field true
@@ -450,7 +462,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEstimatedAmountCurrencyNode
      */
-    public $toEstimatedAmountCurrencyNode;
+    public $toEstimatedAmountCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -462,7 +474,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompany
      */
-    public $toCompany;
+    public $toCompany = null;
 
     /**
      * @cx_field true
@@ -474,7 +486,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSourceNode
      */
-    public $toSourceNode;
+    public $toSourceNode = null;
 
     /**
      * @cx_field true
@@ -486,7 +498,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name broughtInBy
      */
-    public $broughtInBy;
+    public $broughtInBy = null;
 
     /**
      * @cx_field true
@@ -498,7 +510,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attributeChanges
      */
-    public $attributeChanges;
+    public $attributeChanges = null;
 
     /**
      * @cx_field true
@@ -510,7 +522,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCountry2Node
      */
-    public $toCountry2Node;
+    public $toCountry2Node = null;
 
     /**
      * @cx_field true
@@ -522,7 +534,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCountry3Node
      */
-    public $toCountry3Node;
+    public $toCountry3Node = null;
 
     /**
      * @cx_field true
@@ -534,7 +546,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProvince2Node
      */
-    public $toProvince2Node;
+    public $toProvince2Node = null;
 
     /**
      * @cx_field true
@@ -546,7 +558,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProvince3Node
      */
-    public $toProvince3Node;
+    public $toProvince3Node = null;
 
     /**
      * @cx_field true
@@ -558,7 +570,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name groupNodes
      */
-    public $groupNodes;
+    public $groupNodes = null;
 
     /**
      * @cx_field true
@@ -570,7 +582,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCategoryNode
      */
-    public $toCategoryNode;
+    public $toCategoryNode = null;
 
     /**
      * @cx_field true
@@ -582,7 +594,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name leadUsers
      */
-    public $leadUsers;
+    public $leadUsers = null;
 
     /**
      * @cx_field true
@@ -594,7 +606,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfidentialUserRole
      */
-    public $toConfidentialUserRole;
+    public $toConfidentialUserRole = null;
 
     /**
      * @cx_field true
@@ -606,7 +618,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name agency
      */
-    public $agency;
+    public $agency = null;
 
     /**
      * @cx_field true
@@ -618,7 +630,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toBrancheLevel1
      */
-    public $toBrancheLevel1;
+    public $toBrancheLevel1 = null;
 
     /**
      * @cx_field true
@@ -630,7 +642,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toBrancheLevel2
      */
-    public $toBrancheLevel2;
+    public $toBrancheLevel2 = null;
 
     /**
      * @cx_field true
@@ -642,7 +654,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLeadStage
      */
-    public $toLeadStage;
+    public $toLeadStage = null;
 
     /**
      * @cx_field true
@@ -653,8 +665,10 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @destination_entity CRDataNode
      * @to_many 0
      * @name toProcedureNode
+     * @default 1
+     * @nodeType Lead-procedure
      */
-    public $toProcedureNode;
+    public $toProcedureNode = null;
 
     /**
      * @cx_field true
@@ -666,7 +680,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name vacancies
      */
-    public $vacancies;
+    public $vacancies = null;
 
     /**
      * @cx_field true
@@ -678,7 +692,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name opportunities
      */
-    public $opportunities;
+    public $opportunities = null;
 
     /**
      * @cx_field true
@@ -690,7 +704,7 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPriorityNode
      */
-    public $toPriorityNode;
+    public $toPriorityNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

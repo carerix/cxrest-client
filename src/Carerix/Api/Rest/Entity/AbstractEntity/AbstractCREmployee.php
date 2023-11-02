@@ -17,6 +17,7 @@ use Carerix\Api\Rest\Entity\CREmployeeTraining;
 use Carerix\Api\Rest\Entity\CRFinance;
 use Carerix\Api\Rest\Entity\CRJob;
 use Carerix\Api\Rest\Entity\CRMatch;
+use Carerix\Api\Rest\Entity\CRMatchCriteria;
 use Carerix\Api\Rest\Entity\CRMedium;
 use Carerix\Api\Rest\Entity\CRMonthHourView;
 use Carerix\Api\Rest\Entity\CRTalentPoolMatch;
@@ -31,7 +32,7 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 16 Dec 2022 15:06:14 +0200
+ * @version Wed, 11 Oct 2023 08:57:53 +0000
  * @method AbstractCREmployee setMaxDistance() setMaxDistance(integer $value)
  * @method integer getMaxDistance getMaxDistance()
  * @method AbstractCREmployee setMinSalary() setMinSalary(float $value)
@@ -244,16 +245,20 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method string getConsentExpiryDate getConsentExpiryDate()
  * @method AbstractCREmployee setTrackingModificationDate() setTrackingModificationDate(string $value)
  * @method string getTrackingModificationDate getTrackingModificationDate()
- * @method AbstractCREmployee setWorkidCandidateId() setWorkidCandidateId(integer $value)
- * @method integer getWorkidCandidateId getWorkidCandidateId()
- * @method AbstractCREmployee setWorkidPermissionId() setWorkidPermissionId(integer $value)
- * @method integer getWorkidPermissionId getWorkidPermissionId()
+ * @method AbstractCREmployee setWorkidCandidateUuid() setWorkidCandidateUuid(string $value)
+ * @method string getWorkidCandidateUuid getWorkidCandidateUuid()
+ * @method AbstractCREmployee setWorkidPermissionUuid() setWorkidPermissionUuid(string $value)
+ * @method string getWorkidPermissionUuid getWorkidPermissionUuid()
  * @method AbstractCREmployee setWorkidPermissionStatus() setWorkidPermissionStatus(string $value)
  * @method string getWorkidPermissionStatus getWorkidPermissionStatus()
  * @method AbstractCREmployee setWorkidPermissionStartValidityDate() setWorkidPermissionStartValidityDate(string $value)
  * @method string getWorkidPermissionStartValidityDate getWorkidPermissionStartValidityDate()
  * @method AbstractCREmployee setWorkidPermissionEndValidityDate() setWorkidPermissionEndValidityDate(string $value)
  * @method string getWorkidPermissionEndValidityDate getWorkidPermissionEndValidityDate()
+ * @method AbstractCREmployee setConfidentialIamRole() setConfidentialIamRole(string $value)
+ * @method string getConfidentialIamRole getConfidentialIamRole()
+ * @method AbstractCREmployee setMatchCriteriaID() setMatchCriteriaID(integer $value)
+ * @method integer getMatchCriteriaID getMatchCriteriaID()
  * @method AbstractCREmployee setMatches() setMatches(array|Collection $values)
  * @method Collection|CRMatch getMatches getMatches()
  * @method AbstractCREmployee setToUser() setToUser(array|CRUser $value)
@@ -488,6 +493,8 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method CRDataNode getToConsentStageNode getToConsentStageNode($index = null)
  * @method AbstractCREmployee setToConsentPeriodNode() setToConsentPeriodNode(array|CRDataNode $value)
  * @method CRDataNode getToConsentPeriodNode getToConsentPeriodNode($index = null)
+ * @method AbstractCREmployee setToMatchCriteria() setToMatchCriteria(array|CRMatchCriteria $value)
+ * @method CRMatchCriteria getToMatchCriteria getToMatchCriteria($index = null)
  */
 abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
 {
@@ -1524,24 +1531,22 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
     /**
      * @cx_field true
      * @access private
-     * @var integer
-     * @value_class NSNumber
+     * @var string
+     * @value_class NSString
      * @allows_null 1
-     * @value_type i
-     * @value_type_human long integer (32 bits)
+     * @width 1000000
      */
-    public $workidCandidateId = null;
+    public $workidCandidateUuid = null;
 
     /**
      * @cx_field true
      * @access private
-     * @var integer
-     * @value_class NSNumber
+     * @var string
+     * @value_class NSString
      * @allows_null 1
-     * @value_type i
-     * @value_type_human long integer (32 bits)
+     * @width 1000000
      */
-    public $workidPermissionId = null;
+    public $workidPermissionUuid = null;
 
     /**
      * @cx_field true
@@ -1570,6 +1575,27 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      */
     public $workidPermissionEndValidityDate = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 128
+     */
+    public $confidentialIamRole = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 1
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $matchCriteriaID = null;
 
     /**
      * @cx_field true
@@ -3140,6 +3166,18 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @nodeType Consent-period
      */
     public $toConsentPeriodNode = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var CRMatchCriteria
+     * @OneToOne (targetEntity="CRMatchCriteria")
+     * @mandatory 0
+     * @destination_entity CRMatchCriteria
+     * @to_many 0
+     * @name toMatchCriteria
+     */
+    public $toMatchCriteria = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

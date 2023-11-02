@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:34 +0000
+ * @version Wed, 11 Oct 2023 08:58:02 +0000
  * @method AbstractCRVacancyTraining setVacancyTrainingID() setVacancyTrainingID(integer $value)
  * @method integer getVacancyTrainingID getVacancyTrainingID()
  * @method AbstractCRVacancyTraining setCreationDate() setCreationDate(string $value)
@@ -30,7 +30,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  */
 abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRVacancyTraining';
+    public const ENTITY = 'CRVacancyTraining';
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $vacancyTrainingID;
+    public $vacancyTrainingID = null;
 
     /**
      * @cx_field true
@@ -50,7 +50,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -61,7 +61,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -70,7 +70,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -79,7 +79,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $startDate;
+    public $startDate = null;
 
     /**
      * @cx_field true
@@ -88,7 +88,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $endDate;
+    public $endDate = null;
 
     /**
      * @cx_field true
@@ -100,7 +100,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toVacancy
      */
-    public $toVacancy;
+    public $toVacancy = null;
 
     /**
      * @cx_field true
@@ -114,7 +114,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Cursus0
      */
-    public $toTrainingLevel1;
+    public $toTrainingLevel1 = null;
 
     /**
      * @cx_field true
@@ -128,7 +128,7 @@ abstract class AbstractCRVacancyTraining extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Cursus1
      */
-    public $toTrainingLevel2;
+    public $toTrainingLevel2 = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRTalentPoolMatchStage;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:38 +0000
+ * @version Wed, 11 Oct 2023 08:58:05 +0000
  * @method AbstractCRTalentPoolMatchStageEmailTemplate setImportID() setImportID(string $value)
  * @method string getImportID getImportID()
  * @method AbstractCRTalentPoolMatchStageEmailTemplate setToEmailTemplate() setToEmailTemplate(array|CREmailTemplate $value)
@@ -18,7 +18,7 @@ use Carerix\Api\Rest\Entity\CRTalentPoolMatchStage;
  */
 abstract class AbstractCRTalentPoolMatchStageEmailTemplate extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRTalentPoolMatchStageEmailTemplate';
+    public const ENTITY = 'CRTalentPoolMatchStageEmailTemplate';
 
     /**
      * @cx_field true
@@ -29,7 +29,7 @@ abstract class AbstractCRTalentPoolMatchStageEmailTemplate extends \Carerix\Api\
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCRTalentPoolMatchStageEmailTemplate extends \Carerix\Api\
      * @to_many 0
      * @name toEmailTemplate
      */
-    public $toEmailTemplate;
+    public $toEmailTemplate = null;
 
     /**
      * @cx_field true
@@ -53,7 +53,7 @@ abstract class AbstractCRTalentPoolMatchStageEmailTemplate extends \Carerix\Api\
      * @to_many 0
      * @name toTalentPoolMatchStage
      */
-    public $toTalentPoolMatchStage;
+    public $toTalentPoolMatchStage = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

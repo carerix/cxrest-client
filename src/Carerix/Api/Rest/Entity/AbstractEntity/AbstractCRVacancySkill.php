@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:35 +0000
+ * @version Wed, 11 Oct 2023 08:58:02 +0000
  * @method AbstractCRVacancySkill setVacancySkillID() setVacancySkillID(integer $value)
  * @method integer getVacancySkillID getVacancySkillID()
  * @method AbstractCRVacancySkill setCreationDate() setCreationDate(string $value)
@@ -28,7 +28,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  */
 abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRVacancySkill';
+    public const ENTITY = 'CRVacancySkill';
 
     /**
      * @cx_field true
@@ -39,7 +39,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $vacancySkillID;
+    public $vacancySkillID = null;
 
     /**
      * @cx_field true
@@ -48,7 +48,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -59,7 +59,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -68,7 +68,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -80,7 +80,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toVacancy
      */
-    public $toVacancy;
+    public $toVacancy = null;
 
     /**
      * @cx_field true
@@ -92,7 +92,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSkillLevel1
      */
-    public $toSkillLevel1;
+    public $toSkillLevel1 = null;
 
     /**
      * @cx_field true
@@ -104,7 +104,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSkillLevel2
      */
-    public $toSkillLevel2;
+    public $toSkillLevel2 = null;
 
     /**
      * @cx_field true
@@ -116,7 +116,7 @@ abstract class AbstractCRVacancySkill extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSkillLevel3
      */
-    public $toSkillLevel3;
+    public $toSkillLevel3 = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

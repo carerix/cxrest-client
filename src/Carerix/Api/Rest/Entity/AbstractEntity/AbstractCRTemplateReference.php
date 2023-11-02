@@ -14,7 +14,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:32 +0000
+ * @version Wed, 11 Oct 2023 08:58:00 +0000
  * @method AbstractCRTemplateReference setTemplateReferenceID() setTemplateReferenceID(integer $value)
  * @method integer getTemplateReferenceID getTemplateReferenceID()
  * @method AbstractCRTemplateReference setTargetEntityName() setTargetEntityName(string $value)
@@ -77,6 +77,8 @@ use Carerix\Api\Rest\Entity\CRUser;
  * @method string getFileName getFileName()
  * @method AbstractCRTemplateReference setPackageConfig() setPackageConfig(NSDictionary|array $value)
  * @method NSDictionary|array getPackageConfig getPackageConfig()
+ * @method AbstractCRTemplateReference setTemplateLibraryConfig() setTemplateLibraryConfig(NSDictionary|array $value)
+ * @method NSDictionary|array getTemplateLibraryConfig getTemplateLibraryConfig()
  * @method AbstractCRTemplateReference setCreatedBy() setCreatedBy(array|CRUser $value)
  * @method CRUser getCreatedBy getCreatedBy($index = null)
  * @method AbstractCRTemplateReference setModifiedBy() setModifiedBy(array|CRUser $value)
@@ -94,7 +96,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRTemplateReference';
+    public const ENTITY = 'CRTemplateReference';
 
     /**
      * @cx_field true
@@ -105,7 +107,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $templateReferenceID;
+    public $templateReferenceID = null;
 
     /**
      * @cx_field true
@@ -115,7 +117,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $targetEntityName;
+    public $targetEntityName = null;
 
     /**
      * @cx_field true
@@ -125,7 +127,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $url;
+    public $url = null;
 
     /**
      * @cx_field true
@@ -134,7 +136,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -145,7 +147,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -156,7 +158,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -165,7 +167,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -175,7 +177,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -186,7 +188,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isMultiRecord;
+    public $isMultiRecord = null;
 
     /**
      * @cx_field true
@@ -197,7 +199,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -207,7 +209,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 64
      */
-    public $code;
+    public $code = null;
 
     /**
      * @cx_field true
@@ -218,7 +220,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -229,7 +231,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isDefault;
+    public $isDefault = null;
 
     /**
      * @cx_field true
@@ -239,7 +241,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 64
      */
-    public $libraryID;
+    public $libraryID = null;
 
     /**
      * @cx_field true
@@ -249,7 +251,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $userRolesString;
+    public $userRolesString = null;
 
     /**
      * @cx_field true
@@ -260,7 +262,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $showInMenu;
+    public $showInMenu = null;
 
     /**
      * @cx_field true
@@ -270,7 +272,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $languagesString;
+    public $languagesString = null;
 
     /**
      * @cx_field true
@@ -281,7 +283,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isEmbedded;
+    public $isEmbedded = null;
 
     /**
      * @cx_field true
@@ -292,7 +294,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isSystem;
+    public $isSystem = null;
 
     /**
      * @cx_field true
@@ -303,7 +305,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $showInHintsBar;
+    public $showInHintsBar = null;
 
     /**
      * @cx_field true
@@ -314,7 +316,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isPDF;
+    public $isPDF = null;
 
     /**
      * @cx_field true
@@ -324,7 +326,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width
      */
-    public $localizedEntityName;
+    public $localizedEntityName = null;
 
     /**
      * @cx_field true
@@ -333,7 +335,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $config;
+    public $config = null;
 
     /**
      * @cx_field true
@@ -344,7 +346,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $showAsKey;
+    public $showAsKey = null;
 
     /**
      * @cx_field true
@@ -354,7 +356,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 64
      */
-    public $systemCode;
+    public $systemCode = null;
 
     /**
      * @cx_field true
@@ -364,7 +366,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $content;
+    public $content = null;
 
     /**
      * @cx_field true
@@ -375,7 +377,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $templateTypeKey;
+    public $templateTypeKey = null;
 
     /**
      * @cx_field true
@@ -384,7 +386,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $configInfo;
+    public $configInfo = null;
 
     /**
      * @cx_field true
@@ -394,7 +396,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $packageID;
+    public $packageID = null;
 
     /**
      * @cx_field true
@@ -404,7 +406,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $fileName;
+    public $fileName = null;
 
     /**
      * @cx_field true
@@ -413,7 +415,16 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $packageConfig;
+    public $packageConfig = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var NSDictionary|array
+     * @value_class NSDictionary
+     * @allows_null 1
+     */
+    public $templateLibraryConfig = null;
 
     /**
      * @cx_field true
@@ -425,7 +436,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -437,7 +448,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -449,7 +460,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -461,7 +472,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name statusInfos
      */
-    public $statusInfos;
+    public $statusInfos = null;
 
     /**
      * @cx_field true
@@ -473,7 +484,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name leadStages
      */
-    public $leadStages;
+    public $leadStages = null;
 
     /**
      * @cx_field true
@@ -485,7 +496,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name opportunityStages
      */
-    public $opportunityStages;
+    public $opportunityStages = null;
 
     /**
      * @cx_field true
@@ -497,7 +508,7 @@ abstract class AbstractCRTemplateReference extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name talentPoolMatchStages
      */
-    public $talentPoolMatchStages;
+    public $talentPoolMatchStages = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

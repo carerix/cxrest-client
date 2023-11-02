@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRToDo;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:23 +0000
+ * @version Wed, 11 Oct 2023 08:57:53 +0000
  * @method AbstractCREditionArticle setImportID() setImportID(string $value)
  * @method string getImportID getImportID()
  * @method AbstractCREditionArticle setSortOrder() setSortOrder(integer $value)
@@ -22,7 +22,7 @@ use Carerix\Api\Rest\Entity\CRToDo;
  */
 abstract class AbstractCREditionArticle extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CREditionArticle';
+    public const ENTITY = 'CREditionArticle';
 
     /**
      * @cx_field true
@@ -33,7 +33,7 @@ abstract class AbstractCREditionArticle extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -44,7 +44,7 @@ abstract class AbstractCREditionArticle extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -54,7 +54,7 @@ abstract class AbstractCREditionArticle extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $code;
+    public $code = null;
 
     /**
      * @cx_field true
@@ -66,7 +66,7 @@ abstract class AbstractCREditionArticle extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toArticle
      */
-    public $toArticle;
+    public $toArticle = null;
 
     /**
      * @cx_field true
@@ -78,7 +78,7 @@ abstract class AbstractCREditionArticle extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEdition
      */
-    public $toEdition;
+    public $toEdition = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

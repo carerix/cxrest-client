@@ -10,7 +10,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:21 +0000
+ * @version Wed, 11 Oct 2023 08:57:51 +0000
  * @method AbstractCRAttachment setAttachmentID() setAttachmentID(integer $value)
  * @method integer getAttachmentID getAttachmentID()
  * @method AbstractCRAttachment setLabel() setLabel(string $value)
@@ -46,7 +46,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRAttachment';
+    public const ENTITY = 'CRAttachment';
 
     /**
      * @cx_field true
@@ -57,7 +57,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $attachmentID;
+    public $attachmentID = null;
 
     /**
      * @cx_field true
@@ -67,7 +67,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $label;
+    public $label = null;
 
     /**
      * @cx_field true
@@ -78,7 +78,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $valid;
+    public $valid = null;
 
     /**
      * @cx_field true
@@ -88,7 +88,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width
      */
-    public $filePath;
+    public $filePath = null;
 
     /**
      * @cx_field true
@@ -97,7 +97,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -106,7 +106,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -117,7 +117,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -128,7 +128,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_type d
      * @value_type_human
      */
-    public $ranking;
+    public $ranking = null;
 
     /**
      * @cx_field true
@@ -138,7 +138,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $contentID;
+    public $contentID = null;
 
     /**
      * @cx_field true
@@ -147,7 +147,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $metaData;
+    public $metaData = null;
 
     /**
      * @cx_field true
@@ -158,7 +158,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $size;
+    public $size = null;
 
     /**
      * @cx_field true
@@ -169,7 +169,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -183,7 +183,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Document-type
      */
-    public $toTypeNode;
+    public $toTypeNode = null;
 
     /**
      * @cx_field true
@@ -195,7 +195,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toAttachmentData
      */
-    public $toAttachmentData;
+    public $toAttachmentData = null;
 
     /**
      * @cx_field true
@@ -207,7 +207,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -219,7 +219,7 @@ abstract class AbstractCRAttachment extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toStatusNode
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

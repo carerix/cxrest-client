@@ -5,7 +5,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:21 +0000
+ * @version Wed, 11 Oct 2023 08:57:51 +0000
  * @method AbstractCRAttachmentData setContent() setContent(string $value)
  * @method string getContent getContent()
  * @method AbstractCRAttachmentData setContentHash() setContentHash(string $value)
@@ -15,7 +15,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
  */
 abstract class AbstractCRAttachmentData extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRAttachmentData';
+    public const ENTITY = 'CRAttachmentData';
 
     /**
      * @cx_field true
@@ -24,7 +24,7 @@ abstract class AbstractCRAttachmentData extends \Carerix\Api\Rest\Entity
      * @value_class NSData
      * @allows_null 1
      */
-    public $content;
+    public $content = null;
 
     /**
      * @cx_field true
@@ -34,7 +34,7 @@ abstract class AbstractCRAttachmentData extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width 32
      */
-    public $contentHash;
+    public $contentHash = null;
 
     /**
      * @cx_field true
@@ -44,7 +44,7 @@ abstract class AbstractCRAttachmentData extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $contentText;
+    public $contentText = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

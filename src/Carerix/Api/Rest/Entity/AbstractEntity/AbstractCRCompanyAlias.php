@@ -7,7 +7,7 @@ use Carerix\Api\Rest\Entity\CRCompany;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:44 +0000
+ * @version Wed, 11 Oct 2023 08:58:10 +0000
  * @method AbstractCRCompanyAlias setAlias() setAlias(string $value)
  * @method string getAlias getAlias()
  * @method AbstractCRCompanyAlias setCompanyAliasID() setCompanyAliasID(integer $value)
@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRCompany;
  */
 abstract class AbstractCRCompanyAlias extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRCompanyAlias';
+    public const ENTITY = 'CRCompanyAlias';
 
     /**
      * @cx_field true
@@ -29,7 +29,7 @@ abstract class AbstractCRCompanyAlias extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $alias;
+    public $alias = null;
 
     /**
      * @cx_field true
@@ -40,7 +40,7 @@ abstract class AbstractCRCompanyAlias extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $companyAliasID;
+    public $companyAliasID = null;
 
     /**
      * @cx_field true
@@ -51,7 +51,7 @@ abstract class AbstractCRCompanyAlias extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -63,7 +63,7 @@ abstract class AbstractCRCompanyAlias extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompany
      */
-    public $toCompany;
+    public $toCompany = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

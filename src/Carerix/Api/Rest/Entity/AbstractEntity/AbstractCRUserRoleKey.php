@@ -7,7 +7,7 @@ use Carerix\Api\Rest\Entity\CRUserRole;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:33 +0000
+ * @version Wed, 11 Oct 2023 08:58:01 +0000
  * @method AbstractCRUserRoleKey setUserRoleKey() setUserRoleKey(string $value)
  * @method string getUserRoleKey getUserRoleKey()
  * @method AbstractCRUserRoleKey setValue() setValue(string $value)
@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRUserRole;
  */
 abstract class AbstractCRUserRoleKey extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRUserRoleKey';
+    public const ENTITY = 'CRUserRoleKey';
 
     /**
      * @cx_field true
@@ -29,7 +29,7 @@ abstract class AbstractCRUserRoleKey extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $userRoleKey;
+    public $userRoleKey = null;
 
     /**
      * @cx_field true
@@ -39,7 +39,7 @@ abstract class AbstractCRUserRoleKey extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $value;
+    public $value = null;
 
     /**
      * @cx_field true
@@ -50,7 +50,7 @@ abstract class AbstractCRUserRoleKey extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $userRoleID;
+    public $userRoleID = null;
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRUserRoleKey extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUserRole
      */
-    public $toUserRole;
+    public $toUserRole = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

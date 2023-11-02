@@ -14,7 +14,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:29 +0000
+ * @version Wed, 11 Oct 2023 08:57:58 +0000
  * @method AbstractCRMedium setMediumID() setMediumID(integer $value)
  * @method integer getMediumID getMediumID()
  * @method AbstractCRMedium setCreationDate() setCreationDate(string $value)
@@ -88,7 +88,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRMedium';
+    public const ENTITY = 'CRMedium';
 
     /**
      * @cx_field true
@@ -99,7 +99,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $mediumID;
+    public $mediumID = null;
 
     /**
      * @cx_field true
@@ -108,7 +108,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -119,7 +119,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $status;
+    public $status = null;
 
     /**
      * @cx_field true
@@ -128,7 +128,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -139,7 +139,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $active;
+    public $active = null;
 
     /**
      * @cx_field true
@@ -149,7 +149,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width 64
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -160,7 +160,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $mediumTypeKey;
+    public $mediumTypeKey = null;
 
     /**
      * @cx_field true
@@ -170,7 +170,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -180,7 +180,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $costs;
+    public $costs = null;
 
     /**
      * @cx_field true
@@ -191,7 +191,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $autoPublish;
+    public $autoPublish = null;
 
     /**
      * @cx_field true
@@ -202,7 +202,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isHTML;
+    public $isHTML = null;
 
     /**
      * @cx_field true
@@ -212,7 +212,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 80
      */
-    public $subscription;
+    public $subscription = null;
 
     /**
      * @cx_field true
@@ -221,7 +221,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $validUntil;
+    public $validUntil = null;
 
     /**
      * @cx_field true
@@ -231,7 +231,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 15
      */
-    public $agencyNo;
+    public $agencyNo = null;
 
     /**
      * @cx_field true
@@ -241,7 +241,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $code;
+    public $code = null;
 
     /**
      * @cx_field true
@@ -252,7 +252,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -262,7 +262,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $languages;
+    public $languages = null;
 
     /**
      * @cx_field true
@@ -273,7 +273,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $credits;
+    public $credits = null;
 
     /**
      * @cx_field true
@@ -284,7 +284,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isDefault;
+    public $isDefault = null;
 
     /**
      * @cx_field true
@@ -295,7 +295,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $expireTime;
+    public $expireTime = null;
 
     /**
      * @cx_field true
@@ -305,7 +305,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $parserFromAddress;
+    public $parserFromAddress = null;
 
     /**
      * @cx_field true
@@ -314,7 +314,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $jobBoardInfo;
+    public $jobBoardInfo = null;
 
     /**
      * @cx_field true
@@ -325,7 +325,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isSystem;
+    public $isSystem = null;
 
     /**
      * @cx_field true
@@ -335,7 +335,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $parserSubjectCode;
+    public $parserSubjectCode = null;
 
     /**
      * @cx_field true
@@ -347,7 +347,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -359,7 +359,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -371,7 +371,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -383,7 +383,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmailTemplate
      */
-    public $toEmailTemplate;
+    public $toEmailTemplate = null;
 
     /**
      * @cx_field true
@@ -395,7 +395,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name defaultStatusInfo
      */
-    public $defaultStatusInfo;
+    public $defaultStatusInfo = null;
 
     /**
      * @cx_field true
@@ -407,7 +407,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toTemplateReference
      */
-    public $toTemplateReference;
+    public $toTemplateReference = null;
 
     /**
      * @cx_field true
@@ -419,7 +419,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toParentMedium
      */
-    public $toParentMedium;
+    public $toParentMedium = null;
 
     /**
      * @cx_field true
@@ -431,7 +431,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name children
      */
-    public $children;
+    public $children = null;
 
     /**
      * @cx_field true
@@ -445,7 +445,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Verlooptijd-eenheid
      */
-    public $toExpireUnitNode;
+    public $toExpireUnitNode = null;
 
     /**
      * @cx_field true
@@ -459,7 +459,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Bron-Match
      */
-    public $toSourceMatchNode;
+    public $toSourceMatchNode = null;
 
     /**
      * @cx_field true
@@ -473,7 +473,7 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Parser-type
      */
-    public $toParserTypeNode;
+    public $toParserTypeNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

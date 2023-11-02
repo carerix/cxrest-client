@@ -5,7 +5,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:27 +0000
+ * @version Wed, 11 Oct 2023 08:57:55 +0000
  * @method AbstractCRFetchSpecification setFetchSpecificationID() setFetchSpecificationID(integer $value)
  * @method integer getFetchSpecificationID getFetchSpecificationID()
  * @method AbstractCRFetchSpecification setCreationDate() setCreationDate(string $value)
@@ -19,7 +19,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
  */
 abstract class AbstractCRFetchSpecification extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRFetchSpecification';
+    public const ENTITY = 'CRFetchSpecification';
 
     /**
      * @cx_field true
@@ -30,7 +30,7 @@ abstract class AbstractCRFetchSpecification extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $fetchSpecificationID;
+    public $fetchSpecificationID = null;
 
     /**
      * @cx_field true
@@ -39,7 +39,7 @@ abstract class AbstractCRFetchSpecification extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -50,7 +50,7 @@ abstract class AbstractCRFetchSpecification extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -59,7 +59,7 @@ abstract class AbstractCRFetchSpecification extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -67,9 +67,9 @@ abstract class AbstractCRFetchSpecification extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 1000000
+     * @width
      */
-    public $fetchSpecification;
+    public $fetchSpecification = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

@@ -7,7 +7,7 @@ use Carerix\Api\Rest\Entity\CRDataNode;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:23 +0000
+ * @version Wed, 11 Oct 2023 08:57:52 +0000
  * @method AbstractCRDataNodeValue setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRDataNodeValue setSortOrder() setSortOrder(integer $value)
@@ -23,7 +23,7 @@ use Carerix\Api\Rest\Entity\CRDataNode;
  */
 abstract class AbstractCRDataNodeValue extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRDataNodeValue';
+    public const ENTITY = 'CRDataNodeValue';
 
     /**
      * @cx_field true
@@ -32,7 +32,7 @@ abstract class AbstractCRDataNodeValue extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -43,7 +43,7 @@ abstract class AbstractCRDataNodeValue extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -53,7 +53,7 @@ abstract class AbstractCRDataNodeValue extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $value;
+    public $value = null;
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRDataNodeValue extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -76,7 +76,7 @@ abstract class AbstractCRDataNodeValue extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Systeemtaal
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     /**
      * @cx_field true
@@ -89,7 +89,7 @@ abstract class AbstractCRDataNodeValue extends \Carerix\Api\Rest\Entity
      * @name toDataNode
      * @inverseName values
      */
-    public $toDataNode;
+    public $toDataNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

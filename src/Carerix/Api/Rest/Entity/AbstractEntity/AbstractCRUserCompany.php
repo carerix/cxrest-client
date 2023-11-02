@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:32 +0000
+ * @version Wed, 11 Oct 2023 08:58:01 +0000
  * @method AbstractCRUserCompany setImportID() setImportID(string $value)
  * @method string getImportID getImportID()
  * @method AbstractCRUserCompany setCreationDate() setCreationDate(string $value)
@@ -23,7 +23,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRUserCompany extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRUserCompany';
+    public const ENTITY = 'CRUserCompany';
 
     /**
      * @cx_field true
@@ -34,7 +34,7 @@ abstract class AbstractCRUserCompany extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -43,7 +43,7 @@ abstract class AbstractCRUserCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -55,7 +55,7 @@ abstract class AbstractCRUserCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompany
      */
-    public $toCompany;
+    public $toCompany = null;
 
     /**
      * @cx_field true
@@ -67,7 +67,7 @@ abstract class AbstractCRUserCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -79,7 +79,7 @@ abstract class AbstractCRUserCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toRelationshipNode
      */
-    public $toRelationshipNode;
+    public $toRelationshipNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

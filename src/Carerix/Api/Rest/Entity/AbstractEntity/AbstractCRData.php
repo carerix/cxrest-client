@@ -7,7 +7,7 @@ use Carerix\Api\Rest\DataType\NSDictionary;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:22 +0000
+ * @version Wed, 11 Oct 2023 08:57:52 +0000
  * @method AbstractCRData setDataID() setDataID(integer $value)
  * @method integer getDataID getDataID()
  * @method AbstractCRData setEntry() setEntry(string $value)
@@ -37,7 +37,7 @@ use Carerix\Api\Rest\DataType\NSDictionary;
  */
 abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRData';
+    public const ENTITY = 'CRData';
 
     /**
      * @cx_field true
@@ -48,7 +48,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $dataID;
+    public $dataID = null;
 
     /**
      * @cx_field true
@@ -58,7 +58,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $entry;
+    public $entry = null;
 
     /**
      * @cx_field true
@@ -68,7 +68,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $info;
+    public $info = null;
 
     /**
      * @cx_field true
@@ -78,7 +78,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $section;
+    public $section = null;
 
     /**
      * @cx_field true
@@ -88,7 +88,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 12
      */
-    public $domain;
+    public $domain = null;
 
     /**
      * @cx_field true
@@ -97,7 +97,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -106,7 +106,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -117,7 +117,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -128,7 +128,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $isEditable;
+    public $isEditable = null;
 
     /**
      * @cx_field true
@@ -139,7 +139,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $isVisible;
+    public $isVisible = null;
 
     /**
      * @cx_field true
@@ -149,7 +149,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $defaultValue;
+    public $defaultValue = null;
 
     /**
      * @cx_field true
@@ -160,7 +160,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -169,7 +169,7 @@ abstract class AbstractCRData extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $settingConfig;
+    public $settingConfig = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:36 +0000
+ * @version Wed, 11 Oct 2023 08:58:04 +0000
  * @method AbstractCRWorkHistory setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRWorkHistory setEmployer() setEmployer(string $value)
@@ -57,7 +57,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
  */
 abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRWorkHistory';
+    public const ENTITY = 'CRWorkHistory';
 
     /**
      * @cx_field true
@@ -66,7 +66,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -76,7 +76,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $employer;
+    public $employer = null;
 
     /**
      * @cx_field true
@@ -85,7 +85,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $endDate;
+    public $endDate = null;
 
     /**
      * @cx_field true
@@ -95,7 +95,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $function;
+    public $function = null;
 
     /**
      * @cx_field true
@@ -106,7 +106,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -115,7 +115,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -124,7 +124,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $startDate;
+    public $startDate = null;
 
     /**
      * @cx_field true
@@ -135,7 +135,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -145,7 +145,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $info;
+    public $info = null;
 
     /**
      * @cx_field true
@@ -156,7 +156,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $workHistoryID;
+    public $workHistoryID = null;
 
     /**
      * @cx_field true
@@ -166,7 +166,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $workLocation;
+    public $workLocation = null;
 
     /**
      * @cx_field true
@@ -176,7 +176,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $employerInfo;
+    public $employerInfo = null;
 
     /**
      * @cx_field true
@@ -186,7 +186,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $endReason;
+    public $endReason = null;
 
     /**
      * @cx_field true
@@ -196,7 +196,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $reference;
+    public $reference = null;
 
     /**
      * @cx_field true
@@ -210,7 +210,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Branche0
      */
-    public $toBrancheLevel1;
+    public $toBrancheLevel1 = null;
 
     /**
      * @cx_field true
@@ -224,7 +224,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Branche1
      */
-    public $toBrancheLevel2;
+    public $toBrancheLevel2 = null;
 
     /**
      * @cx_field true
@@ -238,7 +238,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Functie0
      */
-    public $toFunctionLevel1;
+    public $toFunctionLevel1 = null;
 
     /**
      * @cx_field true
@@ -252,7 +252,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Functie1
      */
-    public $toFunctionLevel2;
+    public $toFunctionLevel2 = null;
 
     /**
      * @cx_field true
@@ -266,7 +266,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Product
      */
-    public $toProductTypeNode;
+    public $toProductTypeNode = null;
 
     /**
      * @cx_field true
@@ -280,7 +280,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Dienstverband
      */
-    public $toContractTypeNode;
+    public $toContractTypeNode = null;
 
     /**
      * @cx_field true
@@ -292,7 +292,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmployee
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -304,7 +304,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompany
      */
-    public $toCompany;
+    public $toCompany = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

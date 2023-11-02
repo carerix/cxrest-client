@@ -13,7 +13,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:30 +0000
+ * @version Wed, 11 Oct 2023 08:57:59 +0000
  * @method AbstractCRResource setResourceID() setResourceID(integer $value)
  * @method integer getResourceID getResourceID()
  * @method AbstractCRResource setCreationDate() setCreationDate(string $value)
@@ -67,7 +67,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRResource';
+    public const ENTITY = 'CRResource';
 
     /**
      * @cx_field true
@@ -78,7 +78,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $resourceID;
+    public $resourceID = null;
 
     /**
      * @cx_field true
@@ -87,7 +87,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -96,7 +96,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -106,7 +106,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -117,7 +117,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -128,7 +128,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -138,7 +138,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $location;
+    public $location = null;
 
     /**
      * @cx_field true
@@ -148,7 +148,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $resourceDescription;
+    public $resourceDescription = null;
 
     /**
      * @cx_field true
@@ -158,7 +158,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -168,7 +168,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $locationUrl;
+    public $locationUrl = null;
 
     /**
      * @cx_field true
@@ -178,7 +178,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $url;
+    public $url = null;
 
     /**
      * @cx_field true
@@ -189,7 +189,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -199,7 +199,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $identification;
+    public $identification = null;
 
     /**
      * @cx_field true
@@ -208,7 +208,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $amount;
+    public $amount = null;
 
     /**
      * @cx_field true
@@ -217,7 +217,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfo;
+    public $additionalInfo = null;
 
     /**
      * @cx_field true
@@ -226,7 +226,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfoPartial;
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true
@@ -238,7 +238,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -250,7 +250,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -262,7 +262,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -274,7 +274,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -288,7 +288,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Faciliteit-type
      */
-    public $toResourceTypeNode;
+    public $toResourceTypeNode = null;
 
     /**
      * @cx_field true
@@ -302,7 +302,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Regeling-type
      */
-    public $toRegulationTypeNode;
+    public $toRegulationTypeNode = null;
 
     /**
      * @cx_field true
@@ -314,7 +314,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toAmountCurrencyNode
      */
-    public $toAmountCurrencyNode;
+    public $toAmountCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -326,7 +326,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name agency
      */
-    public $agency;
+    public $agency = null;
 
     /**
      * @cx_field true
@@ -338,7 +338,7 @@ abstract class AbstractCRResource extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name toDoResources
      */
-    public $toDoResources;
+    public $toDoResources = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

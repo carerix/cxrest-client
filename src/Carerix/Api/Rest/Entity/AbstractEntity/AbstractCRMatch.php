@@ -21,7 +21,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:29 +0000
+ * @version Wed, 11 Oct 2023 08:57:57 +0000
  * @method AbstractCRMatch setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRMatch setModificationDate() setModificationDate(string $value)
@@ -80,6 +80,12 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method integer getFitScore getFitScore()
  * @method AbstractCRMatch setFitGap() setFitGap(string $value)
  * @method string getFitGap getFitGap()
+ * @method AbstractCRMatch setStatusInfoModificationDate() setStatusInfoModificationDate(string $value)
+ * @method string getStatusInfoModificationDate getStatusInfoModificationDate()
+ * @method AbstractCRMatch setIsOverdue() setIsOverdue(integer $value)
+ * @method integer getIsOverdue getIsOverdue()
+ * @method AbstractCRMatch setConfidentialIamRole() setConfidentialIamRole(string $value)
+ * @method string getConfidentialIamRole getConfidentialIamRole()
  * @method AbstractCRMatch setToEmployee() setToEmployee(array|CREmployee $value)
  * @method CREmployee getToEmployee getToEmployee($index = null)
  * @method AbstractCRMatch setToVacancy() setToVacancy(array|CRVacancy $value)
@@ -147,7 +153,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  */
 abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRMatch';
+    public const ENTITY = 'CRMatch';
 
     /**
      * @cx_field true
@@ -156,7 +162,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -165,7 +171,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -176,7 +182,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $recruiterPreferenceKey;
+    public $recruiterPreferenceKey = null;
 
     /**
      * @cx_field true
@@ -187,7 +193,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $proofPeriod;
+    public $proofPeriod = null;
 
     /**
      * @cx_field true
@@ -197,7 +203,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $agreedSalary;
+    public $agreedSalary = null;
 
     /**
      * @cx_field true
@@ -206,7 +212,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $jobStartDate;
+    public $jobStartDate = null;
 
     /**
      * @cx_field true
@@ -217,7 +223,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -227,7 +233,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -237,7 +243,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $sourceInfo;
+    public $sourceInfo = null;
 
     /**
      * @cx_field true
@@ -246,7 +252,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $invoiceRate;
+    public $invoiceRate = null;
 
     /**
      * @cx_field true
@@ -255,7 +261,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $wageRate;
+    public $wageRate = null;
 
     /**
      * @cx_field true
@@ -265,7 +271,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $motivation;
+    public $motivation = null;
 
     /**
      * @cx_field true
@@ -276,7 +282,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $wageRatePerHour;
+    public $wageRatePerHour = null;
 
     /**
      * @cx_field true
@@ -285,7 +291,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $evaluation;
+    public $evaluation = null;
 
     /**
      * @cx_field true
@@ -296,7 +302,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -307,7 +313,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isConfidential;
+    public $isConfidential = null;
 
     /**
      * @cx_field true
@@ -316,7 +322,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $costPrice;
+    public $costPrice = null;
 
     /**
      * @cx_field true
@@ -325,7 +331,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $sellingPrice;
+    public $sellingPrice = null;
 
     /**
      * @cx_field true
@@ -334,7 +340,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $salesFactor;
+    public $salesFactor = null;
 
     /**
      * @cx_field true
@@ -343,7 +349,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $purchaseRate;
+    public $purchaseRate = null;
 
     /**
      * @cx_field true
@@ -352,7 +358,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $defaultSalesFactor;
+    public $defaultSalesFactor = null;
 
     /**
      * @cx_field true
@@ -361,7 +367,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfo;
+    public $additionalInfo = null;
 
     /**
      * @cx_field true
@@ -370,7 +376,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfoPartial;
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true
@@ -379,7 +385,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $externalInfo;
+    public $externalInfo = null;
 
     /**
      * @cx_field true
@@ -389,7 +395,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 32
      */
-    public $applySource;
+    public $applySource = null;
 
     /**
      * @cx_field true
@@ -399,7 +405,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @xmlSubelementName tag
      */
-    public $applyTags;
+    public $applyTags = null;
 
     /**
      * @cx_field true
@@ -409,7 +415,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $externalIdentifier;
+    public $externalIdentifier = null;
 
     /**
      * @cx_field true
@@ -420,7 +426,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $fitScore;
+    public $fitScore = null;
 
     /**
      * @cx_field true
@@ -430,7 +436,37 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $fitGap;
+    public $fitGap = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSCalendarDate
+     * @allows_null 1
+     */
+    public $statusInfoModificationDate = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $isOverdue = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 128
+     */
+    public $confidentialIamRole = null;
 
     /**
      * @cx_field true
@@ -442,7 +478,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmployee
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -454,7 +490,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toVacancy
      */
-    public $toVacancy;
+    public $toVacancy = null;
 
     /**
      * @cx_field true
@@ -466,7 +502,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -478,7 +514,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -490,7 +526,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -502,7 +538,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPublication
      */
-    public $toPublication;
+    public $toPublication = null;
 
     /**
      * @cx_field true
@@ -514,7 +550,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toMedium
      */
-    public $toMedium;
+    public $toMedium = null;
 
     /**
      * @cx_field true
@@ -526,7 +562,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name statusInfo
      */
-    public $statusInfo;
+    public $statusInfo = null;
 
     /**
      * @cx_field true
@@ -538,7 +574,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name jobs
      */
-    public $jobs;
+    public $jobs = null;
 
     /**
      * @cx_field true
@@ -550,7 +586,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSourceNode
      */
-    public $toSourceNode;
+    public $toSourceNode = null;
 
     /**
      * @cx_field true
@@ -564,7 +600,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toWageRateCurrencyNode;
+    public $toWageRateCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -578,7 +614,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Inkooptarief-eenheid
      */
-    public $toWageRateUnitNode;
+    public $toWageRateUnitNode = null;
 
     /**
      * @cx_field true
@@ -592,7 +628,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toInvoiceRateCurrencyNode;
+    public $toInvoiceRateCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -606,7 +642,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Verkooptarief-eenheid
      */
-    public $toInvoiceRateUnitNode;
+    public $toInvoiceRateUnitNode = null;
 
     /**
      * @cx_field true
@@ -618,7 +654,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel2Company
      */
-    public $toLevel2Company;
+    public $toLevel2Company = null;
 
     /**
      * @cx_field true
@@ -630,7 +666,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel2User
      */
-    public $toLevel2User;
+    public $toLevel2User = null;
 
     /**
      * @cx_field true
@@ -642,7 +678,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel1Company
      */
-    public $toLevel1Company;
+    public $toLevel1Company = null;
 
     /**
      * @cx_field true
@@ -654,7 +690,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel1User
      */
-    public $toLevel1User;
+    public $toLevel1User = null;
 
     /**
      * @cx_field true
@@ -666,7 +702,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attributeChanges
      */
-    public $attributeChanges;
+    public $attributeChanges = null;
 
     /**
      * @cx_field true
@@ -678,7 +714,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfidentialUserRole
      */
-    public $toConfidentialUserRole;
+    public $toConfidentialUserRole = null;
 
     /**
      * @cx_field true
@@ -690,7 +726,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCostPriceCurrencyNode
      */
-    public $toCostPriceCurrencyNode;
+    public $toCostPriceCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -702,7 +738,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCostPriceUnitNode
      */
-    public $toCostPriceUnitNode;
+    public $toCostPriceUnitNode = null;
 
     /**
      * @cx_field true
@@ -714,7 +750,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSellingPriceCurrencyNode
      */
-    public $toSellingPriceCurrencyNode;
+    public $toSellingPriceCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -726,7 +762,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSellingPriceUnitNode
      */
-    public $toSellingPriceUnitNode;
+    public $toSellingPriceUnitNode = null;
 
     /**
      * @cx_field true
@@ -738,7 +774,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name groupNodes
      */
-    public $groupNodes;
+    public $groupNodes = null;
 
     /**
      * @cx_field true
@@ -752,7 +788,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Match-Favoriet
      */
-    public $toPreferenceNode;
+    public $toPreferenceNode = null;
 
     /**
      * @cx_field true
@@ -764,7 +800,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPurchaseRateCurrencyNode
      */
-    public $toPurchaseRateCurrencyNode;
+    public $toPurchaseRateCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -776,7 +812,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPurchaseRateUnitNode
      */
-    public $toPurchaseRateUnitNode;
+    public $toPurchaseRateUnitNode = null;
 
     /**
      * @cx_field true
@@ -788,7 +824,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -800,7 +836,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCurrentEmployeeBrancheLevel1
      */
-    public $toCurrentEmployeeBrancheLevel1;
+    public $toCurrentEmployeeBrancheLevel1 = null;
 
     /**
      * @cx_field true
@@ -812,7 +848,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCurrentEmployeeBrancheLevel2
      */
-    public $toCurrentEmployeeBrancheLevel2;
+    public $toCurrentEmployeeBrancheLevel2 = null;
 
     /**
      * @cx_field true
@@ -824,7 +860,7 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCurrentEmployeeFunctionLevel2
      */
-    public $toCurrentEmployeeFunctionLevel2;
+    public $toCurrentEmployeeFunctionLevel2 = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

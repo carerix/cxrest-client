@@ -11,7 +11,7 @@ use Carerix\Api\Rest\Entity\CRNodeType;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:23 +0000
+ * @version Wed, 11 Oct 2023 08:57:52 +0000
  * @method AbstractCRDataNode setDataNodeID() setDataNodeID(integer $value)
  * @method integer getDataNodeID getDataNodeID()
  * @method AbstractCRDataNode setNotActive() setNotActive(integer $value)
@@ -51,7 +51,7 @@ use Carerix\Api\Rest\Entity\CRNodeType;
  */
 abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRDataNode';
+    public const ENTITY = 'CRDataNode';
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $dataNodeID;
+    public $dataNodeID = null;
 
     /**
      * @cx_field true
@@ -73,7 +73,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $notActive;
+    public $notActive = null;
 
     /**
      * @cx_field true
@@ -82,7 +82,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -93,7 +93,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -102,7 +102,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -113,7 +113,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -124,7 +124,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isHidden;
+    public $isHidden = null;
 
     /**
      * @cx_field true
@@ -135,7 +135,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isDefault;
+    public $isDefault = null;
 
     /**
      * @cx_field true
@@ -145,7 +145,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -156,7 +156,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $exportCode;
+    public $exportCode = null;
 
     /**
      * @cx_field true
@@ -167,7 +167,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isSystem;
+    public $isSystem = null;
 
     /**
      * @cx_field true
@@ -177,7 +177,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $listType;
+    public $listType = null;
 
     /**
      * @cx_field true
@@ -187,7 +187,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $packageID;
+    public $packageID = null;
 
     /**
      * @cx_field true
@@ -196,7 +196,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $packageConfig;
+    public $packageConfig = null;
 
     /**
      * @cx_field true
@@ -208,7 +208,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name type
      */
-    public $type;
+    public $type = null;
 
     /**
      * @cx_field true
@@ -220,7 +220,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name childrenNodes
      */
-    public $childrenNodes;
+    public $childrenNodes = null;
 
     /**
      * @cx_field true
@@ -232,7 +232,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name parentNodes
      */
-    public $parentNodes;
+    public $parentNodes = null;
 
     /**
      * @cx_field true
@@ -245,7 +245,7 @@ abstract class AbstractCRDataNode extends \Carerix\Api\Rest\Entity
      * @name values
      * @inverseName toDataNode
      */
-    public $values;
+    public $values = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

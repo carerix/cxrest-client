@@ -14,10 +14,12 @@ use Carerix\Api\Rest\Entity\CRInvoiceLine;
 use Carerix\Api\Rest\Entity\CRJob;
 use Carerix\Api\Rest\Entity\CRLead;
 use Carerix\Api\Rest\Entity\CRMatch;
+use Carerix\Api\Rest\Entity\CRMatchCriteria;
 use Carerix\Api\Rest\Entity\CROpportunity;
 use Carerix\Api\Rest\Entity\CRPublication;
 use Carerix\Api\Rest\Entity\CRUser;
 use Carerix\Api\Rest\Entity\CRUserRole;
+use Carerix\Api\Rest\Entity\CRVacancyCompanyUserView;
 use Carerix\Api\Rest\Entity\CRVacancyEducation;
 use Carerix\Api\Rest\Entity\CRVacancyLanguage;
 use Carerix\Api\Rest\Entity\CRVacancySkill;
@@ -27,7 +29,7 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:33 +0000
+ * @version Wed, 11 Oct 2023 08:58:02 +0000
  * @method AbstractCRVacancy setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRVacancy setCreationDate() setCreationDate(string $value)
@@ -214,6 +216,12 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method NSArray|array getSharingAgenciesIDs getSharingAgenciesIDs()
  * @method AbstractCRVacancy setIsSalaryPublic() setIsSalaryPublic(integer $value)
  * @method integer getIsSalaryPublic getIsSalaryPublic()
+ * @method AbstractCRVacancy setTrackingModificationDate() setTrackingModificationDate(string $value)
+ * @method string getTrackingModificationDate getTrackingModificationDate()
+ * @method AbstractCRVacancy setConfidentialIamRole() setConfidentialIamRole(string $value)
+ * @method string getConfidentialIamRole getConfidentialIamRole()
+ * @method AbstractCRVacancy setMatchCriteriaID() setMatchCriteriaID(integer $value)
+ * @method integer getMatchCriteriaID getMatchCriteriaID()
  * @method AbstractCRVacancy setMatches() setMatches(array|Collection $values)
  * @method Collection|CRMatch getMatches getMatches()
  * @method AbstractCRVacancy setToUser() setToUser(array|CRUser $value)
@@ -360,10 +368,16 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method Collection|CRVacancySkill getSkills getSkills()
  * @method AbstractCRVacancy setLanguages() setLanguages(array|Collection $values)
  * @method Collection|CRVacancyLanguage getLanguages getLanguages()
+ * @method AbstractCRVacancy setVacancyCompanyUsers() setVacancyCompanyUsers(array|Collection $values)
+ * @method Collection|CRVacancyCompanyUserView getVacancyCompanyUsers getVacancyCompanyUsers()
+ * @method AbstractCRVacancy setToWorkplaceTypeNode() setToWorkplaceTypeNode(array|CRDataNode $value)
+ * @method CRDataNode getToWorkplaceTypeNode getToWorkplaceTypeNode($index = null)
+ * @method AbstractCRVacancy setToMatchCriteria() setToMatchCriteria(array|CRMatchCriteria $value)
+ * @method CRMatchCriteria getToMatchCriteria getToMatchCriteria($index = null)
  */
 abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRVacancy';
+    public const ENTITY = 'CRVacancy';
 
     /**
      * @cx_field true
@@ -372,7 +386,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -381,7 +395,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -392,7 +406,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $maxDistance;
+    public $maxDistance = null;
 
     /**
      * @cx_field true
@@ -403,7 +417,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $vacancyID;
+    public $vacancyID = null;
 
     /**
      * @cx_field true
@@ -413,7 +427,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $workPostalCode;
+    public $workPostalCode = null;
 
     /**
      * @cx_field true
@@ -424,7 +438,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -434,7 +448,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 200
      */
-    public $jobTitle;
+    public $jobTitle = null;
 
     /**
      * @cx_field true
@@ -443,7 +457,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $startDate;
+    public $startDate = null;
 
     /**
      * @cx_field true
@@ -452,7 +466,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $endDate;
+    public $endDate = null;
 
     /**
      * @cx_field true
@@ -463,7 +477,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $numberOfVacancies;
+    public $numberOfVacancies = null;
 
     /**
      * @cx_field true
@@ -474,7 +488,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $matchCountMO;
+    public $matchCountMO = null;
 
     /**
      * @cx_field true
@@ -485,7 +499,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $activePublicationsCount;
+    public $activePublicationsCount = null;
 
     /**
      * @cx_field true
@@ -494,7 +508,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $minSalary;
+    public $minSalary = null;
 
     /**
      * @cx_field true
@@ -503,7 +517,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $maxSalary;
+    public $maxSalary = null;
 
     /**
      * @cx_field true
@@ -513,7 +527,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 45
      */
-    public $vacancyNo;
+    public $vacancyNo = null;
 
     /**
      * @cx_field true
@@ -522,7 +536,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $hoursPerWeek;
+    public $hoursPerWeek = null;
 
     /**
      * @cx_field true
@@ -533,7 +547,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -542,7 +556,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $statusChangedDate;
+    public $statusChangedDate = null;
 
     /**
      * @cx_field true
@@ -553,7 +567,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isVirtual;
+    public $isVirtual = null;
 
     /**
      * @cx_field true
@@ -564,7 +578,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $copyID;
+    public $copyID = null;
 
     /**
      * @cx_field true
@@ -573,7 +587,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $fte;
+    public $fte = null;
 
     /**
      * @cx_field true
@@ -584,7 +598,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isHidden;
+    public $isHidden = null;
 
     /**
      * @cx_field true
@@ -595,7 +609,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isOpenApplication;
+    public $isOpenApplication = null;
 
     /**
      * @cx_field true
@@ -604,7 +618,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $rotationOff;
+    public $rotationOff = null;
 
     /**
      * @cx_field true
@@ -613,7 +627,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $rotationOn;
+    public $rotationOn = null;
 
     /**
      * @cx_field true
@@ -622,7 +636,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $friWorkMinutes;
+    public $friWorkMinutes = null;
 
     /**
      * @cx_field true
@@ -631,7 +645,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $monWorkMinutes;
+    public $monWorkMinutes = null;
 
     /**
      * @cx_field true
@@ -640,7 +654,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $satWorkMinutes;
+    public $satWorkMinutes = null;
 
     /**
      * @cx_field true
@@ -649,7 +663,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $sunWorkMinutes;
+    public $sunWorkMinutes = null;
 
     /**
      * @cx_field true
@@ -658,7 +672,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $thuWorkMinutes;
+    public $thuWorkMinutes = null;
 
     /**
      * @cx_field true
@@ -667,7 +681,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $tueWorkMinutes;
+    public $tueWorkMinutes = null;
 
     /**
      * @cx_field true
@@ -676,7 +690,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $wedWorkMinutes;
+    public $wedWorkMinutes = null;
 
     /**
      * @cx_field true
@@ -685,7 +699,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $successRatePercentage;
+    public $successRatePercentage = null;
 
     /**
      * @cx_field true
@@ -694,7 +708,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $estimatedAmount;
+    public $estimatedAmount = null;
 
     /**
      * @cx_field true
@@ -703,7 +717,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $realizedAmount;
+    public $realizedAmount = null;
 
     /**
      * @cx_field true
@@ -712,7 +726,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $estimatedDays;
+    public $estimatedDays = null;
 
     /**
      * @cx_field true
@@ -721,7 +735,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $realizedDays;
+    public $realizedDays = null;
 
     /**
      * @cx_field true
@@ -731,7 +745,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $arboRequirements;
+    public $arboRequirements = null;
 
     /**
      * @cx_field true
@@ -741,7 +755,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $invoiceAttention;
+    public $invoiceAttention = null;
 
     /**
      * @cx_field true
@@ -751,7 +765,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $invoiceCity;
+    public $invoiceCity = null;
 
     /**
      * @cx_field true
@@ -761,7 +775,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $invoiceNumber;
+    public $invoiceNumber = null;
 
     /**
      * @cx_field true
@@ -771,7 +785,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $invoicePostalCode;
+    public $invoicePostalCode = null;
 
     /**
      * @cx_field true
@@ -781,7 +795,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $invoiceStreet;
+    public $invoiceStreet = null;
 
     /**
      * @cx_field true
@@ -791,7 +805,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $vacancyInformation;
+    public $vacancyInformation = null;
 
     /**
      * @cx_field true
@@ -801,7 +815,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $workCity;
+    public $workCity = null;
 
     /**
      * @cx_field true
@@ -811,7 +825,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $additionalInformation;
+    public $additionalInformation = null;
 
     /**
      * @cx_field true
@@ -821,7 +835,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $applicationContactInformation;
+    public $applicationContactInformation = null;
 
     /**
      * @cx_field true
@@ -831,7 +845,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $companyInformation;
+    public $companyInformation = null;
 
     /**
      * @cx_field true
@@ -841,7 +855,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $contactInformation;
+    public $contactInformation = null;
 
     /**
      * @cx_field true
@@ -851,7 +865,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 120
      */
-    public $contractPeriod;
+    public $contractPeriod = null;
 
     /**
      * @cx_field true
@@ -862,7 +876,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $hasBonus;
+    public $hasBonus = null;
 
     /**
      * @cx_field true
@@ -873,7 +887,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $hasCompanyCar;
+    public $hasCompanyCar = null;
 
     /**
      * @cx_field true
@@ -883,7 +897,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $invoiceFullAddress;
+    public $invoiceFullAddress = null;
 
     /**
      * @cx_field true
@@ -893,7 +907,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $invoiceNumberSuffix;
+    public $invoiceNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -903,7 +917,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -913,7 +927,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $offerInformation;
+    public $offerInformation = null;
 
     /**
      * @cx_field true
@@ -922,7 +936,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $reactionEndDate;
+    public $reactionEndDate = null;
 
     /**
      * @cx_field true
@@ -932,7 +946,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $requirements;
+    public $requirements = null;
 
     /**
      * @cx_field true
@@ -942,7 +956,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 80
      */
-    public $salaryScale;
+    public $salaryScale = null;
 
     /**
      * @cx_field true
@@ -952,7 +966,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $trainingInformation;
+    public $trainingInformation = null;
 
     /**
      * @cx_field true
@@ -962,7 +976,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $sourceInfo;
+    public $sourceInfo = null;
 
     /**
      * @cx_field true
@@ -973,7 +987,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $coordX;
+    public $coordX = null;
 
     /**
      * @cx_field true
@@ -984,7 +998,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $coordY;
+    public $coordY = null;
 
     /**
      * @cx_field true
@@ -995,7 +1009,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isAnonymous;
+    public $isAnonymous = null;
 
     /**
      * @cx_field true
@@ -1004,7 +1018,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $feePercentage;
+    public $feePercentage = null;
 
     /**
      * @cx_field true
@@ -1013,7 +1027,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $invoiceDiscountPercentage;
+    public $invoiceDiscountPercentage = null;
 
     /**
      * @cx_field true
@@ -1023,7 +1037,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $workLocation;
+    public $workLocation = null;
 
     /**
      * @cx_field true
@@ -1033,7 +1047,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $titleInformation;
+    public $titleInformation = null;
 
     /**
      * @cx_field true
@@ -1043,7 +1057,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $introInformation;
+    public $introInformation = null;
 
     /**
      * @cx_field true
@@ -1053,7 +1067,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $invoiceSubject;
+    public $invoiceSubject = null;
 
     /**
      * @cx_field true
@@ -1063,7 +1077,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $customerReference;
+    public $customerReference = null;
 
     /**
      * @cx_field true
@@ -1074,7 +1088,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $numberOfInvoicePrints;
+    public $numberOfInvoicePrints = null;
 
     /**
      * @cx_field true
@@ -1084,7 +1098,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 200
      */
-    public $invoiceEmailAddress;
+    public $invoiceEmailAddress = null;
 
     /**
      * @cx_field true
@@ -1095,7 +1109,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isTemplate;
+    public $isTemplate = null;
 
     /**
      * @cx_field true
@@ -1106,7 +1120,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isConfidential;
+    public $isConfidential = null;
 
     /**
      * @cx_field true
@@ -1115,7 +1129,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $userBonuses;
+    public $userBonuses = null;
 
     /**
      * @cx_field true
@@ -1125,7 +1139,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $invoiceCompanyName;
+    public $invoiceCompanyName = null;
 
     /**
      * @cx_field true
@@ -1134,7 +1148,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $salesFactor;
+    public $salesFactor = null;
 
     /**
      * @cx_field true
@@ -1145,7 +1159,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $createCollectiveInvoices;
+    public $createCollectiveInvoices = null;
 
     /**
      * @cx_field true
@@ -1154,7 +1168,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfo;
+    public $additionalInfo = null;
 
     /**
      * @cx_field true
@@ -1163,7 +1177,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfoPartial;
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true
@@ -1174,7 +1188,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $commitmentLevelNode;
+    public $commitmentLevelNode = null;
 
     /**
      * @cx_field true
@@ -1183,7 +1197,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $signDate;
+    public $signDate = null;
 
     /**
      * @cx_field true
@@ -1192,7 +1206,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $deadline;
+    public $deadline = null;
 
     /**
      * @cx_field true
@@ -1202,7 +1216,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $languageNotes;
+    public $languageNotes = null;
 
     /**
      * @cx_field true
@@ -1212,7 +1226,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $skillNotes;
+    public $skillNotes = null;
 
     /**
      * @cx_field true
@@ -1222,7 +1236,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $externalIdentifier;
+    public $externalIdentifier = null;
 
     /**
      * @cx_field true
@@ -1232,7 +1246,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $workStreet;
+    public $workStreet = null;
 
     /**
      * @cx_field true
@@ -1242,7 +1256,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $workNumber;
+    public $workNumber = null;
 
     /**
      * @cx_field true
@@ -1252,7 +1266,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $workNumberSuffix;
+    public $workNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -1262,7 +1276,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $workFullAddress;
+    public $workFullAddress = null;
 
     /**
      * @cx_field true
@@ -1271,7 +1285,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $sharingAgenciesIDs;
+    public $sharingAgenciesIDs = null;
 
     /**
      * @cx_field true
@@ -1282,7 +1296,37 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isSalaryPublic;
+    public $isSalaryPublic = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSCalendarDate
+     * @allows_null 1
+     */
+    public $trackingModificationDate = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 128
+     */
+    public $confidentialIamRole = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 1
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $matchCriteriaID = null;
 
     /**
      * @cx_field true
@@ -1294,7 +1338,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name matches
      */
-    public $matches;
+    public $matches = null;
 
     /**
      * @cx_field true
@@ -1306,7 +1350,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -1318,7 +1362,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -1330,7 +1374,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -1342,7 +1386,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -1354,7 +1398,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -1366,7 +1410,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name publications
      */
-    public $publications;
+    public $publications = null;
 
     /**
      * @cx_field true
@@ -1380,7 +1424,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Vacature-status
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -1394,7 +1438,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Salarisperiode
      */
-    public $toSalaryPeriodNode;
+    public $toSalaryPeriodNode = null;
 
     /**
      * @cx_field true
@@ -1408,7 +1452,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Ervaring
      */
-    public $toExperienceLevelNode;
+    public $toExperienceLevelNode = null;
 
     /**
      * @cx_field true
@@ -1420,7 +1464,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProvince1Node
      */
-    public $toProvince1Node;
+    public $toProvince1Node = null;
 
     /**
      * @cx_field true
@@ -1434,7 +1478,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Productgroep
      */
-    public $toProductNode;
+    public $toProductNode = null;
 
     /**
      * @cx_field true
@@ -1448,7 +1492,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Product
      */
-    public $toProductTypeNode;
+    public $toProductTypeNode = null;
 
     /**
      * @cx_field true
@@ -1460,7 +1504,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name educations
      */
-    public $educations;
+    public $educations = null;
 
     /**
      * @cx_field true
@@ -1472,7 +1516,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toVacancyHolder
      */
-    public $toVacancyHolder;
+    public $toVacancyHolder = null;
 
     /**
      * @cx_field true
@@ -1486,7 +1530,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Functie0
      */
-    public $toFunctionLevel1;
+    public $toFunctionLevel1 = null;
 
     /**
      * @cx_field true
@@ -1500,7 +1544,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Functie1
      */
-    public $toFunctionLevel2;
+    public $toFunctionLevel2 = null;
 
     /**
      * @cx_field true
@@ -1514,7 +1558,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Dienstverband
      */
-    public $toContractTypeNode;
+    public $toContractTypeNode = null;
 
     /**
      * @cx_field true
@@ -1528,7 +1572,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Rijbewijs
      */
-    public $toDriverLicenceNode;
+    public $toDriverLicenceNode = null;
 
     /**
      * @cx_field true
@@ -1540,7 +1584,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toSignAuthority
      */
-    public $toSignAuthority;
+    public $toSignAuthority = null;
 
     /**
      * @cx_field true
@@ -1552,7 +1596,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name trainings
      */
-    public $trainings;
+    public $trainings = null;
 
     /**
      * @cx_field true
@@ -1564,7 +1608,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toFunctionTypeNode
      */
-    public $toFunctionTypeNode;
+    public $toFunctionTypeNode = null;
 
     /**
      * @cx_field true
@@ -1578,7 +1622,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toCountry1Node;
+    public $toCountry1Node = null;
 
     /**
      * @cx_field true
@@ -1592,7 +1636,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toSalaryCurrencyNode;
+    public $toSalaryCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -1606,7 +1650,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Werktijden-eenheid
      */
-    public $toWorkUnitNode;
+    public $toWorkUnitNode = null;
 
     /**
      * @cx_field true
@@ -1620,7 +1664,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Werkschema-eenheid
      */
-    public $toRotationOnUnitNode;
+    public $toRotationOnUnitNode = null;
 
     /**
      * @cx_field true
@@ -1634,7 +1678,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Werkschema-eenheid
      */
-    public $toRotationOffUnitNode;
+    public $toRotationOffUnitNode = null;
 
     /**
      * @cx_field true
@@ -1646,7 +1690,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompetitor
      */
-    public $toCompetitor;
+    public $toCompetitor = null;
 
     /**
      * @cx_field true
@@ -1660,7 +1704,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Project-resultaat
      */
-    public $toResultNode;
+    public $toResultNode = null;
 
     /**
      * @cx_field true
@@ -1674,7 +1718,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toEstimatedAmountCurrencyNode;
+    public $toEstimatedAmountCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -1688,7 +1732,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toRealizedAmountCurrencyNode;
+    public $toRealizedAmountCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -1702,7 +1746,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toInvoiceCountryNode;
+    public $toInvoiceCountryNode = null;
 
     /**
      * @cx_field true
@@ -1716,7 +1760,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toInvoiceProvinceNode;
+    public $toInvoiceProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1730,7 +1774,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toSalaryScaleCurrencyNode;
+    public $toSalaryScaleCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -1744,7 +1788,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Salarisschaal
      */
-    public $toSalaryScaleNode;
+    public $toSalaryScaleNode = null;
 
     /**
      * @cx_field true
@@ -1758,7 +1802,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toWorkCountryNode;
+    public $toWorkCountryNode = null;
 
     /**
      * @cx_field true
@@ -1772,7 +1816,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Functieniveau
      */
-    public $toWorkLevelNode;
+    public $toWorkLevelNode = null;
 
     /**
      * @cx_field true
@@ -1784,7 +1828,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompany
      */
-    public $toCompany;
+    public $toCompany = null;
 
     /**
      * @cx_field true
@@ -1795,10 +1839,10 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @destination_entity CRDataNode
      * @to_many 0
      * @name toSourceNode
-     * @default 0
+     * @default 1
      * @nodeType Bron-Vacature
      */
-    public $toSourceNode;
+    public $toSourceNode = null;
 
     /**
      * @cx_field true
@@ -1810,7 +1854,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name jobs
      */
-    public $jobs;
+    public $jobs = null;
 
     /**
      * @cx_field true
@@ -1822,7 +1866,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel3User
      */
-    public $toLevel3User;
+    public $toLevel3User = null;
 
     /**
      * @cx_field true
@@ -1834,7 +1878,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel3Company
      */
-    public $toLevel3Company;
+    public $toLevel3Company = null;
 
     /**
      * @cx_field true
@@ -1846,7 +1890,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel2Company
      */
-    public $toLevel2Company;
+    public $toLevel2Company = null;
 
     /**
      * @cx_field true
@@ -1858,7 +1902,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLevel2User
      */
-    public $toLevel2User;
+    public $toLevel2User = null;
 
     /**
      * @cx_field true
@@ -1870,7 +1914,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name broughtInBy
      */
-    public $broughtInBy;
+    public $broughtInBy = null;
 
     /**
      * @cx_field true
@@ -1882,7 +1926,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attributeChanges
      */
-    public $attributeChanges;
+    public $attributeChanges = null;
 
     /**
      * @cx_field true
@@ -1896,7 +1940,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType BTW-tarief
      */
-    public $toTaxRateNode;
+    public $toTaxRateNode = null;
 
     /**
      * @cx_field true
@@ -1910,7 +1954,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Betalingstermijn
      */
-    public $toPaymentPeriodNode;
+    public $toPaymentPeriodNode = null;
 
     /**
      * @cx_field true
@@ -1922,7 +1966,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name invoiceLines
      */
-    public $invoiceLines;
+    public $invoiceLines = null;
 
     /**
      * @cx_field true
@@ -1936,7 +1980,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Land
      */
-    public $toCountry2Node;
+    public $toCountry2Node = null;
 
     /**
      * @cx_field true
@@ -1950,7 +1994,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Land
      */
-    public $toCountry3Node;
+    public $toCountry3Node = null;
 
     /**
      * @cx_field true
@@ -1962,7 +2006,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProvince2Node
      */
-    public $toProvince2Node;
+    public $toProvince2Node = null;
 
     /**
      * @cx_field true
@@ -1974,7 +2018,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProvince3Node
      */
-    public $toProvince3Node;
+    public $toProvince3Node = null;
 
     /**
      * @cx_field true
@@ -1986,7 +2030,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toInvoiceUser
      */
-    public $toInvoiceUser;
+    public $toInvoiceUser = null;
 
     /**
      * @cx_field true
@@ -1998,7 +2042,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toInvoiceCompany
      */
-    public $toInvoiceCompany;
+    public $toInvoiceCompany = null;
 
     /**
      * @cx_field true
@@ -2012,7 +2056,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Vacature-type
      */
-    public $toVacancyTypeNode;
+    public $toVacancyTypeNode = null;
 
     /**
      * @cx_field true
@@ -2026,7 +2070,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Factuurafhandeling
      */
-    public $toInvoiceHandlingNode;
+    public $toInvoiceHandlingNode = null;
 
     /**
      * @cx_field true
@@ -2040,7 +2084,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Factuurregel-label
      */
-    public $toInvoiceLineLabelNode;
+    public $toInvoiceLineLabelNode = null;
 
     /**
      * @cx_field true
@@ -2054,7 +2098,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Betalingstermijn-startdatum
      */
-    public $toPaymentPeriodStartDateNode;
+    public $toPaymentPeriodStartDateNode = null;
 
     /**
      * @cx_field true
@@ -2068,7 +2112,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Crediteringsmethode
      */
-    public $toCreditMethodNode;
+    public $toCreditMethodNode = null;
 
     /**
      * @cx_field true
@@ -2080,7 +2124,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name groupNodes
      */
-    public $groupNodes;
+    public $groupNodes = null;
 
     /**
      * @cx_field true
@@ -2094,7 +2138,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Vacature-categorie
      */
-    public $toCategoryNode;
+    public $toCategoryNode = null;
 
     /**
      * @cx_field true
@@ -2106,7 +2150,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name vacancyUsers
      */
-    public $vacancyUsers;
+    public $vacancyUsers = null;
 
     /**
      * @cx_field true
@@ -2118,7 +2162,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toProjectNode
      */
-    public $toProjectNode;
+    public $toProjectNode = null;
 
     /**
      * @cx_field true
@@ -2130,7 +2174,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfidentialUserRole
      */
-    public $toConfidentialUserRole;
+    public $toConfidentialUserRole = null;
 
     /**
      * @cx_field true
@@ -2142,7 +2186,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name agency
      */
-    public $agency;
+    public $agency = null;
 
     /**
      * @cx_field true
@@ -2156,7 +2200,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Commitment-level
      */
-    public $toCommitmentLevelNode;
+    public $toCommitmentLevelNode = null;
 
     /**
      * @cx_field true
@@ -2168,7 +2212,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toBrancheLevel1
      */
-    public $toBrancheLevel1;
+    public $toBrancheLevel1 = null;
 
     /**
      * @cx_field true
@@ -2180,7 +2224,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toBrancheLevel2
      */
-    public $toBrancheLevel2;
+    public $toBrancheLevel2 = null;
 
     /**
      * @cx_field true
@@ -2192,7 +2236,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLead
      */
-    public $toLead;
+    public $toLead = null;
 
     /**
      * @cx_field true
@@ -2204,7 +2248,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toOpportunity
      */
-    public $toOpportunity;
+    public $toOpportunity = null;
 
     /**
      * @cx_field true
@@ -2216,7 +2260,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name skills
      */
-    public $skills;
+    public $skills = null;
 
     /**
      * @cx_field true
@@ -2228,7 +2272,43 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name languages
      */
-    public $languages;
+    public $languages = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var Collection
+     * @OneToMany (targetEntity="CRVacancyCompanyUserView")
+     * @mandatory 0
+     * @destination_entity CRVacancyCompanyUserView
+     * @to_many 1
+     * @name vacancyCompanyUsers
+     */
+    public $vacancyCompanyUsers = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var CRDataNode
+     * @OneToOne (targetEntity="CRDataNode")
+     * @mandatory 0
+     * @destination_entity CRDataNode
+     * @to_many 0
+     * @name toWorkplaceTypeNode
+     */
+    public $toWorkplaceTypeNode = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var CRMatchCriteria
+     * @OneToOne (targetEntity="CRMatchCriteria")
+     * @mandatory 0
+     * @destination_entity CRMatchCriteria
+     * @to_many 0
+     * @name toMatchCriteria
+     */
+    public $toMatchCriteria = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

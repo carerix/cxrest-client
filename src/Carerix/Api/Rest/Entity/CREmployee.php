@@ -1535,4 +1535,44 @@ class CREmployee extends AbstractCREmployee
         $args = func_get_args();
         return call_user_func_array(['parent', 'subscribe'], $args);
     }
+
+    //backward compatibility
+    /**
+     * Deprecated, use native setWorkIdPermissionUuid() instead.
+     * @param int $value
+     * @return void
+     */
+    public function setWorkIdPermissionId(int $value)
+    {
+        $this->workidPermissionUuid = (string)$value;
+    }
+
+    /**
+     * Deprecated, use native getWorkIdPermissionUuid() instead.
+     * @return int
+     */
+    public function getWorkIdPermissionId()
+    {
+        return (int)$this->workidPermissionUuid;
+    }
+
+    /**
+     * Deprecated, use native setWorkidCandidateUuid() instead.
+     * @param int $value
+     * @return void
+     */
+    public function setWorkidCandidateId(int $value)
+    {
+        $this->workidCandidateUuid = (string)$value;
+    }
+
+    /**
+     * Deprecated, use native getWorkidCandidateUuid() instead.
+     * @param int $value
+     * @return int
+     */
+    public function getWorkidCandidateId()
+    {
+        return (int)$this->workidCandidateUuid;
+    }
 }

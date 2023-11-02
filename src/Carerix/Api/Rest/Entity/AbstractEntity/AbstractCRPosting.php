@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRPublication;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:29 +0000
+ * @version Wed, 11 Oct 2023 08:57:58 +0000
  * @method AbstractCRPosting setPostingID() setPostingID(integer $value)
  * @method integer getPostingID getPostingID()
  * @method AbstractCRPosting setCreationDate() setCreationDate(string $value)
@@ -33,7 +33,7 @@ use Carerix\Api\Rest\Entity\CRPublication;
  */
 abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRPosting';
+    public const ENTITY = 'CRPosting';
 
     /**
      * @cx_field true
@@ -44,7 +44,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $postingID;
+    public $postingID = null;
 
     /**
      * @cx_field true
@@ -53,7 +53,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $lastAttemptDate;
+    public $lastAttemptDate = null;
 
     /**
      * @cx_field true
@@ -72,7 +72,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 16
      */
-    public $errorNumber;
+    public $errorNumber = null;
 
     /**
      * @cx_field true
@@ -82,7 +82,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -91,7 +91,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -102,7 +102,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $tryCount;
+    public $tryCount = null;
 
     /**
      * @cx_field true
@@ -114,7 +114,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toPublication
      */
-    public $toPublication;
+    public $toPublication = null;
 
     /**
      * @cx_field true
@@ -128,7 +128,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Posting-status
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -140,7 +140,7 @@ abstract class AbstractCRPosting extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toMedium
      */
-    public $toMedium;
+    public $toMedium = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

@@ -11,7 +11,7 @@ use Carerix\Api\Rest\Entity\CRResource;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:27 +0000
+ * @version Wed, 11 Oct 2023 08:57:55 +0000
  * @method AbstractCRFinance setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRFinance setDeleted() setDeleted(integer $value)
@@ -53,7 +53,7 @@ use Carerix\Api\Rest\Entity\CRResource;
  */
 abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRFinance';
+    public const ENTITY = 'CRFinance';
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -73,7 +73,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -82,7 +82,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $endDate;
+    public $endDate = null;
 
     /**
      * @cx_field true
@@ -92,7 +92,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $info;
+    public $info = null;
 
     /**
      * @cx_field true
@@ -103,7 +103,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $financeID;
+    public $financeID = null;
 
     /**
      * @cx_field true
@@ -112,7 +112,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -121,7 +121,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $startDate;
+    public $startDate = null;
 
     /**
      * @cx_field true
@@ -130,7 +130,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $amount;
+    public $amount = null;
 
     /**
      * @cx_field true
@@ -139,7 +139,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $tariff;
+    public $tariff = null;
 
     /**
      * @cx_field true
@@ -150,7 +150,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $noInvoice;
+    public $noInvoice = null;
 
     /**
      * @cx_field true
@@ -161,7 +161,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -170,7 +170,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $purchaseRate;
+    public $purchaseRate = null;
 
     /**
      * @cx_field true
@@ -182,7 +182,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toTypeNode
      */
-    public $toTypeNode;
+    public $toTypeNode = null;
 
     /**
      * @cx_field true
@@ -194,7 +194,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toStatusNode
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -208,7 +208,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType ${toTypeNode.name}
      */
-    public $toKindNode;
+    public $toKindNode = null;
 
     /**
      * @cx_field true
@@ -222,7 +222,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Valuta
      */
-    public $toCurrencyNode;
+    public $toCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -236,7 +236,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType ${toTypeNode.name}-eenheid
      */
-    public $toUnitNode;
+    public $toUnitNode = null;
 
     /**
      * @cx_field true
@@ -248,7 +248,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toResource
      */
-    public $toResource;
+    public $toResource = null;
 
     /**
      * @cx_field true
@@ -260,7 +260,7 @@ abstract class AbstractCRFinance extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name invoiceLines
      */
-    public $invoiceLines;
+    public $invoiceLines = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:36 +0000
+ * @version Wed, 11 Oct 2023 08:58:03 +0000
  * @method AbstractCRWeekHourComment setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRWeekHourComment setDeleted() setDeleted(integer $value)
@@ -33,7 +33,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRWeekHourComment';
+    public const ENTITY = 'CRWeekHourComment';
 
     /**
      * @cx_field true
@@ -42,7 +42,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -53,7 +53,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -64,7 +64,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $weekHourCommentID;
+    public $weekHourCommentID = null;
 
     /**
      * @cx_field true
@@ -73,7 +73,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -84,7 +84,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isEmployeeComment;
+    public $isEmployeeComment = null;
 
     /**
      * @cx_field true
@@ -94,7 +94,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -104,7 +104,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width 8
      */
-    public $dateString;
+    public $dateString = null;
 
     /**
      * @cx_field true
@@ -116,7 +116,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toJob
      */
-    public $toJob;
+    public $toJob = null;
 
     /**
      * @cx_field true
@@ -128,7 +128,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toEmployee
      */
-    public $toEmployee;
+    public $toEmployee = null;
 
     /**
      * @cx_field true
@@ -140,7 +140,7 @@ abstract class AbstractCRWeekHourComment extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

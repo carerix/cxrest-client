@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:42 +0000
+ * @version Wed, 11 Oct 2023 08:58:08 +0000
  * @method AbstractCRConfig setConfigID() setConfigID(integer $value)
  * @method integer getConfigID getConfigID()
  * @method AbstractCRConfig setCreationDate() setCreationDate(string $value)
@@ -31,7 +31,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRConfig';
+    public const ENTITY = 'CRConfig';
 
     /**
      * @cx_field true
@@ -42,7 +42,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $configID;
+    public $configID = null;
 
     /**
      * @cx_field true
@@ -51,7 +51,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -71,7 +71,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -80,7 +80,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $config;
+    public $config = null;
 
     /**
      * @cx_field true
@@ -90,7 +90,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width 1000
      */
-    public $configName;
+    public $configName = null;
 
     /**
      * @cx_field true
@@ -102,7 +102,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -114,7 +114,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -126,7 +126,7 @@ abstract class AbstractCRConfig extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toConfigProfile
      */
-    public $toConfigProfile;
+    public $toConfigProfile = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

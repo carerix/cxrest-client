@@ -66,7 +66,9 @@ class EntityGenerator
             curl_close($ch);
             throw new Exception($errorNumber . ': ' . $error);
         }
-
+        if (stripos($result, 'nsexception')) {
+            throw new Exception("Something wrong in responce: $result ");
+        }
         curl_close($ch);
         return $result;
     }
@@ -79,6 +81,7 @@ class EntityGenerator
     public function build($dir = null)
     {
         foreach ($this->getEntities() as $entity) {
+            echo "Processing: {$entity}".PHP_EOL;
             try {
                 $xml = $this->getScheme($entity);
             } catch (Exception $ex) {

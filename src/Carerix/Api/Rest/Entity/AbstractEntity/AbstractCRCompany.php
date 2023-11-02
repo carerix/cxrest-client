@@ -21,7 +21,7 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:22 +0000
+ * @version Wed, 11 Oct 2023 08:57:52 +0000
  * @method AbstractCRCompany setUrl() setUrl(string $value)
  * @method string getUrl getUrl()
  * @method AbstractCRCompany setVisitStreet() setVisitStreet(string $value)
@@ -281,7 +281,7 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  */
 abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRCompany';
+    public const ENTITY = 'CRCompany';
 
     /**
      * @cx_field true
@@ -291,7 +291,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 100
      */
-    public $url;
+    public $url = null;
 
     /**
      * @cx_field true
@@ -301,7 +301,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $visitStreet;
+    public $visitStreet = null;
 
     /**
      * @cx_field true
@@ -311,7 +311,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $visitCity;
+    public $visitCity = null;
 
     /**
      * @cx_field true
@@ -322,7 +322,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $companyID;
+    public $companyID = null;
 
     /**
      * @cx_field true
@@ -332,7 +332,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $emailAddress;
+    public $emailAddress = null;
 
     /**
      * @cx_field true
@@ -342,7 +342,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -352,7 +352,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $visitPostalCode;
+    public $visitPostalCode = null;
 
     /**
      * @cx_field true
@@ -361,7 +361,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -370,7 +370,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -380,7 +380,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $visitNumber;
+    public $visitNumber = null;
 
     /**
      * @cx_field true
@@ -390,7 +390,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $mailingCity;
+    public $mailingCity = null;
 
     /**
      * @cx_field true
@@ -400,7 +400,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $mailingNumber;
+    public $mailingNumber = null;
 
     /**
      * @cx_field true
@@ -410,7 +410,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $mailingPostalCode;
+    public $mailingPostalCode = null;
 
     /**
      * @cx_field true
@@ -420,7 +420,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $mailingStreet;
+    public $mailingStreet = null;
 
     /**
      * @cx_field true
@@ -431,7 +431,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -441,7 +441,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $visitNumberSuffix;
+    public $visitNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -451,7 +451,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 16
      */
-    public $shortName;
+    public $shortName = null;
 
     /**
      * @cx_field true
@@ -461,7 +461,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $mailingNumberSuffix;
+    public $mailingNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -472,7 +472,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -482,7 +482,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $phoneNumber;
+    public $phoneNumber = null;
 
     /**
      * @cx_field true
@@ -493,7 +493,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isSupplier;
+    public $isSupplier = null;
 
     /**
      * @cx_field true
@@ -502,7 +502,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creditUntilDate;
+    public $creditUntilDate = null;
 
     /**
      * @cx_field true
@@ -511,7 +511,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $creditLimit;
+    public $creditLimit = null;
 
     /**
      * @cx_field true
@@ -520,7 +520,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $lastContactDate;
+    public $lastContactDate = null;
 
     /**
      * @cx_field true
@@ -529,7 +529,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $invoiceDiscountPercentage;
+    public $invoiceDiscountPercentage = null;
 
     /**
      * @cx_field true
@@ -540,7 +540,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $gAccountKey;
+    public $gAccountKey = null;
 
     /**
      * @cx_field true
@@ -549,7 +549,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $gAccountPercentage;
+    public $gAccountPercentage = null;
 
     /**
      * @cx_field true
@@ -560,7 +560,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $taxChargeKey;
+    public $taxChargeKey = null;
 
     /**
      * @cx_field true
@@ -569,7 +569,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $creditRestrictPercentage;
+    public $creditRestrictPercentage = null;
 
     /**
      * @cx_field true
@@ -579,7 +579,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $visitFullAddress;
+    public $visitFullAddress = null;
 
     /**
      * @cx_field true
@@ -589,7 +589,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $mailingFullAddress;
+    public $mailingFullAddress = null;
 
     /**
      * @cx_field true
@@ -599,7 +599,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $division;
+    public $division = null;
 
     /**
      * @cx_field true
@@ -609,7 +609,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $sourceInfo;
+    public $sourceInfo = null;
 
     /**
      * @cx_field true
@@ -620,7 +620,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isCompetitor;
+    public $isCompetitor = null;
 
     /**
      * @cx_field true
@@ -630,7 +630,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $paymentCode;
+    public $paymentCode = null;
 
     /**
      * @cx_field true
@@ -641,7 +641,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $companySize;
+    public $companySize = null;
 
     /**
      * @cx_field true
@@ -651,7 +651,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 12
      */
-    public $debtorNumber;
+    public $debtorNumber = null;
 
     /**
      * @cx_field true
@@ -661,7 +661,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $faxNumber;
+    public $faxNumber = null;
 
     /**
      * @cx_field true
@@ -671,7 +671,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $invoiceCity;
+    public $invoiceCity = null;
 
     /**
      * @cx_field true
@@ -681,7 +681,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $invoiceFullAddress;
+    public $invoiceFullAddress = null;
 
     /**
      * @cx_field true
@@ -691,7 +691,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $invoiceNumber;
+    public $invoiceNumber = null;
 
     /**
      * @cx_field true
@@ -701,7 +701,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 10
      */
-    public $invoiceNumberSuffix;
+    public $invoiceNumberSuffix = null;
 
     /**
      * @cx_field true
@@ -711,7 +711,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 30
      */
-    public $invoicePostalCode;
+    public $invoicePostalCode = null;
 
     /**
      * @cx_field true
@@ -721,7 +721,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $invoiceStreet;
+    public $invoiceStreet = null;
 
     /**
      * @cx_field true
@@ -731,7 +731,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 15
      */
-    public $kvkNumber;
+    public $kvkNumber = null;
 
     /**
      * @cx_field true
@@ -741,7 +741,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $nameAlias1;
+    public $nameAlias1 = null;
 
     /**
      * @cx_field true
@@ -751,7 +751,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $nameAlias2;
+    public $nameAlias2 = null;
 
     /**
      * @cx_field true
@@ -761,7 +761,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $nameAlias3;
+    public $nameAlias3 = null;
 
     /**
      * @cx_field true
@@ -771,7 +771,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     /**
      * @cx_field true
@@ -782,7 +782,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $paymentTerm;
+    public $paymentTerm = null;
 
     /**
      * @cx_field true
@@ -791,7 +791,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $revenue;
+    public $revenue = null;
 
     /**
      * @cx_field true
@@ -801,7 +801,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $companyInformation;
+    public $companyInformation = null;
 
     /**
      * @cx_field true
@@ -811,7 +811,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $taxNumber;
+    public $taxNumber = null;
 
     /**
      * @cx_field true
@@ -821,7 +821,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $bankAccountNumberOld;
+    public $bankAccountNumberOld = null;
 
     /**
      * @cx_field true
@@ -831,7 +831,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 60
      */
-    public $bankName;
+    public $bankName = null;
 
     /**
      * @cx_field true
@@ -840,7 +840,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creditFromDate;
+    public $creditFromDate = null;
 
     /**
      * @cx_field true
@@ -851,7 +851,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $numberOfInvoicePrints;
+    public $numberOfInvoicePrints = null;
 
     /**
      * @cx_field true
@@ -860,7 +860,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $invoiceSettings;
+    public $invoiceSettings = null;
 
     /**
      * @cx_field true
@@ -871,7 +871,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $contactCount;
+    public $contactCount = null;
 
     /**
      * @cx_field true
@@ -882,7 +882,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $coordX;
+    public $coordX = null;
 
     /**
      * @cx_field true
@@ -893,7 +893,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $coordY;
+    public $coordY = null;
 
     /**
      * @cx_field true
@@ -903,7 +903,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $correspondenceName;
+    public $correspondenceName = null;
 
     /**
      * @cx_field true
@@ -913,7 +913,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $companyProfile;
+    public $companyProfile = null;
 
     /**
      * @cx_field true
@@ -922,7 +922,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $salesFactor;
+    public $salesFactor = null;
 
     /**
      * @cx_field true
@@ -933,7 +933,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $createCollectiveInvoices;
+    public $createCollectiveInvoices = null;
 
     /**
      * @cx_field true
@@ -943,7 +943,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $gAccountNotes;
+    public $gAccountNotes = null;
 
     /**
      * @cx_field true
@@ -953,7 +953,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $gAccountNumber;
+    public $gAccountNumber = null;
 
     /**
      * @cx_field true
@@ -962,7 +962,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDecimalNumber
      * @allows_null 1
      */
-    public $feePercentage;
+    public $feePercentage = null;
 
     /**
      * @cx_field true
@@ -972,7 +972,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $bankBicCode;
+    public $bankBicCode = null;
 
     /**
      * @cx_field true
@@ -982,7 +982,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $bankIbanCode;
+    public $bankIbanCode = null;
 
     /**
      * @cx_field true
@@ -992,7 +992,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $linkedInUrl;
+    public $linkedInUrl = null;
 
     /**
      * @cx_field true
@@ -1001,7 +1001,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfo;
+    public $additionalInfo = null;
 
     /**
      * @cx_field true
@@ -1010,7 +1010,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $additionalInfoPartial;
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true
@@ -1020,7 +1020,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $bankAccountNumber;
+    public $bankAccountNumber = null;
 
     /**
      * @cx_field true
@@ -1030,7 +1030,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $kvkCity;
+    public $kvkCity = null;
 
     /**
      * @cx_field true
@@ -1040,7 +1040,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width
      */
-    public $mailingCountrySort;
+    public $mailingCountrySort = null;
 
     /**
      * @cx_field true
@@ -1051,7 +1051,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $mailingAddressUseVisitAddress;
+    public $mailingAddressUseVisitAddress = null;
 
     /**
      * @cx_field true
@@ -1062,7 +1062,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $invoiceAddressUseMailingAddress;
+    public $invoiceAddressUseMailingAddress = null;
 
     /**
      * @cx_field true
@@ -1071,7 +1071,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $evaluation;
+    public $evaluation = null;
 
     /**
      * @cx_field true
@@ -1081,7 +1081,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $externalIdentifier;
+    public $externalIdentifier = null;
 
     /**
      * @cx_field true
@@ -1093,7 +1093,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toMainUser
      */
-    public $toMainUser;
+    public $toMainUser = null;
 
     /**
      * @cx_field true
@@ -1105,7 +1105,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name userCompanies
      */
-    public $userCompanies;
+    public $userCompanies = null;
 
     /**
      * @cx_field true
@@ -1117,7 +1117,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -1129,7 +1129,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -1141,7 +1141,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name financialContact
      */
-    public $financialContact;
+    public $financialContact = null;
 
     /**
      * @cx_field true
@@ -1153,7 +1153,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -1167,7 +1167,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toVisitProvinceNode;
+    public $toVisitProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1181,7 +1181,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Branche0
      */
-    public $toBrancheLevel1;
+    public $toBrancheLevel1 = null;
 
     /**
      * @cx_field true
@@ -1195,7 +1195,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Branche1
      */
-    public $toBrancheLevel2;
+    public $toBrancheLevel2 = null;
 
     /**
      * @cx_field true
@@ -1209,7 +1209,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Key-account
      */
-    public $toKeyAccountNode;
+    public $toKeyAccountNode = null;
 
     /**
      * @cx_field true
@@ -1223,7 +1223,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toVisitCountryNode;
+    public $toVisitCountryNode = null;
 
     /**
      * @cx_field true
@@ -1235,7 +1235,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name children
      */
-    public $children;
+    public $children = null;
 
     /**
      * @cx_field true
@@ -1247,7 +1247,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name parents
      */
-    public $parents;
+    public $parents = null;
 
     /**
      * @cx_field true
@@ -1259,7 +1259,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name statuses
      */
-    public $statuses;
+    public $statuses = null;
 
     /**
      * @cx_field true
@@ -1271,7 +1271,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name parent
      */
-    public $parent;
+    public $parent = null;
 
     /**
      * @cx_field true
@@ -1285,7 +1285,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType BIK
      */
-    public $toBikNode1;
+    public $toBikNode1 = null;
 
     /**
      * @cx_field true
@@ -1299,7 +1299,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType BIK
      */
-    public $toBikNode2;
+    public $toBikNode2 = null;
 
     /**
      * @cx_field true
@@ -1313,7 +1313,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toMailingCountryNode;
+    public $toMailingCountryNode = null;
 
     /**
      * @cx_field true
@@ -1327,7 +1327,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toMailingProvinceNode;
+    public $toMailingProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1341,7 +1341,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Verzamelfacturen
      */
-    public $toInvoiceCollectionNode;
+    public $toInvoiceCollectionNode = null;
 
     /**
      * @cx_field true
@@ -1355,7 +1355,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Krediet-status
      */
-    public $toCreditStatusNode;
+    public $toCreditStatusNode = null;
 
     /**
      * @cx_field true
@@ -1369,7 +1369,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toInvoiceCurrencyNode;
+    public $toInvoiceCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -1383,7 +1383,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Bron-Opdrachtgever
      */
-    public $toSourceNode;
+    public $toSourceNode = null;
 
     /**
      * @cx_field true
@@ -1397,7 +1397,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Rekeningtype
      */
-    public $toAccountTypeNode;
+    public $toAccountTypeNode = null;
 
     /**
      * @cx_field true
@@ -1411,7 +1411,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Land
      */
-    public $toInvoiceCountryNode;
+    public $toInvoiceCountryNode = null;
 
     /**
      * @cx_field true
@@ -1425,7 +1425,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Regio
      */
-    public $toInvoiceProvinceNode;
+    public $toInvoiceProvinceNode = null;
 
     /**
      * @cx_field true
@@ -1439,7 +1439,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Rechtspersoon
      */
-    public $toRechtsvormNode;
+    public $toRechtsvormNode = null;
 
     /**
      * @cx_field true
@@ -1453,7 +1453,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toRevenueCurrencyNode;
+    public $toRevenueCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -1465,7 +1465,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name vacancies
      */
-    public $vacancies;
+    public $vacancies = null;
 
     /**
      * @cx_field true
@@ -1479,7 +1479,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Valuta
      */
-    public $toCreditLimitCurrencyNode;
+    public $toCreditLimitCurrencyNode = null;
 
     /**
      * @cx_field true
@@ -1493,7 +1493,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Facturatieperiode
      */
-    public $toInvoicePeriodNode;
+    public $toInvoicePeriodNode = null;
 
     /**
      * @cx_field true
@@ -1505,7 +1505,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name groupNodes
      */
-    public $groupNodes;
+    public $groupNodes = null;
 
     /**
      * @cx_field true
@@ -1519,7 +1519,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Taal
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     /**
      * @cx_field true
@@ -1533,7 +1533,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Opdrachtgever-soort
      */
-    public $toKindNode;
+    public $toKindNode = null;
 
     /**
      * @cx_field true
@@ -1547,7 +1547,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Betalingstermijn
      */
-    public $toPaymentPeriodNode;
+    public $toPaymentPeriodNode = null;
 
     /**
      * @cx_field true
@@ -1561,7 +1561,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType BTW-tarief
      */
-    public $toTaxRateNode;
+    public $toTaxRateNode = null;
 
     /**
      * @cx_field true
@@ -1573,7 +1573,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUnionConditions1Node
      */
-    public $toUnionConditions1Node;
+    public $toUnionConditions1Node = null;
 
     /**
      * @cx_field true
@@ -1585,7 +1585,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUnionConditions2Node
      */
-    public $toUnionConditions2Node;
+    public $toUnionConditions2Node = null;
 
     /**
      * @cx_field true
@@ -1599,7 +1599,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Factuurafhandeling
      */
-    public $toInvoiceHandlingNode;
+    public $toInvoiceHandlingNode = null;
 
     /**
      * @cx_field true
@@ -1613,7 +1613,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Factuurregel-label
      */
-    public $toInvoiceLineLabelNode;
+    public $toInvoiceLineLabelNode = null;
 
     /**
      * @cx_field true
@@ -1627,7 +1627,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Betalingstermijn-startdatum
      */
-    public $toPaymentPeriodStartDateNode;
+    public $toPaymentPeriodStartDateNode = null;
 
     /**
      * @cx_field true
@@ -1641,7 +1641,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @default 1
      * @nodeType Crediteringsmethode
      */
-    public $toCreditMethodNode;
+    public $toCreditMethodNode = null;
 
     /**
      * @cx_field true
@@ -1653,7 +1653,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name workHistories
      */
-    public $workHistories;
+    public $workHistories = null;
 
     /**
      * @cx_field true
@@ -1665,7 +1665,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name aliases
      */
-    public $aliases;
+    public $aliases = null;
 
     /**
      * @cx_field true
@@ -1677,7 +1677,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name freelanceCandidates
      */
-    public $freelanceCandidates;
+    public $freelanceCandidates = null;
 
     /**
      * @cx_field true
@@ -1689,7 +1689,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name talentPoolCompanies
      */
-    public $talentPoolCompanies;
+    public $talentPoolCompanies = null;
 
     /**
      * @cx_field true
@@ -1701,7 +1701,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name opportunities
      */
-    public $opportunities;
+    public $opportunities = null;
 
     /**
      * @cx_field true
@@ -1713,7 +1713,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name leads
      */
-    public $leads;
+    public $leads = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

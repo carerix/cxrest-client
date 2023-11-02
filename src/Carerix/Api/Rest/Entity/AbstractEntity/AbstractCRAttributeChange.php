@@ -7,7 +7,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:21 +0000
+ * @version Wed, 11 Oct 2023 08:57:51 +0000
  * @method AbstractCRAttributeChange setAttributeEntityName() setAttributeEntityName(string $value)
  * @method string getAttributeEntityName getAttributeEntityName()
  * @method AbstractCRAttributeChange setId1() setId1(integer $value)
@@ -33,7 +33,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRAttributeChange';
+    public const ENTITY = 'CRAttributeChange';
 
     /**
      * @cx_field true
@@ -43,7 +43,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width 31
      */
-    public $attributeEntityName;
+    public $attributeEntityName = null;
 
     /**
      * @cx_field true
@@ -54,7 +54,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $id1;
+    public $id1 = null;
 
     /**
      * @cx_field true
@@ -65,7 +65,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $id2;
+    public $id2 = null;
 
     /**
      * @cx_field true
@@ -74,7 +74,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $effectiveDate;
+    public $effectiveDate = null;
 
     /**
      * @cx_field true
@@ -84,7 +84,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $value;
+    public $value = null;
 
     /**
      * @cx_field true
@@ -94,7 +94,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 31
      */
-    public $attributeName;
+    public $attributeName = null;
 
     /**
      * @cx_field true
@@ -105,7 +105,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $attributeChangeID;
+    public $attributeChangeID = null;
 
     /**
      * @cx_field true
@@ -114,7 +114,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $effectiveEndDate;
+    public $effectiveEndDate = null;
 
     /**
      * @cx_field true
@@ -124,7 +124,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $oldValue;
+    public $oldValue = null;
 
     /**
      * @cx_field true
@@ -134,7 +134,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 40
      */
-    public $remoteAddress;
+    public $remoteAddress = null;
 
     /**
      * @cx_field true
@@ -146,7 +146,7 @@ abstract class AbstractCRAttributeChange extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

@@ -16,7 +16,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:24 +0000
+ * @version Wed, 11 Oct 2023 08:57:53 +0000
  * @method AbstractCREmailTemplate setName() setName(string $value)
  * @method string getName getName()
  * @method AbstractCREmailTemplate setBodyText() setBodyText(string $value)
@@ -89,6 +89,8 @@ use Carerix\Api\Rest\Entity\CRUser;
  * @method integer getEmailTemplateTypeKey getEmailTemplateTypeKey()
  * @method AbstractCREmailTemplate setPackageConfig() setPackageConfig(NSDictionary|array $value)
  * @method NSDictionary|array getPackageConfig getPackageConfig()
+ * @method AbstractCREmailTemplate setTemplateLibraryConfig() setTemplateLibraryConfig(NSDictionary|array $value)
+ * @method NSDictionary|array getTemplateLibraryConfig getTemplateLibraryConfig()
  * @method AbstractCREmailTemplate setAttachments() setAttachments(array|Collection $values)
  * @method Collection|CRAttachment getAttachments getAttachments()
  * @method AbstractCREmailTemplate setOwner() setOwner(array|CRUser $value)
@@ -108,7 +110,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CREmailTemplate';
+    public const ENTITY = 'CREmailTemplate';
 
     /**
      * @cx_field true
@@ -118,7 +120,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -128,7 +130,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $bodyText;
+    public $bodyText = null;
 
     /**
      * @cx_field true
@@ -139,7 +141,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $index;
+    public $index = null;
 
     /**
      * @cx_field true
@@ -149,7 +151,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $altText;
+    public $altText = null;
 
     /**
      * @cx_field true
@@ -160,7 +162,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $emailTemplateID;
+    public $emailTemplateID = null;
 
     /**
      * @cx_field true
@@ -169,7 +171,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -178,7 +180,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -189,7 +191,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -199,7 +201,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 128
      */
-    public $targetEntityName;
+    public $targetEntityName = null;
 
     /**
      * @cx_field true
@@ -210,7 +212,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isScript;
+    public $isScript = null;
 
     /**
      * @cx_field true
@@ -220,7 +222,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $fromKeyPath;
+    public $fromKeyPath = null;
 
     /**
      * @cx_field true
@@ -230,7 +232,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $toKeyPath;
+    public $toKeyPath = null;
 
     /**
      * @cx_field true
@@ -241,7 +243,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isMultiRecord;
+    public $isMultiRecord = null;
 
     /**
      * @cx_field true
@@ -252,7 +254,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isActive;
+    public $isActive = null;
 
     /**
      * @cx_field true
@@ -262,7 +264,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 64
      */
-    public $code;
+    public $code = null;
 
     /**
      * @cx_field true
@@ -273,7 +275,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isHTML;
+    public $isHTML = null;
 
     /**
      * @cx_field true
@@ -284,7 +286,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $sortOrder;
+    public $sortOrder = null;
 
     /**
      * @cx_field true
@@ -295,7 +297,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $addressTypeKey;
+    public $addressTypeKey = null;
 
     /**
      * @cx_field true
@@ -306,7 +308,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $useAlternativeAddress;
+    public $useAlternativeAddress = null;
 
     /**
      * @cx_field true
@@ -317,7 +319,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isDefault;
+    public $isDefault = null;
 
     /**
      * @cx_field true
@@ -327,7 +329,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 64
      */
-    public $libraryID;
+    public $libraryID = null;
 
     /**
      * @cx_field true
@@ -337,7 +339,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $userRolesString;
+    public $userRolesString = null;
 
     /**
      * @cx_field true
@@ -347,7 +349,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $selectionsEntitiesString;
+    public $selectionsEntitiesString = null;
 
     /**
      * @cx_field true
@@ -358,7 +360,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $addAttachments;
+    public $addAttachments = null;
 
     /**
      * @cx_field true
@@ -369,7 +371,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -380,7 +382,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $delay;
+    public $delay = null;
 
     /**
      * @cx_field true
@@ -390,7 +392,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $languagesString;
+    public $languagesString = null;
 
     /**
      * @cx_field true
@@ -401,7 +403,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isSystem;
+    public $isSystem = null;
 
     /**
      * @cx_field true
@@ -412,7 +414,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $showInHintsBar;
+    public $showInHintsBar = null;
 
     /**
      * @cx_field true
@@ -423,7 +425,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isConfidential;
+    public $isConfidential = null;
 
     /**
      * @cx_field true
@@ -433,7 +435,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width
      */
-    public $localizedEntityName;
+    public $localizedEntityName = null;
 
     /**
      * @cx_field true
@@ -443,7 +445,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 64
      */
-    public $systemCode;
+    public $systemCode = null;
 
     /**
      * @cx_field true
@@ -453,7 +455,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $packageID;
+    public $packageID = null;
 
     /**
      * @cx_field true
@@ -462,7 +464,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $configInfo;
+    public $configInfo = null;
 
     /**
      * @cx_field true
@@ -473,7 +475,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $emailTemplateTypeKey;
+    public $emailTemplateTypeKey = null;
 
     /**
      * @cx_field true
@@ -482,7 +484,16 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $packageConfig;
+    public $packageConfig = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var NSDictionary|array
+     * @value_class NSDictionary
+     * @allows_null 1
+     */
+    public $templateLibraryConfig = null;
 
     /**
      * @cx_field true
@@ -494,7 +505,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name attachments
      */
-    public $attachments;
+    public $attachments = null;
 
     /**
      * @cx_field true
@@ -506,7 +517,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -520,7 +531,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType Uitstel-eenheid
      */
-    public $toDelayUnitNode;
+    public $toDelayUnitNode = null;
 
     /**
      * @cx_field true
@@ -532,7 +543,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name statusInfos
      */
-    public $statusInfos;
+    public $statusInfos = null;
 
     /**
      * @cx_field true
@@ -544,7 +555,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name leadStages
      */
-    public $leadStages;
+    public $leadStages = null;
 
     /**
      * @cx_field true
@@ -556,7 +567,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name opportunityStages
      */
-    public $opportunityStages;
+    public $opportunityStages = null;
 
     /**
      * @cx_field true
@@ -568,7 +579,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name checkpoints
      */
-    public $checkpoints;
+    public $checkpoints = null;
 
     /**
      * @cx_field true
@@ -580,7 +591,7 @@ abstract class AbstractCREmailTemplate extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name talentPoolMatchStages
      */
-    public $talentPoolMatchStages;
+    public $talentPoolMatchStages = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

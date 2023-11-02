@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:32 +0000
+ * @version Wed, 11 Oct 2023 08:58:00 +0000
  * @method AbstractCRUrl setUrl() setUrl(string $value)
  * @method string getUrl getUrl()
  * @method AbstractCRUrl setUrlID() setUrlID(integer $value)
@@ -24,7 +24,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRUrl extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRUrl';
+    public const ENTITY = 'CRUrl';
 
     /**
      * @cx_field true
@@ -34,7 +34,7 @@ abstract class AbstractCRUrl extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000
      */
-    public $url;
+    public $url = null;
 
     /**
      * @cx_field true
@@ -45,7 +45,7 @@ abstract class AbstractCRUrl extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $urlID;
+    public $urlID = null;
 
     /**
      * @cx_field true
@@ -54,7 +54,7 @@ abstract class AbstractCRUrl extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -63,7 +63,7 @@ abstract class AbstractCRUrl extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -75,7 +75,7 @@ abstract class AbstractCRUrl extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -89,7 +89,7 @@ abstract class AbstractCRUrl extends \Carerix\Api\Rest\Entity
      * @default 0
      * @nodeType URL-label
      */
-    public $toUrlLabel;
+    public $toUrlLabel = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

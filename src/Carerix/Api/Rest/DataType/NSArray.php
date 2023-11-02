@@ -83,6 +83,8 @@ class NSArray extends ArrayObject implements DataTypeInterface
                 || $v instanceof Entity
             ) {
                 $array[$k] = $v->toArray();
+            } else {
+            	$array[$k] = $v;
             }
         }
         return $array;
@@ -92,6 +94,7 @@ class NSArray extends ArrayObject implements DataTypeInterface
      * @param SimpleXMLElement $sxe
      * @return SimpleXMLElement
      * @throws ReflectionException
+     * @todo see Util::xmlFactory todo
      */
     public function toSimpleXMLElement(&$sxe = null)
     {
@@ -99,18 +102,31 @@ class NSArray extends ArrayObject implements DataTypeInterface
         if ($sxe === null) {
             $sxe = new SimpleXMLElement('<' . self::DATA_TYPE . '/>');
         }
+        
+        $worker = function ($k, $v, &$sxe) use ($subElementName, &$worker) {
+        	if ($v instanceof NSDictionary) {
+        		$v->toSimpleXMLElement($sxe->{NSDictionary::DATA_TYPE}[]);
+        	} elseif ($v instanceof Entity) {
+        		$entity = Entity::getEntityFromObject($v);
+        		$v->toSimpleXMLElement($sxe->{$entity}, $v);
+        	} elseif ($subElementName) {
+        		$sxe->addChild($subElementName, $v);
+        	} else {
+        		//normal arrays was treated as simple types and this is strictly broken, arrays can not be added as children
+        		if (is_array($v)) {
+        			foreach ($v as $nodeName => $nodeVal) {
+        				$tmp = $sxe->addChild($nodeName);
+        				$worker($nodeName, $nodeVal, $tmp);
+        			}
+        		} else {
+        			$sxe->addChild(self::DEFAULT_ARRAY_ITEM_KEY, $v);
+        		}
+        		
+        	}
+        };
 
-        foreach ($this as $v) {
-            if ($v instanceof NSDictionary) {
-                $v->toSimpleXMLElement($sxe->{NSDictionary::DATA_TYPE}[]);
-            } elseif ($v instanceof Entity) {
-                $entity = Entity::getEntityFromObject($v);
-                $v->toSimpleXMLElement($sxe->{$entity}, $v);
-            } elseif ($subElementName) {
-                $sxe->addChild($subElementName, $v);
-            } else {
-                $sxe->addChild(self::DEFAULT_ARRAY_ITEM_KEY, $v);
-            }
+        foreach ($this as $k => $v) {
+        	$worker($k, $v, $sxe);
         }
 
         return $sxe;

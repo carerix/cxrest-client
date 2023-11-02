@@ -12,7 +12,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:41 +0000
+ * @version Wed, 11 Oct 2023 08:58:08 +0000
  * @method AbstractCRTemplatePart setTemplatePartID() setTemplatePartID(integer $value)
  * @method integer getTemplatePartID getTemplatePartID()
  * @method AbstractCRTemplatePart setCreationDate() setCreationDate(string $value)
@@ -60,7 +60,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRTemplatePart';
+    public const ENTITY = 'CRTemplatePart';
 
     /**
      * @cx_field true
@@ -71,7 +71,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $templatePartID;
+    public $templatePartID = null;
 
     /**
      * @cx_field true
@@ -80,7 +80,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -91,7 +91,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -102,7 +102,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -111,7 +111,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -121,7 +121,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $content;
+    public $content = null;
 
     /**
      * @cx_field true
@@ -131,7 +131,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $title;
+    public $title = null;
 
     /**
      * @cx_field true
@@ -141,7 +141,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1024
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -152,7 +152,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isVisible;
+    public $isVisible = null;
 
     /**
      * @cx_field true
@@ -163,7 +163,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $templatePartTypeKey;
+    public $templatePartTypeKey = null;
 
     /**
      * @cx_field true
@@ -173,7 +173,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 64
      */
-    public $code;
+    public $code = null;
 
     /**
      * @cx_field true
@@ -183,7 +183,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $packageID;
+    public $packageID = null;
 
     /**
      * @cx_field true
@@ -192,7 +192,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $configInfo;
+    public $configInfo = null;
 
     /**
      * @cx_field true
@@ -203,7 +203,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isSystem;
+    public $isSystem = null;
 
     /**
      * @cx_field true
@@ -214,7 +214,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $contentTypeKey;
+    public $contentTypeKey = null;
 
     /**
      * @cx_field true
@@ -223,7 +223,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @value_class NSDictionary
      * @allows_null 1
      */
-    public $packageConfig;
+    public $packageConfig = null;
 
     /**
      * @cx_field true
@@ -235,7 +235,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -247,7 +247,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -259,7 +259,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -271,7 +271,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLanguageNode
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     /**
      * @cx_field true
@@ -283,7 +283,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name children
      */
-    public $children;
+    public $children = null;
 
     /**
      * @cx_field true
@@ -295,7 +295,7 @@ abstract class AbstractCRTemplatePart extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name parents
      */
-    public $parents;
+    public $parents = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

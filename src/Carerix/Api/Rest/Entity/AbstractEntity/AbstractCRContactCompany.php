@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:52 +0000
+ * @version Wed, 11 Oct 2023 08:58:15 +0000
  * @method AbstractCRContactCompany setToRelationshipNode() setToRelationshipNode(array|CRDataNode $value)
  * @method CRDataNode getToRelationshipNode getToRelationshipNode($index = null)
  * @method AbstractCRContactCompany setToCompany() setToCompany(array|CRCompany $value)
@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRContactCompany extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRContactCompany';
+    public const ENTITY = 'CRContactCompany';
 
     /**
      * @cx_field true
@@ -31,7 +31,7 @@ abstract class AbstractCRContactCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toRelationshipNode
      */
-    public $toRelationshipNode;
+    public $toRelationshipNode = null;
 
     /**
      * @cx_field true
@@ -43,7 +43,7 @@ abstract class AbstractCRContactCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toCompany
      */
-    public $toCompany;
+    public $toCompany = null;
 
     /**
      * @cx_field true
@@ -55,7 +55,7 @@ abstract class AbstractCRContactCompany extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

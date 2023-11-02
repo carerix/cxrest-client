@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:40 +0000
+ * @version Wed, 11 Oct 2023 08:58:07 +0000
  * @method AbstractCROpportunityUser setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCROpportunityUser setImportID() setImportID(string $value)
@@ -25,7 +25,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCROpportunityUser extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CROpportunityUser';
+    public const ENTITY = 'CROpportunityUser';
 
     /**
      * @cx_field true
@@ -34,7 +34,7 @@ abstract class AbstractCROpportunityUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -45,7 +45,7 @@ abstract class AbstractCROpportunityUser extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -54,7 +54,7 @@ abstract class AbstractCROpportunityUser extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -66,7 +66,7 @@ abstract class AbstractCROpportunityUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toUser
      */
-    public $toUser;
+    public $toUser = null;
 
     /**
      * @cx_field true
@@ -78,7 +78,7 @@ abstract class AbstractCROpportunityUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toOpportunity
      */
-    public $toOpportunity;
+    public $toOpportunity = null;
 
     /**
      * @cx_field true
@@ -90,7 +90,7 @@ abstract class AbstractCROpportunityUser extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toOpportunityRoleNode
      */
-    public $toOpportunityRoleNode;
+    public $toOpportunityRoleNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

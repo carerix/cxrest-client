@@ -10,7 +10,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:43 +0000
+ * @version Wed, 11 Oct 2023 08:58:09 +0000
  * @method AbstractCRObjectImport setObjectImportID() setObjectImportID(integer $value)
  * @method integer getObjectImportID getObjectImportID()
  * @method AbstractCRObjectImport setImportID() setImportID(string $value)
@@ -40,7 +40,7 @@ use Carerix\Api\Rest\Entity\CRUser;
  */
 abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRObjectImport';
+    public const ENTITY = 'CRObjectImport';
 
     /**
      * @cx_field true
@@ -51,7 +51,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $objectImportID;
+    public $objectImportID = null;
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -71,7 +71,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $headers;
+    public $headers = null;
 
     /**
      * @cx_field true
@@ -80,7 +80,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @value_class NSArray
      * @allows_null 1
      */
-    public $results;
+    public $results = null;
 
     /**
      * @cx_field true
@@ -89,7 +89,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -98,7 +98,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -109,7 +109,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $attachmentID;
+    public $attachmentID = null;
 
     /**
      * @cx_field true
@@ -120,7 +120,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -132,7 +132,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toStatusNode
      */
-    public $toStatusNode;
+    public $toStatusNode = null;
 
     /**
      * @cx_field true
@@ -144,7 +144,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name owner
      */
-    public $owner;
+    public $owner = null;
 
     /**
      * @cx_field true
@@ -156,7 +156,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name modifiedBy
      */
-    public $modifiedBy;
+    public $modifiedBy = null;
 
     /**
      * @cx_field true
@@ -168,7 +168,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name createdBy
      */
-    public $createdBy;
+    public $createdBy = null;
 
     /**
      * @cx_field true
@@ -180,7 +180,7 @@ abstract class AbstractCRObjectImport extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toAttachment
      */
-    public $toAttachment;
+    public $toAttachment = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

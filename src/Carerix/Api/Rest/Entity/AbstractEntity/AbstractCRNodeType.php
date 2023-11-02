@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRDataNode;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:29 +0000
+ * @version Wed, 11 Oct 2023 08:57:58 +0000
  * @method AbstractCRNodeType setTypeID() setTypeID(integer $value)
  * @method integer getTypeID getTypeID()
  * @method AbstractCRNodeType setName() setName(string $value)
@@ -40,7 +40,7 @@ use Carerix\Api\Rest\Entity\CRDataNode;
  */
 abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRNodeType';
+    public const ENTITY = 'CRNodeType';
 
     /**
      * @cx_field true
@@ -51,7 +51,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $typeID;
+    public $typeID = null;
 
     /**
      * @cx_field true
@@ -61,7 +61,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width 32
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -72,7 +72,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @width 255
      * @isUnique 1
      */
-    public $importID;
+    public $importID = null;
 
     /**
      * @cx_field true
@@ -83,7 +83,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isEnumerated;
+    public $isEnumerated = null;
 
     /**
      * @cx_field true
@@ -94,7 +94,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @value_type i
      * @value_type_human long integer (32 bits)
      */
-    public $currentEnumerationID;
+    public $currentEnumerationID = null;
 
     /**
      * @cx_field true
@@ -105,7 +105,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $deleted;
+    public $deleted = null;
 
     /**
      * @cx_field true
@@ -116,7 +116,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isEditable;
+    public $isEditable = null;
 
     /**
      * @cx_field true
@@ -126,7 +126,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width
      */
-    public $localizedName;
+    public $localizedName = null;
 
     /**
      * @cx_field true
@@ -137,7 +137,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isExtracted;
+    public $isExtracted = null;
 
     /**
      * @cx_field true
@@ -147,7 +147,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 32
      */
-    public $identifier;
+    public $identifier = null;
 
     /**
      * @cx_field true
@@ -157,7 +157,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notesDescription;
+    public $notesDescription = null;
 
     /**
      * @cx_field true
@@ -168,7 +168,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @value_type s
      * @value_type_human short integer (16 bits)
      */
-    public $isMultiLanguage;
+    public $isMultiLanguage = null;
 
     /**
      * @cx_field true
@@ -178,7 +178,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $customType;
+    public $customType = null;
 
     /**
      * @cx_field true
@@ -190,7 +190,7 @@ abstract class AbstractCRNodeType extends \Carerix\Api\Rest\Entity
      * @to_many 1
      * @name dataNodes
      */
-    public $dataNodes;
+    public $dataNodes = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

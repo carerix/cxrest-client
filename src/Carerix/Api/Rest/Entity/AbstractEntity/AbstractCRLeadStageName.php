@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRLeadStage;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:40 +0000
+ * @version Wed, 11 Oct 2023 08:58:07 +0000
  * @method AbstractCRLeadStageName setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRLeadStageName setName() setName(string $value)
@@ -22,7 +22,7 @@ use Carerix\Api\Rest\Entity\CRLeadStage;
  */
 abstract class AbstractCRLeadStageName extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRLeadStageName';
+    public const ENTITY = 'CRLeadStageName';
 
     /**
      * @cx_field true
@@ -31,7 +31,7 @@ abstract class AbstractCRLeadStageName extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 0
      */
-    public $creationDate;
+    public $creationDate = null;
 
     /**
      * @cx_field true
@@ -41,7 +41,7 @@ abstract class AbstractCRLeadStageName extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 255
      */
-    public $name;
+    public $name = null;
 
     /**
      * @cx_field true
@@ -50,7 +50,7 @@ abstract class AbstractCRLeadStageName extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $modificationDate;
+    public $modificationDate = null;
 
     /**
      * @cx_field true
@@ -62,7 +62,7 @@ abstract class AbstractCRLeadStageName extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLanguageNode
      */
-    public $toLanguageNode;
+    public $toLanguageNode = null;
 
     /**
      * @cx_field true
@@ -74,7 +74,7 @@ abstract class AbstractCRLeadStageName extends \Carerix\Api\Rest\Entity
      * @to_many 0
      * @name toLeadStage
      */
-    public $toLeadStage;
+    public $toLeadStage = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

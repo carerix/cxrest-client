@@ -5,7 +5,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Fri, 04 Sep 2020 13:43:31 +0000
+ * @version Wed, 11 Oct 2023 08:58:00 +0000
  * @method AbstractCRToDoNotes setNotesHash() setNotesHash(string $value)
  * @method string getNotesHash getNotesHash()
  * @method AbstractCRToDoNotes setNotes() setNotes(string $value)
@@ -13,7 +13,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
  */
 abstract class AbstractCRToDoNotes extends \Carerix\Api\Rest\Entity
 {
-    const ENTITY = 'CRToDoNotes';
+    public const ENTITY = 'CRToDoNotes';
 
     /**
      * @cx_field true
@@ -23,7 +23,7 @@ abstract class AbstractCRToDoNotes extends \Carerix\Api\Rest\Entity
      * @allows_null 0
      * @width 32
      */
-    public $notesHash;
+    public $notesHash = null;
 
     /**
      * @cx_field true
@@ -33,7 +33,7 @@ abstract class AbstractCRToDoNotes extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      * @width 1000000
      */
-    public $notes;
+    public $notes = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {
