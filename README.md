@@ -1,16 +1,16 @@
 Carerix REST API Client Library
 =========
-Client library to access your Carerix application via RESTful API (https://api.carerix.com) 
+Client library to access your Carerix application via RESTful API (https://api.carerix.com)
 
 Installation
 ------------
-Recommened way is to install the library using composer:
+Recommended way is to install the library using composer:
 ```bash
-$ composer require carerx/cxrest-client  
+$ composer require carerx/cxrest-client
 ```
 
 Basic usage
-- 
+-
 Bootstrapping:
 ```php
 use Carerix\Api\Rest\Client;
@@ -28,7 +28,7 @@ $manager->setPassword(API_TOKEN);
 Entity::setManager($manager);
 ```
 
-Usage (after entity manager was bootstrapped correctly): 
+Usage (after entity manager was bootstrapped correctly):
 ```php
 use Carerix\Api\Rest\Entity\CREmployee;
 use Carerix\Api\Rest\Entity\CRUser;
@@ -43,17 +43,17 @@ $employee = new CREmployee();
 $employee
     ->setFirstName('John')
     ->setLastName('Smith');
-$employee->apply($params); 
+$employee->apply($params);
 ```
 
 Resources
 ---------
 * http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest - RESTful API description
 * http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest_api_methods - Detailed description of the methods provided by Carerix RESTful API
-* http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest_api_client - Detailed description and examples for this Client Library 
+* http://development.wiki.carerix.com/cxwiki/doku.php?id=cxrest_api_client - Detailed description and examples for this Client Library
 * http://development.wiki.carerix.com/cxwiki/doku.php?id=xml - all developers, examples of XML packages that can be used with Carerix RESTful API
 
-To access these resources you'll have to apply a partner developer account.  
+To access these resources you'll have to apply a partner developer account.
 
 License
 -------
