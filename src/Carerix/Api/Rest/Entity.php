@@ -749,6 +749,10 @@ abstract class Entity implements Serializable
                 } elseif (self::isOneToOneAssociation($reflection)) {
                     //go up one level
                     $v         = array_shift($v);
+                    // skip processing of children elements if there are none
+                    if (is_null($v)) {
+                        continue;
+                    }
                     $className = self::getEntityClassName($association);
                     $v         = call_user_func($className . '::fromArrayStatic', $v, $className);
                 } elseif (self::isOneToManyAssociation($reflection)) {
