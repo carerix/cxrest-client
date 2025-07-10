@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:07 +0000
+ * @version Wed, 09 Jul 2025 09:47:08 +0000
  * @method AbstractCROpportunity setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCROpportunity setCreationDate() setCreationDate(string $value)
@@ -252,7 +252,7 @@ abstract class AbstractCROpportunity extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $workCity = null;
 
@@ -313,7 +313,7 @@ abstract class AbstractCROpportunity extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 100
+     * @width 255
      */
     public $workLocation = null;
 

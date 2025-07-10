@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:57 +0000
+ * @version Wed, 09 Jul 2025 09:46:46 +0000
  * @method AbstractCRInvoice setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRInvoice setDeleted() setDeleted(integer $value)
@@ -433,7 +433,7 @@ abstract class AbstractCRInvoice extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $senderKvkCity = null;
 

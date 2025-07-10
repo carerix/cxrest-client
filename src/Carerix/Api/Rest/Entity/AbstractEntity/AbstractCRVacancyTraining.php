@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:02 +0000
+ * @version Wed, 09 Jul 2025 09:46:55 +0000
  * @method AbstractCRVacancyTraining setVacancyTrainingID() setVacancyTrainingID(integer $value)
  * @method integer getVacancyTrainingID getVacancyTrainingID()
  * @method AbstractCRVacancyTraining setCreationDate() setCreationDate(string $value)

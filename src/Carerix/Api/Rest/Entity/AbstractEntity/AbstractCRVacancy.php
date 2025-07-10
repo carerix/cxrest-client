@@ -29,7 +29,7 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:02 +0000
+ * @version Wed, 09 Jul 2025 09:46:55 +0000
  * @method AbstractCRVacancy setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRVacancy setCreationDate() setCreationDate(string $value)
@@ -222,6 +222,8 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method string getConfidentialIamRole getConfidentialIamRole()
  * @method AbstractCRVacancy setMatchCriteriaID() setMatchCriteriaID(integer $value)
  * @method integer getMatchCriteriaID getMatchCriteriaID()
+ * @method AbstractCRVacancy setMatchCount() setMatchCount(integer $value)
+ * @method integer getMatchCount getMatchCount()
  * @method AbstractCRVacancy setMatches() setMatches(array|Collection $values)
  * @method Collection|CRMatch getMatches getMatches()
  * @method AbstractCRVacancy setToUser() setToUser(array|CRUser $value)
@@ -763,7 +765,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $invoiceCity = null;
 
@@ -813,7 +815,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $workCity = null;
 
@@ -1035,7 +1037,7 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 100
+     * @width 255
      */
     public $workLocation = null;
 
@@ -1327,6 +1329,17 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type_human long integer (32 bits)
      */
     public $matchCriteriaID = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $matchCount = null;
 
     /**
      * @cx_field true

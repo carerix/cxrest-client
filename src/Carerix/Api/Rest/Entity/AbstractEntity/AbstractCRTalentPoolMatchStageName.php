@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRTalentPoolMatchStage;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:06 +0000
+ * @version Wed, 09 Jul 2025 09:47:05 +0000
  * @method AbstractCRTalentPoolMatchStageName setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRTalentPoolMatchStageName setName() setName(string $value)

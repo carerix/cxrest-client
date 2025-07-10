@@ -12,7 +12,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:50 +0000
+ * @version Wed, 09 Jul 2025 09:46:36 +0000
  * @method AbstractCRAgency setAgencyID() setAgencyID(integer $value)
  * @method integer getAgencyID getAgencyID()
  * @method AbstractCRAgency setCreationDate() setCreationDate(string $value)
@@ -93,6 +93,8 @@ use Carerix\Api\Rest\Entity\CRUser;
  * @method string getIndicationColor getIndicationColor()
  * @method AbstractCRAgency setAdditionalIndicationColor() setAdditionalIndicationColor(string $value)
  * @method string getAdditionalIndicationColor getAdditionalIndicationColor()
+ * @method AbstractCRAgency setAgencyWebsite() setAgencyWebsite(string $value)
+ * @method string getAgencyWebsite getAgencyWebsite()
  * @method AbstractCRAgency setParent() setParent(array|CRAgency $value)
  * @method CRAgency getParent getParent($index = null)
  * @method AbstractCRAgency setChildren() setChildren(array|Collection $values)
@@ -243,7 +245,7 @@ abstract class AbstractCRAgency extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $visitCity = null;
 
@@ -385,7 +387,7 @@ abstract class AbstractCRAgency extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $mailingCity = null;
 
@@ -476,7 +478,7 @@ abstract class AbstractCRAgency extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $kvkCity = null;
 
@@ -517,6 +519,16 @@ abstract class AbstractCRAgency extends \Carerix\Api\Rest\Entity
      * @width 20
      */
     public $additionalIndicationColor = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 100
+     */
+    public $agencyWebsite = null;
 
     /**
      * @cx_field true

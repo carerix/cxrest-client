@@ -39,6 +39,8 @@ class Client
      */
     protected $historyContainer = [];
 
+    private $_OAuth2Token;
+
     public function __construct()
     {
         $handlerStack = HandlerStack::create();
@@ -47,6 +49,13 @@ class Client
         $this->client = new GuzzleClient([
             'handler' => $handlerStack
         ]);
+    }
+
+    /**
+     * @return GuzzleClient
+     */
+    public function getGuzzleClient() {
+        return $this->client;
     }
 
     /**
@@ -151,7 +160,7 @@ class Client
         $username = $request->getUsername();
         $password = $request->getPassword();
 
-        if ($username && $password) {
+        if (!$this->isOAuth2() && $username && $password) {
             $options[RequestOptions::AUTH] = [$username, $password];
         }
 
@@ -163,6 +172,10 @@ class Client
             'Accept'     => '*/*',
             'User-Agent' => __CLASS__,
         ];
+
+        if ($this->isOAuth2()) {
+            $headers['Authorization'] = sprintf("Bearer %s", $this->_OAuth2Token);
+        }
 
         switch ($request->getMethod()) {
             case self::POST:
@@ -195,5 +208,14 @@ class Client
         }
 
         return $response->getBody()->getContents();
+    }
+
+    public function setOAuth2Token(string $token) {
+        $this->_OAuth2Token = $token;
+        return $this;
+    }
+
+    public function isOAuth2() {
+        return (strlen((string)$this->_OAuth2Token)>0 && boolval($this->_OAuth2Token));
     }
 }

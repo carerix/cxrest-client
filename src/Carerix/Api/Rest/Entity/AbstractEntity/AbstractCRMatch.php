@@ -21,7 +21,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:57 +0000
+ * @version Wed, 09 Jul 2025 09:46:47 +0000
  * @method AbstractCRMatch setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRMatch setModificationDate() setModificationDate(string $value)
@@ -86,6 +86,8 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method integer getIsOverdue getIsOverdue()
  * @method AbstractCRMatch setConfidentialIamRole() setConfidentialIamRole(string $value)
  * @method string getConfidentialIamRole getConfidentialIamRole()
+ * @method AbstractCRMatch setIndeedApplyIdentifier() setIndeedApplyIdentifier(string $value)
+ * @method string getIndeedApplyIdentifier getIndeedApplyIdentifier()
  * @method AbstractCRMatch setToEmployee() setToEmployee(array|CREmployee $value)
  * @method CREmployee getToEmployee getToEmployee($index = null)
  * @method AbstractCRMatch setToVacancy() setToVacancy(array|CRVacancy $value)
@@ -150,6 +152,8 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method CRDataNode getToCurrentEmployeeBrancheLevel2 getToCurrentEmployeeBrancheLevel2($index = null)
  * @method AbstractCRMatch setToCurrentEmployeeFunctionLevel2() setToCurrentEmployeeFunctionLevel2(array|CRDataNode $value)
  * @method CRDataNode getToCurrentEmployeeFunctionLevel2 getToCurrentEmployeeFunctionLevel2($index = null)
+ * @method AbstractCRMatch setToRejectionReasonNode() setToRejectionReasonNode(array|CRDataNode $value)
+ * @method CRDataNode getToRejectionReasonNode getToRejectionReasonNode($index = null)
  */
 abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
 {
@@ -467,6 +471,16 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @width 128
      */
     public $confidentialIamRole = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 255
+     */
+    public $indeedApplyIdentifier = null;
 
     /**
      * @cx_field true
@@ -861,6 +875,20 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @name toCurrentEmployeeFunctionLevel2
      */
     public $toCurrentEmployeeFunctionLevel2 = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var CRDataNode
+     * @OneToOne (targetEntity="CRDataNode")
+     * @mandatory 0
+     * @destination_entity CRDataNode
+     * @to_many 0
+     * @name toRejectionReasonNode
+     * @default 1
+     * @nodeType RejectionReason
+     */
+    public $toRejectionReasonNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

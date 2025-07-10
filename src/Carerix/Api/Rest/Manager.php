@@ -172,6 +172,35 @@ class Manager
     }
 
     /**
+     * Automatically obtains token and configure transport layer to use it as bearer
+     * @param string $conventionsUrl
+     * @param string $clientId
+     * @param string $clientSecret
+     * @param bool $force Forces token request to be made
+     * @throws Exception
+     * @throws InvalidArgumentException
+     * @return self
+     */
+    public function configureOAuth2Auth(string $conventionsUrl, string $clientId, string $clientSecret, bool $force = false)
+    {
+        if ($this->isOAuth2Ready() && !$force) {
+            return $this;
+        }
+
+        if (!$conventionsUrl || !$clientId || !$clientSecret) {
+            throw new InvalidArgumentException('OAuth2 config params are empty or not provided');
+        }
+
+        $tokenManager = new OAuth2Token($this->client->getGuzzleClient(), $conventionsUrl, $clientId, $clientSecret);
+        if (!$tokenManager->getToken($force)) {
+            throw new Exception(sprintf("OAuth2 error:  %s", join(PHP_EOL, $tokenManager->errors)));
+        }
+        $this->client->setOAuth2Token($tokenManager->getToken());
+
+        return $this;
+    }
+
+    /**
      * Automatically discover and register entities
      * @return void
      */
@@ -519,5 +548,9 @@ class Manager
         }
 
         return $instance;
+    }
+
+    public function isOAuth2Ready() {
+        return $this->client->isOAuth2();
     }
 }

@@ -16,7 +16,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:53 +0000
+ * @version Wed, 09 Jul 2025 09:46:41 +0000
  * @method AbstractCREmailTemplate setName() setName(string $value)
  * @method string getName getName()
  * @method AbstractCREmailTemplate setBodyText() setBodyText(string $value)

@@ -31,7 +31,7 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:14 +0000
+ * @version Wed, 09 Jul 2025 09:47:19 +0000
  * @method AbstractCRContact setPhoto() setPhoto(string $value)
  * @method string getPhoto getPhoto()
  * @method AbstractCRContact setCompanyInformation() setCompanyInformation(string $value)
@@ -282,6 +282,8 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method string getIamUser getIamUser()
  * @method AbstractCRContact setUserRoleType() setUserRoleType(string $value)
  * @method string getUserRoleType getUserRoleType()
+ * @method AbstractCRContact setPrefixCarerixEmail() setPrefixCarerixEmail(string $value)
+ * @method string getPrefixCarerixEmail getPrefixCarerixEmail()
  * @method AbstractCRContact setGroups() setGroups(array|Collection $values)
  * @method Collection|CRDataNode getGroups getGroups()
  * @method AbstractCRContact setToStatusNode() setToStatusNode(array|CRDataNode $value)
@@ -633,7 +635,7 @@ abstract class AbstractCRContact extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $city = null;
 
@@ -776,7 +778,7 @@ abstract class AbstractCRContact extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $visitCity = null;
 
@@ -1189,7 +1191,7 @@ abstract class AbstractCRContact extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $homeCity = null;
 
@@ -1249,7 +1251,7 @@ abstract class AbstractCRContact extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $alternativeCity = null;
 
@@ -1646,6 +1648,16 @@ abstract class AbstractCRContact extends \Carerix\Api\Rest\Entity
     /**
      * @cx_field true
      * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 200
+     */
+    public $prefixCarerixEmail = null;
+
+    /**
+     * @cx_field true
+     * @access private
      * @var Collection
      * @OneToMany (targetEntity="CRDataNode")
      * @mandatory 0
@@ -2037,6 +2049,7 @@ abstract class AbstractCRContact extends \Carerix\Api\Rest\Entity
      * @destination_entity CREmailAddress
      * @to_many 1
      * @name emailAddresses
+     * @inverseName toUser
      */
     public $emailAddresses = null;
 

@@ -15,7 +15,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:58 +0000
+ * @version Wed, 09 Jul 2025 09:46:48 +0000
  * @method AbstractCRPublication setPublicationID() setPublicationID(integer $value)
  * @method integer getPublicationID getPublicationID()
  * @method AbstractCRPublication setCampaign() setCampaign(string $value)
@@ -90,6 +90,10 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method NSDictionary|array getAdditionalInfo getAdditionalInfo()
  * @method AbstractCRPublication setAdditionalInfoPartial() setAdditionalInfoPartial(NSDictionary|array $value)
  * @method NSDictionary|array getAdditionalInfoPartial getAdditionalInfoPartial()
+ * @method AbstractCRPublication setIndeedSourcePostingIdentifier() setIndeedSourcePostingIdentifier(string $value)
+ * @method string getIndeedSourcePostingIdentifier getIndeedSourcePostingIdentifier()
+ * @method AbstractCRPublication setVacancyUrl() setVacancyUrl(string $value)
+ * @method string getVacancyUrl getVacancyUrl()
  * @method AbstractCRPublication setToVacancy() setToVacancy(array|CRVacancy $value)
  * @method CRVacancy getToVacancy getToVacancy($index = null)
  * @method AbstractCRPublication setCreatedBy() setCreatedBy(array|CRUser $value)
@@ -405,7 +409,7 @@ abstract class AbstractCRPublication extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 100
+     * @width 255
      */
     public $workLocation = null;
 
@@ -485,6 +489,26 @@ abstract class AbstractCRPublication extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      */
     public $additionalInfoPartial = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 255
+     */
+    public $indeedSourcePostingIdentifier = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 1000
+     */
+    public $vacancyUrl = null;
 
     /**
      * @cx_field true

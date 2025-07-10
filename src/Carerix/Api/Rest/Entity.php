@@ -968,8 +968,7 @@ abstract class Entity implements Serializable
         if (property_exists($this, $identifierKey)) {
             return $this->{$identifierKey};
         }
-
-        return $this->attributes['id'];
+        return (!isset($this->attributes['id']))? null : $this->attributes['id'];
     }
 
     /**

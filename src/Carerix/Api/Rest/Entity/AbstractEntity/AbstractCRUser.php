@@ -29,7 +29,7 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:01 +0000
+ * @version Wed, 09 Jul 2025 09:46:52 +0000
  * @method AbstractCRUser setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRUser setCreationDate() setCreationDate(string $value)
@@ -252,6 +252,8 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method string getIamUser getIamUser()
  * @method AbstractCRUser setUserRoleType() setUserRoleType(string $value)
  * @method string getUserRoleType getUserRoleType()
+ * @method AbstractCRUser setPrefixCarerixEmail() setPrefixCarerixEmail(string $value)
+ * @method string getPrefixCarerixEmail getPrefixCarerixEmail()
  * @method AbstractCRUser setVacancies() setVacancies(array|Collection $values)
  * @method Collection|CRVacancy getVacancies getVacancies()
  * @method AbstractCRUser setClients() setClients(array|Collection $values)
@@ -451,7 +453,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $city = null;
 
@@ -594,7 +596,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $visitCity = null;
 
@@ -1007,7 +1009,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $homeCity = null;
 
@@ -1067,7 +1069,7 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $alternativeCity = null;
 
@@ -1460,6 +1462,16 @@ abstract class AbstractCRUser extends \Carerix\Api\Rest\Entity
      * @width 25
      */
     public $userRoleType = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 200
+     */
+    public $prefixCarerixEmail = null;
 
     /**
      * @cx_field true

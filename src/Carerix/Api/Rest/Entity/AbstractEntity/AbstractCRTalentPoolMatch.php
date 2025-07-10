@@ -3,6 +3,7 @@
 namespace Carerix\Api\Rest\Entity\AbstractEntity;
 
 use Carerix\Api\Rest\Collection;
+use Carerix\Api\Rest\DataType\NSDictionary;
 use Carerix\Api\Rest\Entity\CRAttributeChange;
 use Carerix\Api\Rest\Entity\CRDataNode;
 use Carerix\Api\Rest\Entity\CREmployee;
@@ -14,7 +15,7 @@ use Carerix\Api\Rest\Entity\CRUserRole;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:05 +0000
+ * @version Wed, 09 Jul 2025 09:47:00 +0000
  * @method AbstractCRTalentPoolMatch setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRTalentPoolMatch setModificationDate() setModificationDate(string $value)
@@ -29,6 +30,10 @@ use Carerix\Api\Rest\Entity\CRUserRole;
  * @method integer getIsConfidential getIsConfidential()
  * @method AbstractCRTalentPoolMatch setConfidentialIamRole() setConfidentialIamRole(string $value)
  * @method string getConfidentialIamRole getConfidentialIamRole()
+ * @method AbstractCRTalentPoolMatch setAdditionalInfo() setAdditionalInfo(NSDictionary|array $value)
+ * @method NSDictionary|array getAdditionalInfo getAdditionalInfo()
+ * @method AbstractCRTalentPoolMatch setAdditionalInfoPartial() setAdditionalInfoPartial(NSDictionary|array $value)
+ * @method NSDictionary|array getAdditionalInfoPartial getAdditionalInfoPartial()
  * @method AbstractCRTalentPoolMatch setToEmployee() setToEmployee(array|CREmployee $value)
  * @method CREmployee getToEmployee getToEmployee($index = null)
  * @method AbstractCRTalentPoolMatch setModifiedBy() setModifiedBy(array|CRUser $value)
@@ -121,6 +126,24 @@ abstract class AbstractCRTalentPoolMatch extends \Carerix\Api\Rest\Entity
      * @width 128
      */
     public $confidentialIamRole = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var NSDictionary|array
+     * @value_class NSDictionary
+     * @allows_null 1
+     */
+    public $additionalInfo = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var NSDictionary|array
+     * @value_class NSDictionary
+     * @allows_null 1
+     */
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true

@@ -14,7 +14,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:58 +0000
+ * @version Wed, 09 Jul 2025 09:46:47 +0000
  * @method AbstractCRMedium setMediumID() setMediumID(integer $value)
  * @method integer getMediumID getMediumID()
  * @method AbstractCRMedium setCreationDate() setCreationDate(string $value)
@@ -63,6 +63,10 @@ use Carerix\Api\Rest\Entity\CRUser;
  * @method integer getIsSystem getIsSystem()
  * @method AbstractCRMedium setParserSubjectCode() setParserSubjectCode(string $value)
  * @method string getParserSubjectCode getParserSubjectCode()
+ * @method AbstractCRMedium setIsPublishedToIndeed() setIsPublishedToIndeed(integer $value)
+ * @method integer getIsPublishedToIndeed getIsPublishedToIndeed()
+ * @method AbstractCRMedium setIndeedApplyAllowedFields() setIndeedApplyAllowedFields(NSDictionary|array $value)
+ * @method NSDictionary|array getIndeedApplyAllowedFields getIndeedApplyAllowedFields()
  * @method AbstractCRMedium setModifiedBy() setModifiedBy(array|CRUser $value)
  * @method CRUser getModifiedBy getModifiedBy($index = null)
  * @method AbstractCRMedium setOwner() setOwner(array|CRUser $value)
@@ -336,6 +340,26 @@ abstract class AbstractCRMedium extends \Carerix\Api\Rest\Entity
      * @width 100
      */
     public $parserSubjectCode = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $isPublishedToIndeed = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var NSDictionary|array
+     * @value_class NSDictionary
+     * @allows_null 1
+     */
+    public $indeedApplyAllowedFields = null;
 
     /**
      * @cx_field true

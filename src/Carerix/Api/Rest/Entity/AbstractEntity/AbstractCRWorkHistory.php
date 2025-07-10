@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:04 +0000
+ * @version Wed, 09 Jul 2025 09:46:58 +0000
  * @method AbstractCRWorkHistory setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRWorkHistory setEmployer() setEmployer(string $value)
@@ -164,7 +164,7 @@ abstract class AbstractCRWorkHistory extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 128
+     * @width 255
      */
     public $workLocation = null;
 

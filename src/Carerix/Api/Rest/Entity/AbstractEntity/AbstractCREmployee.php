@@ -32,7 +32,7 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:53 +0000
+ * @version Wed, 09 Jul 2025 09:46:42 +0000
  * @method AbstractCREmployee setMaxDistance() setMaxDistance(integer $value)
  * @method integer getMaxDistance getMaxDistance()
  * @method AbstractCREmployee setMinSalary() setMinSalary(float $value)
@@ -241,8 +241,6 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method integer getTimesheetTypeKey getTimesheetTypeKey()
  * @method AbstractCREmployee setPrivacyApprovalDate() setPrivacyApprovalDate(string $value)
  * @method string getPrivacyApprovalDate getPrivacyApprovalDate()
- * @method AbstractCREmployee setConsentExpiryDate() setConsentExpiryDate(string $value)
- * @method string getConsentExpiryDate getConsentExpiryDate()
  * @method AbstractCREmployee setTrackingModificationDate() setTrackingModificationDate(string $value)
  * @method string getTrackingModificationDate getTrackingModificationDate()
  * @method AbstractCREmployee setWorkidCandidateUuid() setWorkidCandidateUuid(string $value)
@@ -259,6 +257,14 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method string getConfidentialIamRole getConfidentialIamRole()
  * @method AbstractCREmployee setMatchCriteriaID() setMatchCriteriaID(integer $value)
  * @method integer getMatchCriteriaID getMatchCriteriaID()
+ * @method AbstractCREmployee setRating() setRating(integer $value)
+ * @method integer getRating getRating()
+ * @method AbstractCREmployee setEngagementScore() setEngagementScore(integer $value)
+ * @method integer getEngagementScore getEngagementScore()
+ * @method AbstractCREmployee setConsentExpiryDate() setConsentExpiryDate(string $value)
+ * @method string getConsentExpiryDate getConsentExpiryDate()
+ * @method AbstractCREmployee setMatchCount() setMatchCount(integer $value)
+ * @method integer getMatchCount getMatchCount()
  * @method AbstractCREmployee setMatches() setMatches(array|Collection $values)
  * @method Collection|CRMatch getMatches getMatches()
  * @method AbstractCREmployee setToUser() setToUser(array|CRUser $value)
@@ -495,6 +501,8 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method CRDataNode getToConsentPeriodNode getToConsentPeriodNode($index = null)
  * @method AbstractCREmployee setToMatchCriteria() setToMatchCriteria(array|CRMatchCriteria $value)
  * @method CRMatchCriteria getToMatchCriteria getToMatchCriteria($index = null)
+ * @method AbstractCREmployee setToPreferredChannelNode() setToPreferredChannelNode(array|CRDataNode $value)
+ * @method CRDataNode getToPreferredChannelNode getToPreferredChannelNode($index = null)
  */
 abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
 {
@@ -1018,7 +1026,7 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $identificationCity = null;
 
@@ -1037,7 +1045,7 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $birthCity = null;
 
@@ -1057,7 +1065,7 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $driversLicenseCity = null;
 
@@ -1517,15 +1525,6 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @value_class NSCalendarDate
      * @allows_null 1
      */
-    public $consentExpiryDate = null;
-
-    /**
-     * @cx_field true
-     * @access private
-     * @var string
-     * @value_class NSCalendarDate
-     * @allows_null 1
-     */
     public $trackingModificationDate = null;
 
     /**
@@ -1596,6 +1595,48 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @value_type_human long integer (32 bits)
      */
     public $matchCriteriaID = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 1
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $rating = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 1
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $engagementScore = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSCalendarDate
+     * @allows_null 1
+     */
+    public $consentExpiryDate = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $matchCount = null;
 
     /**
      * @cx_field true
@@ -3178,6 +3219,18 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @name toMatchCriteria
      */
     public $toMatchCriteria = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var CRDataNode
+     * @OneToOne (targetEntity="CRDataNode")
+     * @mandatory 0
+     * @destination_entity CRDataNode
+     * @to_many 0
+     * @name toPreferredChannelNode
+     */
+    public $toPreferredChannelNode = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

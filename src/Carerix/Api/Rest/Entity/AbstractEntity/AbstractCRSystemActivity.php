@@ -40,7 +40,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:12 +0000
+ * @version Wed, 09 Jul 2025 09:47:15 +0000
  * @method AbstractCRSystemActivity setLabel() setLabel(string $value)
  * @method string getLabel getLabel()
  * @method AbstractCRSystemActivity setDeadline() setDeadline(string $value)

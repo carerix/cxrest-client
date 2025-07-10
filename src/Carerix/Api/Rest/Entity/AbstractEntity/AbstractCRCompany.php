@@ -21,7 +21,7 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:52 +0000
+ * @version Wed, 09 Jul 2025 09:46:39 +0000
  * @method AbstractCRCompany setUrl() setUrl(string $value)
  * @method string getUrl getUrl()
  * @method AbstractCRCompany setVisitStreet() setVisitStreet(string $value)
@@ -182,6 +182,8 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method NSDictionary|array getEvaluation getEvaluation()
  * @method AbstractCRCompany setExternalIdentifier() setExternalIdentifier(string $value)
  * @method string getExternalIdentifier getExternalIdentifier()
+ * @method AbstractCRCompany setJobUrl() setJobUrl(string $value)
+ * @method string getJobUrl getJobUrl()
  * @method AbstractCRCompany setToMainUser() setToMainUser(array|CRUser $value)
  * @method CRUser getToMainUser getToMainUser($index = null)
  * @method AbstractCRCompany setUserCompanies() setUserCompanies(array|Collection $values)
@@ -309,7 +311,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $visitCity = null;
 
@@ -388,7 +390,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $mailingCity = null;
 
@@ -669,7 +671,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $invoiceCity = null;
 
@@ -1028,7 +1030,7 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 40
+     * @width 255
      */
     public $kvkCity = null;
 
@@ -1082,6 +1084,16 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @width 255
      */
     public $externalIdentifier = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 100
+     */
+    public $jobUrl = null;
 
     /**
      * @cx_field true

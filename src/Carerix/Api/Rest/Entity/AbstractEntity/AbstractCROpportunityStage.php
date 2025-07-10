@@ -13,7 +13,7 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:58:08 +0000
+ * @version Wed, 09 Jul 2025 09:47:09 +0000
  * @method AbstractCROpportunityStage setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCROpportunityStage setIsFinal() setIsFinal(integer $value)
@@ -40,6 +40,8 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
  * @method string getPackageID getPackageID()
  * @method AbstractCROpportunityStage setPackageConfig() setPackageConfig(NSDictionary|array $value)
  * @method NSDictionary|array getPackageConfig getPackageConfig()
+ * @method AbstractCROpportunityStage setIsSuccessful() setIsSuccessful(integer $value)
+ * @method integer getIsSuccessful getIsSuccessful()
  * @method AbstractCROpportunityStage setTemplateReferences() setTemplateReferences(array|Collection $values)
  * @method Collection|CRTemplateReference getTemplateReferences getTemplateReferences()
  * @method AbstractCROpportunityStage setEmailTemplates() setEmailTemplates(array|Collection $values)
@@ -191,6 +193,17 @@ abstract class AbstractCROpportunityStage extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      */
     public $packageConfig = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $isSuccessful = null;
 
     /**
      * @cx_field true

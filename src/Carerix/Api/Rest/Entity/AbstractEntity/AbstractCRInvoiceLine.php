@@ -3,6 +3,7 @@
 namespace Carerix\Api\Rest\Entity\AbstractEntity;
 
 use Carerix\Api\Rest\Collection;
+use Carerix\Api\Rest\DataType\NSDictionary;
 use Carerix\Api\Rest\Entity\CRAttachment;
 use Carerix\Api\Rest\Entity\CRCompany;
 use Carerix\Api\Rest\Entity\CRDataNode;
@@ -23,7 +24,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:57 +0000
+ * @version Wed, 09 Jul 2025 09:46:46 +0000
  * @method AbstractCRInvoiceLine setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRInvoiceLine setDeleted() setDeleted(integer $value)
@@ -80,6 +81,10 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
  * @method integer getCredited getCredited()
  * @method AbstractCRInvoiceLine setWeekTotalNumber() setWeekTotalNumber(float $value)
  * @method float getWeekTotalNumber getWeekTotalNumber()
+ * @method AbstractCRInvoiceLine setAdditionalInfo() setAdditionalInfo(NSDictionary|array $value)
+ * @method NSDictionary|array getAdditionalInfo getAdditionalInfo()
+ * @method AbstractCRInvoiceLine setAdditionalInfoPartial() setAdditionalInfoPartial(NSDictionary|array $value)
+ * @method NSDictionary|array getAdditionalInfoPartial getAdditionalInfoPartial()
  * @method AbstractCRInvoiceLine setToStatusNode() setToStatusNode(array|CRDataNode $value)
  * @method CRDataNode getToStatusNode getToStatusNode($index = null)
  * @method AbstractCRInvoiceLine setToWeekHour() setToWeekHour(array|CRWeekHour $value)
@@ -404,6 +409,24 @@ abstract class AbstractCRInvoiceLine extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      */
     public $weekTotalNumber = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var NSDictionary|array
+     * @value_class NSDictionary
+     * @allows_null 1
+     */
+    public $additionalInfo = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var NSDictionary|array
+     * @value_class NSDictionary
+     * @allows_null 1
+     */
+    public $additionalInfoPartial = null;
 
     /**
      * @cx_field true

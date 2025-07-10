@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:55 +0000
+ * @version Wed, 09 Jul 2025 09:46:44 +0000
  * @method AbstractCREmployeeTraining setEmployeeTrainingID() setEmployeeTrainingID(integer $value)
  * @method integer getEmployeeTrainingID getEmployeeTrainingID()
  * @method AbstractCREmployeeTraining setCreationDate() setCreationDate(string $value)

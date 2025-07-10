@@ -12,7 +12,7 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 11 Oct 2023 08:57:59 +0000
+ * @version Wed, 09 Jul 2025 09:46:50 +0000
  * @method AbstractCRStatusInfo setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRStatusInfo setModificationDate() setModificationDate(string $value)
@@ -53,6 +53,8 @@ use Carerix\Api\Rest\Entity\CRTemplateReference;
  * @method integer getIsInterviewWithClient getIsInterviewWithClient()
  * @method AbstractCRStatusInfo setSla() setSla(integer $value)
  * @method integer getSla getSla()
+ * @method AbstractCRStatusInfo setIsPlacementRestricted() setIsPlacementRestricted(integer $value)
+ * @method integer getIsPlacementRestricted getIsPlacementRestricted()
  * @method AbstractCRStatusInfo setTemplateReferences() setTemplateReferences(array|Collection $values)
  * @method Collection|CRTemplateReference getTemplateReferences getTemplateReferences()
  * @method AbstractCRStatusInfo setEmailTemplates() setEmailTemplates(array|Collection $values)
@@ -284,6 +286,17 @@ abstract class AbstractCRStatusInfo extends \Carerix\Api\Rest\Entity
      * @value_type_human long integer (32 bits)
      */
     public $sla = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $isPlacementRestricted = null;
 
     /**
      * @cx_field true
