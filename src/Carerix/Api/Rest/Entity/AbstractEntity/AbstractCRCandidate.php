@@ -16,6 +16,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
 use Carerix\Api\Rest\Entity\CRJob;
 use Carerix\Api\Rest\Entity\CRLeadUser;
 use Carerix\Api\Rest\Entity\CROpportunityUser;
+use Carerix\Api\Rest\Entity\CRPhoneNumber;
 use Carerix\Api\Rest\Entity\CRTalentPoolUser;
 use Carerix\Api\Rest\Entity\CRToDo;
 use Carerix\Api\Rest\Entity\CRToDoUser;
@@ -31,7 +32,7 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:20 +0000
+ * @version Thu, 10 Sep 2026 15:06:26 +0200
  * @method AbstractCRCandidate setPhoto() setPhoto(string $value)
  * @method string getPhoto getPhoto()
  * @method AbstractCRCandidate setCompanyInformation() setCompanyInformation(string $value)
@@ -284,6 +285,10 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method string getUserRoleType getUserRoleType()
  * @method AbstractCRCandidate setPrefixCarerixEmail() setPrefixCarerixEmail(string $value)
  * @method string getPrefixCarerixEmail getPrefixCarerixEmail()
+ * @method AbstractCRCandidate setAnonymized() setAnonymized(integer $value)
+ * @method integer getAnonymized getAnonymized()
+ * @method AbstractCRCandidate setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRCandidate setGroups() setGroups(array|Collection $values)
  * @method Collection|CRDataNode getGroups getGroups()
  * @method AbstractCRCandidate setToDos() setToDos(array|Collection $values)
@@ -380,6 +385,8 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method Collection|CRTalentPoolUser getTalentPoolUsers getTalentPoolUsers()
  * @method AbstractCRCandidate setUserHashes() setUserHashes(array|Collection $values)
  * @method Collection|CRUserHash getUserHashes getUserHashes()
+ * @method AbstractCRCandidate setPhoneNumbers() setPhoneNumbers(array|Collection $values)
+ * @method Collection|CRPhoneNumber getPhoneNumbers getPhoneNumbers()
  */
 abstract class AbstractCRCandidate extends \Carerix\Api\Rest\Entity
 {
@@ -1656,6 +1663,27 @@ abstract class AbstractCRCandidate extends \Carerix\Api\Rest\Entity
     /**
      * @cx_field true
      * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $anonymized = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
+
+    /**
+     * @cx_field true
+     * @access private
      * @var Collection
      * @OneToMany (targetEntity="CRDataNode")
      * @mandatory 0
@@ -1770,6 +1798,7 @@ abstract class AbstractCRCandidate extends \Carerix\Api\Rest\Entity
      * @destination_entity CRUser
      * @to_many 0
      * @name singleOwner
+     * @inverseName _ownContacts
      */
     public $singleOwner = null;
 
@@ -2263,6 +2292,18 @@ abstract class AbstractCRCandidate extends \Carerix\Api\Rest\Entity
      * @name userHashes
      */
     public $userHashes = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var Collection
+     * @OneToMany (targetEntity="CRPhoneNumber")
+     * @mandatory 0
+     * @destination_entity CRPhoneNumber
+     * @to_many 1
+     * @name phoneNumbers
+     */
+    public $phoneNumbers = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

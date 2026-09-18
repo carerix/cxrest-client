@@ -38,7 +38,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:17 +0000
+ * @version Thu, 10 Sep 2026 15:06:01 +0200
  * @method AbstractCRNewsletter setIsVisible() setIsVisible(integer $value)
  * @method integer getIsVisible getIsVisible()
  * @method AbstractCRNewsletter setIsOpened() setIsOpened(integer $value)
@@ -650,7 +650,7 @@ abstract class AbstractCRNewsletter extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 255
+     * @width 600
      */
     public $externalIdentifier = null;
 

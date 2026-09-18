@@ -12,6 +12,7 @@ use Carerix\Api\Rest\Entity\CRDataNode;
 use Carerix\Api\Rest\Entity\CREmployee;
 use Carerix\Api\Rest\Entity\CRLead;
 use Carerix\Api\Rest\Entity\CROpportunity;
+use Carerix\Api\Rest\Entity\CRPhoneNumber;
 use Carerix\Api\Rest\Entity\CRTalentPoolCompany;
 use Carerix\Api\Rest\Entity\CRUser;
 use Carerix\Api\Rest\Entity\CRUserCompany;
@@ -21,7 +22,7 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:39 +0000
+ * @version Thu, 10 Sep 2026 15:01:26 +0200
  * @method AbstractCRCompany setUrl() setUrl(string $value)
  * @method string getUrl getUrl()
  * @method AbstractCRCompany setVisitStreet() setVisitStreet(string $value)
@@ -184,6 +185,14 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method string getExternalIdentifier getExternalIdentifier()
  * @method AbstractCRCompany setJobUrl() setJobUrl(string $value)
  * @method string getJobUrl getJobUrl()
+ * @method AbstractCRCompany setEqualPayConditionsSummary() setEqualPayConditionsSummary(string $value)
+ * @method string getEqualPayConditionsSummary getEqualPayConditionsSummary()
+ * @method AbstractCRCompany setTotalJobsCount() setTotalJobsCount(integer $value)
+ * @method integer getTotalJobsCount getTotalJobsCount()
+ * @method AbstractCRCompany setActiveJobsCount() setActiveJobsCount(integer $value)
+ * @method integer getActiveJobsCount getActiveJobsCount()
+ * @method AbstractCRCompany setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRCompany setToMainUser() setToMainUser(array|CRUser $value)
  * @method CRUser getToMainUser getToMainUser($index = null)
  * @method AbstractCRCompany setUserCompanies() setUserCompanies(array|Collection $values)
@@ -280,6 +289,8 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method Collection|CROpportunity getOpportunities getOpportunities()
  * @method AbstractCRCompany setLeads() setLeads(array|Collection $values)
  * @method Collection|CRLead getLeads getLeads()
+ * @method AbstractCRCompany setPhoneNumbers() setPhoneNumbers(array|Collection $values)
+ * @method Collection|CRPhoneNumber getPhoneNumbers getPhoneNumbers()
  */
 abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
 {
@@ -1098,6 +1109,48 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
     /**
      * @cx_field true
      * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $equalPayConditionsSummary = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $totalJobsCount = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $activeJobsCount = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
+
+    /**
+     * @cx_field true
+     * @access private
      * @var CRUser
      * @OneToOne (targetEntity="CRUser")
      * @mandatory 0
@@ -1726,6 +1779,18 @@ abstract class AbstractCRCompany extends \Carerix\Api\Rest\Entity
      * @name leads
      */
     public $leads = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var Collection
+     * @OneToMany (targetEntity="CRPhoneNumber")
+     * @mandatory 0
+     * @destination_entity CRPhoneNumber
+     * @to_many 1
+     * @name phoneNumbers
+     */
+    public $phoneNumbers = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

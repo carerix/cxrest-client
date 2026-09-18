@@ -12,7 +12,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:11 +0000
+ * @version Thu, 10 Sep 2026 15:05:08 +0200
  * @method AbstractCRTemplatePart setTemplatePartID() setTemplatePartID(integer $value)
  * @method integer getTemplatePartID getTemplatePartID()
  * @method AbstractCRTemplatePart setCreationDate() setCreationDate(string $value)

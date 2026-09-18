@@ -1530,7 +1530,7 @@ class CREmployee extends AbstractCREmployee
      * @return CREmployee
      * @see Entity::subscribe()
      */
-    public function subscribe(array $parameters = null, $hydrate = null)
+    public function subscribe(?array $parameters = null, $hydrate = null)
     {
         $args = func_get_args();
         return call_user_func_array(['parent', 'subscribe'], $args);

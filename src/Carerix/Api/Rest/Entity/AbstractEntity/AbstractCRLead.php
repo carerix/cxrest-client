@@ -19,7 +19,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:07 +0000
+ * @version Thu, 10 Sep 2026 15:04:47 +0200
  * @method AbstractCRLead setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRLead setCreationDate() setCreationDate(string $value)
@@ -66,6 +66,8 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method NSDictionary|array getAdditionalInfoPartial getAdditionalInfoPartial()
  * @method AbstractCRLead setConfidentialIamRole() setConfidentialIamRole(string $value)
  * @method string getConfidentialIamRole getConfidentialIamRole()
+ * @method AbstractCRLead setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRLead setToUser() setToUser(array|CRUser $value)
  * @method CRUser getToUser getToUser($index = null)
  * @method AbstractCRLead setCreatedBy() setCreatedBy(array|CRUser $value)
@@ -355,6 +357,16 @@ abstract class AbstractCRLead extends \Carerix\Api\Rest\Entity
      * @width 128
      */
     public $confidentialIamRole = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
 
     /**
      * @cx_field true

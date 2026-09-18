@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRPublication;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:48 +0000
+ * @version Thu, 10 Sep 2026 15:02:24 +0200
  * @method AbstractCRPosting setPostingID() setPostingID(integer $value)
  * @method integer getPostingID getPostingID()
  * @method AbstractCRPosting setCreationDate() setCreationDate(string $value)

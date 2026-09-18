@@ -49,7 +49,6 @@ class EntityGenerator
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, ['Expect:']);
-        curl_setopt($ch, CURLOPT_PROXY, 'localhost:8888');
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_USERAGENT, __CLASS__);
@@ -63,13 +62,11 @@ class EntityGenerator
         if (!$result) {
             $errorNumber = curl_errno($ch);
             $error       = curl_error($ch);
-            curl_close($ch);
             throw new Exception($errorNumber . ': ' . $error);
         }
         if (stripos($result, 'nsexception')) {
             throw new Exception("Something wrong in responce: $result ");
         }
-        curl_close($ch);
         return $result;
     }
 

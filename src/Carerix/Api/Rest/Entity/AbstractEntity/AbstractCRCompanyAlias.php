@@ -7,7 +7,7 @@ use Carerix\Api\Rest\Entity\CRCompany;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:13 +0000
+ * @version Thu, 10 Sep 2026 15:05:25 +0200
  * @method AbstractCRCompanyAlias setAlias() setAlias(string $value)
  * @method string getAlias getAlias()
  * @method AbstractCRCompanyAlias setCompanyAliasID() setCompanyAliasID(integer $value)

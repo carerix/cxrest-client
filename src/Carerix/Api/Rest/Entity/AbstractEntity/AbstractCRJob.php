@@ -12,6 +12,7 @@ use Carerix\Api\Rest\Entity\CREmployee;
 use Carerix\Api\Rest\Entity\CRFinance;
 use Carerix\Api\Rest\Entity\CRInvoiceLine;
 use Carerix\Api\Rest\Entity\CRJobDocument;
+use Carerix\Api\Rest\Entity\CRPhoneNumber;
 use Carerix\Api\Rest\Entity\CRToDo;
 use Carerix\Api\Rest\Entity\CRUser;
 use Carerix\Api\Rest\Entity\CRUserRole;
@@ -22,7 +23,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourJobView;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:46 +0000
+ * @version Thu, 10 Sep 2026 15:02:11 +0200
  * @method AbstractCRJob setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRJob setEndDate() setEndDate(string $value)
@@ -137,6 +138,8 @@ use Carerix\Api\Rest\Entity\CRWeekHourJobView;
  * @method integer getIsConfidential getIsConfidential()
  * @method AbstractCRJob setConfidentialIamRole() setConfidentialIamRole(string $value)
  * @method string getConfidentialIamRole getConfidentialIamRole()
+ * @method AbstractCRJob setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRJob setToEmployee() setToEmployee(array|CREmployee $value)
  * @method CREmployee getToEmployee getToEmployee($index = null)
  * @method AbstractCRJob setToVacancy() setToVacancy(array|CRVacancy $value)
@@ -205,6 +208,8 @@ use Carerix\Api\Rest\Entity\CRWeekHourJobView;
  * @method CRDataNode getToPurchaseRateUnitNode getToPurchaseRateUnitNode($index = null)
  * @method AbstractCRJob setToConfidentialUserRole() setToConfidentialUserRole(array|CRUserRole $value)
  * @method CRUserRole getToConfidentialUserRole getToConfidentialUserRole($index = null)
+ * @method AbstractCRJob setPhoneNumbers() setPhoneNumbers(array|Collection $values)
+ * @method Collection|CRPhoneNumber getPhoneNumbers getPhoneNumbers()
  */
 abstract class AbstractCRJob extends \Carerix\Api\Rest\Entity
 {
@@ -762,6 +767,16 @@ abstract class AbstractCRJob extends \Carerix\Api\Rest\Entity
     /**
      * @cx_field true
      * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
+
+    /**
+     * @cx_field true
+     * @access private
      * @var CREmployee
      * @OneToOne (targetEntity="CREmployee")
      * @mandatory 0
@@ -1191,6 +1206,18 @@ abstract class AbstractCRJob extends \Carerix\Api\Rest\Entity
      * @name toConfidentialUserRole
      */
     public $toConfidentialUserRole = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var Collection
+     * @OneToMany (targetEntity="CRPhoneNumber")
+     * @mandatory 0
+     * @destination_entity CRPhoneNumber
+     * @to_many 1
+     * @name phoneNumbers
+     */
+    public $phoneNumbers = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

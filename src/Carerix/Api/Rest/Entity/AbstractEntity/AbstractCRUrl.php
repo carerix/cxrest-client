@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:52 +0000
+ * @version Thu, 10 Sep 2026 15:03:16 +0200
  * @method AbstractCRUrl setUrl() setUrl(string $value)
  * @method string getUrl getUrl()
  * @method AbstractCRUrl setUrlID() setUrlID(integer $value)

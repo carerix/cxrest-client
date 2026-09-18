@@ -14,7 +14,7 @@ class Token
      * @return string application token
      * @throws Exception
      */
-    public static function get($params = [], Manager $manager = null)
+    public static function get($params = [], ?Manager $manager = null)
     {
         $path = '/token/get?' . http_build_query($params);
 

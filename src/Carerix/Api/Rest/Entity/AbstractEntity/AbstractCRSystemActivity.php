@@ -40,7 +40,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:15 +0000
+ * @version Thu, 10 Sep 2026 15:05:39 +0200
  * @method AbstractCRSystemActivity setLabel() setLabel(string $value)
  * @method string getLabel getLabel()
  * @method AbstractCRSystemActivity setDeadline() setDeadline(string $value)
@@ -599,7 +599,7 @@ abstract class AbstractCRSystemActivity extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 255
+     * @width 600
      */
     public $externalIdentifier = null;
 

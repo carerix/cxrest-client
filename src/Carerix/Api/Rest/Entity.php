@@ -71,7 +71,7 @@ abstract class Entity implements Serializable
 
     private $extendedPropertiesList = ['raw', 'lastParameters', 'snapshot', 'transient','attributes','stableHash'];
 
-    public function __construct(array $values = null)
+    public function __construct(?array $values = null)
     {
         if ($values !== null) {
             $this->fromArray($values);
@@ -223,7 +223,7 @@ abstract class Entity implements Serializable
      * @throws Exception
      * @throws ReflectionException
      */
-    public function toSimpleXMLElement(SimpleXMLElement &$sxe = null, Entity $context = null, $dirty = false)
+    public function toSimpleXMLElement(?SimpleXMLElement &$sxe = null, ?Entity $context = null, $dirty = false)
     {
         if ($context === null) {
             $context = $this;
@@ -633,7 +633,7 @@ abstract class Entity implements Serializable
      * @return static
      * @throws Exception
      */
-    public function subscribe(array $parameters = null, $hydrate = null)
+    public function subscribe(?array $parameters = null, $hydrate = null)
     {
         if (func_num_args() == 1 && !is_array($parameters)) {
             $hydrate    = $parameters;
@@ -700,7 +700,7 @@ abstract class Entity implements Serializable
      * @return Entity
      * @throws Exception
      */
-    public static function fromArrayStatic(array $data, $class = null, EntityConfiguration $configuration = null)
+    public static function fromArrayStatic(array $data, $class = null, ?EntityConfiguration $configuration = null)
     {
         if (!is_array($data)) {
             return null;
@@ -848,7 +848,8 @@ abstract class Entity implements Serializable
                 } elseif (self::isOneToOneAssociation($reflection)) {
                     // convert one dimensional array to a value;
                     if (property_exists($v, 0)) {
-                        $v = array_shift($v);
+                        $vArray = (array)$v;
+                        $v      = array_shift($vArray);
                     }
                     $associationClassName = self::getEntityClassName($association);
                     $v                    = call_user_func($associationClassName . '::toArrayStatic', $v, $dirty);

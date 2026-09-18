@@ -15,7 +15,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:48 +0000
+ * @version Thu, 10 Sep 2026 15:02:24 +0200
  * @method AbstractCRPublication setPublicationID() setPublicationID(integer $value)
  * @method integer getPublicationID getPublicationID()
  * @method AbstractCRPublication setCampaign() setCampaign(string $value)
@@ -94,6 +94,8 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method string getIndeedSourcePostingIdentifier getIndeedSourcePostingIdentifier()
  * @method AbstractCRPublication setVacancyUrl() setVacancyUrl(string $value)
  * @method string getVacancyUrl getVacancyUrl()
+ * @method AbstractCRPublication setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRPublication setToVacancy() setToVacancy(array|CRVacancy $value)
  * @method CRVacancy getToVacancy getToVacancy($index = null)
  * @method AbstractCRPublication setCreatedBy() setCreatedBy(array|CRUser $value)
@@ -509,6 +511,16 @@ abstract class AbstractCRPublication extends \Carerix\Api\Rest\Entity
      * @width 1000
      */
     public $vacancyUrl = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
 
     /**
      * @cx_field true

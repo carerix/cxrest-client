@@ -5,6 +5,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
 use Carerix\Api\Rest\Collection;
 use Carerix\Api\Rest\DataType\NSArray;
 use Carerix\Api\Rest\DataType\NSDictionary;
+use Carerix\Api\Rest\Entity\CRAgency;
 use Carerix\Api\Rest\Entity\CRAttachment;
 use Carerix\Api\Rest\Entity\CRAttributeChange;
 use Carerix\Api\Rest\Entity\CRCompany;
@@ -32,7 +33,7 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:42 +0000
+ * @version Thu, 10 Sep 2026 15:01:49 +0200
  * @method AbstractCREmployee setMaxDistance() setMaxDistance(integer $value)
  * @method integer getMaxDistance getMaxDistance()
  * @method AbstractCREmployee setMinSalary() setMinSalary(float $value)
@@ -265,6 +266,14 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method string getConsentExpiryDate getConsentExpiryDate()
  * @method AbstractCREmployee setMatchCount() setMatchCount(integer $value)
  * @method integer getMatchCount getMatchCount()
+ * @method AbstractCREmployee setRestrictedAgency() setRestrictedAgency(integer $value)
+ * @method integer getRestrictedAgency getRestrictedAgency()
+ * @method AbstractCREmployee setCompletenessScore() setCompletenessScore(float $value)
+ * @method float getCompletenessScore getCompletenessScore()
+ * @method AbstractCREmployee setAnonymized() setAnonymized(integer $value)
+ * @method integer getAnonymized getAnonymized()
+ * @method AbstractCREmployee setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCREmployee setMatches() setMatches(array|Collection $values)
  * @method Collection|CRMatch getMatches getMatches()
  * @method AbstractCREmployee setToUser() setToUser(array|CRUser $value)
@@ -503,6 +512,8 @@ use Carerix\Api\Rest\Entity\CRWorkHistory;
  * @method CRMatchCriteria getToMatchCriteria getToMatchCriteria($index = null)
  * @method AbstractCREmployee setToPreferredChannelNode() setToPreferredChannelNode(array|CRDataNode $value)
  * @method CRDataNode getToPreferredChannelNode getToPreferredChannelNode($index = null)
+ * @method AbstractCREmployee setRestrictedToAgency() setRestrictedToAgency(array|CRAgency $value)
+ * @method CRAgency getRestrictedToAgency getRestrictedToAgency($index = null)
  */
 abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
 {
@@ -1637,6 +1648,47 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @value_type_human short integer (16 bits)
      */
     public $matchCount = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 1
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $restrictedAgency = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var float
+     * @value_class NSDecimalNumber
+     * @allows_null 1
+     */
+    public $completenessScore = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 0
+     * @value_type s
+     * @value_type_human short integer (16 bits)
+     */
+    public $anonymized = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
 
     /**
      * @cx_field true
@@ -3231,6 +3283,18 @@ abstract class AbstractCREmployee extends \Carerix\Api\Rest\Entity
      * @name toPreferredChannelNode
      */
     public $toPreferredChannelNode = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var CRAgency
+     * @OneToOne (targetEntity="CRAgency")
+     * @mandatory 0
+     * @destination_entity CRAgency
+     * @to_many 0
+     * @name restrictedToAgency
+     */
+    public $restrictedToAgency = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

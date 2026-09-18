@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:12 +0000
+ * @version Thu, 10 Sep 2026 15:05:19 +0200
  * @method AbstractCRConfigProfile setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRConfigProfile setDeleted() setDeleted(integer $value)
@@ -24,6 +24,8 @@ use Carerix\Api\Rest\Entity\CRUser;
  * @method string getNotes getNotes()
  * @method AbstractCRConfigProfile setConfigProfileID() setConfigProfileID(integer $value)
  * @method integer getConfigProfileID getConfigProfileID()
+ * @method AbstractCRConfigProfile setSourceConfigProfileID() setSourceConfigProfileID(integer $value)
+ * @method integer getSourceConfigProfileID getSourceConfigProfileID()
  * @method AbstractCRConfigProfile setConfigs() setConfigs(array|Collection $values)
  * @method Collection|CRConfig getConfigs getConfigs()
  * @method AbstractCRConfigProfile setCreatedBy() setCreatedBy(array|CRUser $value)
@@ -107,6 +109,17 @@ abstract class AbstractCRConfigProfile extends \Carerix\Api\Rest\Entity
      * @value_type_human long integer (32 bits)
      */
     public $configProfileID = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var integer
+     * @value_class NSNumber
+     * @allows_null 1
+     * @value_type i
+     * @value_type_human long integer (32 bits)
+     */
+    public $sourceConfigProfileID = null;
 
     /**
      * @cx_field true

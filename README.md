@@ -2,6 +2,10 @@
 
 Client library to access your Carerix application via RESTful API (https://api.carerix.com) 
 
+# Requirements
+
+* PHP 7.4+, compatible with PHP 8.5
+
 # Installation
 
 Recommened way is to install the library using composer:

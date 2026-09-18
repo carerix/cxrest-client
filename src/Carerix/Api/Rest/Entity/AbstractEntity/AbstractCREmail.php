@@ -39,7 +39,7 @@ use Carerix\Api\Rest\Entity\CRWeekHourView;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:14 +0000
+ * @version Thu, 10 Sep 2026 15:05:37 +0200
  * @method AbstractCREmail setStartTime() setStartTime(string $value)
  * @method string getStartTime getStartTime()
  * @method AbstractCREmail setDelay() setDelay(integer $value)
@@ -611,7 +611,7 @@ abstract class AbstractCREmail extends \Carerix\Api\Rest\Entity
      * @var string
      * @value_class NSString
      * @allows_null 1
-     * @width 255
+     * @width 600
      */
     public $externalIdentifier = null;
 

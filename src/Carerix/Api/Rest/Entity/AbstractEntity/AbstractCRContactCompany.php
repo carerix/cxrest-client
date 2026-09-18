@@ -9,7 +9,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:21 +0000
+ * @version Thu, 10 Sep 2026 15:06:35 +0200
  * @method AbstractCRContactCompany setToRelationshipNode() setToRelationshipNode(array|CRDataNode $value)
  * @method CRDataNode getToRelationshipNode getToRelationshipNode($index = null)
  * @method AbstractCRContactCompany setToCompany() setToCompany(array|CRCompany $value)

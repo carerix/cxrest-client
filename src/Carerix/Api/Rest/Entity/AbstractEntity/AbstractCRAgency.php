@@ -7,12 +7,13 @@ use Carerix\Api\Rest\DataType\NSDictionary;
 use Carerix\Api\Rest\Entity\CRAgency;
 use Carerix\Api\Rest\Entity\CRAttachment;
 use Carerix\Api\Rest\Entity\CRDataNode;
+use Carerix\Api\Rest\Entity\CRPhoneNumber;
 use Carerix\Api\Rest\Entity\CRUser;
 
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:36 +0000
+ * @version Thu, 10 Sep 2026 15:01:17 +0200
  * @method AbstractCRAgency setAgencyID() setAgencyID(integer $value)
  * @method integer getAgencyID getAgencyID()
  * @method AbstractCRAgency setCreationDate() setCreationDate(string $value)
@@ -113,6 +114,8 @@ use Carerix\Api\Rest\Entity\CRUser;
  * @method CRDataNode getToMailingCountryNode getToMailingCountryNode($index = null)
  * @method AbstractCRAgency setToMailingProvinceNode() setToMailingProvinceNode(array|CRDataNode $value)
  * @method CRDataNode getToMailingProvinceNode getToMailingProvinceNode($index = null)
+ * @method AbstractCRAgency setPhoneNumbers() setPhoneNumbers(array|Collection $values)
+ * @method Collection|CRPhoneNumber getPhoneNumbers getPhoneNumbers()
  */
 abstract class AbstractCRAgency extends \Carerix\Api\Rest\Entity
 {
@@ -647,6 +650,18 @@ abstract class AbstractCRAgency extends \Carerix\Api\Rest\Entity
      * @nodeType Regio
      */
     public $toMailingProvinceNode = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var Collection
+     * @OneToMany (targetEntity="CRPhoneNumber")
+     * @mandatory 0
+     * @destination_entity CRPhoneNumber
+     * @to_many 1
+     * @name phoneNumbers
+     */
+    public $phoneNumbers = null;
 
     public static function configure(\Carerix\Api\Rest\EntityConfiguration $entityConfiguration)
     {

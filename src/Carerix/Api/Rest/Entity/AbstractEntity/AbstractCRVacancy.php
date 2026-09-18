@@ -29,7 +29,7 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:55 +0000
+ * @version Thu, 10 Sep 2026 15:03:41 +0200
  * @method AbstractCRVacancy setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRVacancy setCreationDate() setCreationDate(string $value)
@@ -224,6 +224,8 @@ use Carerix\Api\Rest\Entity\CRVacancyUser;
  * @method integer getMatchCriteriaID getMatchCriteriaID()
  * @method AbstractCRVacancy setMatchCount() setMatchCount(integer $value)
  * @method integer getMatchCount getMatchCount()
+ * @method AbstractCRVacancy setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRVacancy setMatches() setMatches(array|Collection $values)
  * @method Collection|CRMatch getMatches getMatches()
  * @method AbstractCRVacancy setToUser() setToUser(array|CRUser $value)
@@ -1340,6 +1342,16 @@ abstract class AbstractCRVacancy extends \Carerix\Api\Rest\Entity
      * @value_type_human short integer (16 bits)
      */
     public $matchCount = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
 
     /**
      * @cx_field true

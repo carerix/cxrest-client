@@ -15,7 +15,7 @@ use Carerix\Api\Rest\Entity\CRUserRole;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:00 +0000
+ * @version Thu, 10 Sep 2026 15:04:24 +0200
  * @method AbstractCRTalentPoolMatch setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRTalentPoolMatch setModificationDate() setModificationDate(string $value)

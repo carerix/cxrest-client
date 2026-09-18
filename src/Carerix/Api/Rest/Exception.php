@@ -27,8 +27,9 @@ class Exception extends \Exception
      * @param \Exception|null $previous
      * @see   \Exception
      */
-    public function __construct($message = null, $code = 0, \Exception $previous = null)
+    public function __construct($message = null, $code = 0, ?\Exception $previous = null)
     {
+        $message = (string)$message;
         parent::__construct($message, (int)$code, $previous);
 
         $this->init($message);

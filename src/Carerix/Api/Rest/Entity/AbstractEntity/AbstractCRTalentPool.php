@@ -14,7 +14,7 @@ use Carerix\Api\Rest\Entity\CRUser;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:58 +0000
+ * @version Thu, 10 Sep 2026 15:04:12 +0200
  * @method AbstractCRTalentPool setModificationDate() setModificationDate(string $value)
  * @method string getModificationDate getModificationDate()
  * @method AbstractCRTalentPool setCreationDate() setCreationDate(string $value)
@@ -37,6 +37,8 @@ use Carerix\Api\Rest\Entity\CRUser;
  * @method integer getMatchCountMO getMatchCountMO()
  * @method AbstractCRTalentPool setSharingAgenciesIDs() setSharingAgenciesIDs(NSArray|array $value)
  * @method NSArray|array getSharingAgenciesIDs getSharingAgenciesIDs()
+ * @method AbstractCRTalentPool setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRTalentPool setModifiedBy() setModifiedBy(array|CRUser $value)
  * @method CRUser getModifiedBy getModifiedBy($index = null)
  * @method AbstractCRTalentPool setOwner() setOwner(array|CRUser $value)
@@ -178,6 +180,16 @@ abstract class AbstractCRTalentPool extends \Carerix\Api\Rest\Entity
      * @allows_null 1
      */
     public $sharingAgenciesIDs = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
 
     /**
      * @cx_field true

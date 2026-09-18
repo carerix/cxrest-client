@@ -5,7 +5,7 @@ namespace Carerix\Api\Rest\Entity\AbstractEntity;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:47:22 +0000
+ * @version Thu, 10 Sep 2026 15:06:35 +0200
  * @method AbstractCRMatchCriteria setPositiveJobFunctions() setPositiveJobFunctions(string $value)
  * @method string getPositiveJobFunctions getPositiveJobFunctions()
  * @method AbstractCRMatchCriteria setPositiveJobFunctionsModificationDate() setPositiveJobFunctionsModificationDate(string $value)

@@ -21,7 +21,7 @@ use Carerix\Api\Rest\Entity\CRVacancy;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:47 +0000
+ * @version Thu, 10 Sep 2026 15:02:17 +0200
  * @method AbstractCRMatch setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRMatch setModificationDate() setModificationDate(string $value)
@@ -88,6 +88,16 @@ use Carerix\Api\Rest\Entity\CRVacancy;
  * @method string getConfidentialIamRole getConfidentialIamRole()
  * @method AbstractCRMatch setIndeedApplyIdentifier() setIndeedApplyIdentifier(string $value)
  * @method string getIndeedApplyIdentifier getIndeedApplyIdentifier()
+ * @method AbstractCRMatch setApplyMedium() setApplyMedium(string $value)
+ * @method string getApplyMedium getApplyMedium()
+ * @method AbstractCRMatch setApplyCampaign() setApplyCampaign(string $value)
+ * @method string getApplyCampaign getApplyCampaign()
+ * @method AbstractCRMatch setApplyTerm() setApplyTerm(string $value)
+ * @method string getApplyTerm getApplyTerm()
+ * @method AbstractCRMatch setApplyContent() setApplyContent(string $value)
+ * @method string getApplyContent getApplyContent()
+ * @method AbstractCRMatch setAiSummary() setAiSummary(string $value)
+ * @method string getAiSummary getAiSummary()
  * @method AbstractCRMatch setToEmployee() setToEmployee(array|CREmployee $value)
  * @method CREmployee getToEmployee getToEmployee($index = null)
  * @method AbstractCRMatch setToVacancy() setToVacancy(array|CRVacancy $value)
@@ -481,6 +491,56 @@ abstract class AbstractCRMatch extends \Carerix\Api\Rest\Entity
      * @width 255
      */
     public $indeedApplyIdentifier = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 255
+     */
+    public $applyMedium = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 255
+     */
+    public $applyCampaign = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width 255
+     */
+    public $applyTerm = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $applyContent = null;
+
+    /**
+     * @cx_field true
+     * @access private
+     * @var string
+     * @value_class NSString
+     * @allows_null 1
+     * @width
+     */
+    public $aiSummary = null;
 
     /**
      * @cx_field true

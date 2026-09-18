@@ -11,7 +11,7 @@ use Carerix\Api\Rest\Entity\CRNodeType;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:40 +0000
+ * @version Thu, 10 Sep 2026 15:01:36 +0200
  * @method AbstractCRDataNode setDataNodeID() setDataNodeID(integer $value)
  * @method integer getDataNodeID getDataNodeID()
  * @method AbstractCRDataNode setNotActive() setNotActive(integer $value)

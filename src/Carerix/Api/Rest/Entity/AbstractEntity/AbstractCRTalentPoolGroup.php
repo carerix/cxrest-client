@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRTalentPool;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:59 +0000
+ * @version Thu, 10 Sep 2026 15:04:19 +0200
  * @method AbstractCRTalentPoolGroup setImportID() setImportID(string $value)
  * @method string getImportID getImportID()
  * @method AbstractCRTalentPoolGroup setToGroupNode() setToGroupNode(array|CRDataNode $value)

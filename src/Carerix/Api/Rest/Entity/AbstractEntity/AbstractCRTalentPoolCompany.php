@@ -8,7 +8,7 @@ use Carerix\Api\Rest\Entity\CRTalentPool;
 /**
  * THIS FILE WAS GENERATED AUTOMATICALLY USING REST API ENTITY DESCRIBE SERVICE. DO NOT MODIFY IT.
  * YOUR CHANGES WILL BE LOST. INSTEAD MODIFY CONCRETE IMPLEMENTATION OF THIS CLASS IF NECESSARY.
- * @version Wed, 09 Jul 2025 09:46:59 +0000
+ * @version Thu, 10 Sep 2026 15:04:18 +0200
  * @method AbstractCRTalentPoolCompany setCreationDate() setCreationDate(string $value)
  * @method string getCreationDate getCreationDate()
  * @method AbstractCRTalentPoolCompany setModificationDate() setModificationDate(string $value)
